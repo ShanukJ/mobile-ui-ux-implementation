@@ -18,15 +18,15 @@ npm install
 
 👤 **Athindu Umayanga**
 
-* Github: [@ShanukJ](https://github.com/Athindu)
+* Github: [@Athindu](https://github.com/Athindu)
 
 👤 **Avishka Pasindu**
 
-* Github: [@ShanukJ](https://github.com/avishka-pasindu)
+* Github: [@avishka-pasindu](https://github.com/avishka-pasindu)
 
 👤 **Kavindu Lanarolle**
 
-* Github: [@ShanukJ](https://github.com/KavinduaLanarolle)
+* Github: [@KavinduaLanarolle](https://github.com/KavinduaLanarolle)
 
 ## Show your support
 
