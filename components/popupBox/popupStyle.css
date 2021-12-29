@@ -1,0 +1,61 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter&display=swap');
+
+.popup{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-right: -50%;
+    transform: translate(-50%, -50%);                       
+    width: 336px;
+    height: 350px;
+    border-style: solid;
+    border-width: 1px;
+    border-radius: 8px;
+}
+
+.material-icons-outlined{
+    font-size: 70px;
+    margin-top: 45px;
+    margin-left: 133px;
+    margin-right: 133px;
+    color: #27AE60;
+}
+
+.popup_head{
+    font-family: Inter;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 16px;
+    line-height: 22px;
+    text-align: center;
+    color: #092C4C;
+    margin-top: 20px;
+}
+
+.popup_body{
+    font-family: Inter;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 22px;
+    text-align: center;
+    color: #092C4C;
+    margin-top: 20px;
+}
+
+.close_btn{
+    width: 238px;
+    height: 55px;
+    background: #092C4C;
+    border-width: 0px;
+    border-radius: 8px;
+    font-family: Inter;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 16px;
+    line-height: 22px;
+    text-align: center;
+    color: #FFFFFF;
+    margin-top: 35px;
+    margin-left: 49px;
+}
