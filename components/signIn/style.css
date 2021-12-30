@@ -19,8 +19,10 @@
    width: 340px;
    height: 456px;
    left: 51px;
-   top: 616px;
+   top: 596px;
 }
+
+
 
 .parent {
   height: 926px;
@@ -29,6 +31,7 @@
   align-items: center;
   justify-content: center;
   }
+
   .child {
   background: #FFFF00;
   align-items: center;
@@ -38,7 +41,7 @@
   }
 
 
-.already-a-member{
+.not-have-account{
     display: flex;
     flex-direction: row;
     align-items: flex-start;
@@ -49,10 +52,24 @@
     width: 320px;
     font-size: 16px;
     height: 40px;
-    left: 108px;
+    left: 63px;
     top: 730px;
 }
 
+.forgot-password{
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    
+    color: #092C4C;
+    font-family: Inter;
+    position: absolute;
+    width: 180px;
+    font-size: 14px;
+    height: 40px;
+    left: 242px;
+    top: 600px;
+}
  
 
 @media screen and (min-width: 926px) {
@@ -65,28 +82,12 @@
   }
 
 
-.input-placeholder1{
-   position: absolute;
-   width: 320px;
-   height: 56px;
-   left: 51px;
-   top: 400px; 
-   
-   font-family: Inter;
-   font-style: normal;
-   padding-left: 10px;
-   font-size: 16px;
-   line-height: 22px;
-   color: #092C4C;
-  
-  }
-
 .input-placeholder2{
    position: absolute;
    width: 320px;
    height: 56px;
    left: 51px;
-   top: 480px; 
+   top: 432px; 
    font-family: Inter;
    font-style: normal;
    padding-left: 10px;
@@ -107,7 +108,7 @@
    width: 320px;
    height: 56px;
    left: 51px;
-   top: 560px; 
+   top: 512px; 
    
    font-family: Inter;
    font-style: normal;
@@ -118,7 +119,7 @@
   
   }
 
-  .register-btn{
+  .login-btn{
     position: absolute;
     width: 320px;
     height: 60px;
