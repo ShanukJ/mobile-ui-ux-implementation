@@ -1,0 +1,20 @@
+#map {
+  height: 200px;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+}
+a[href^="http://maps.google.com/maps"]{display:none !important}
+
+.gmnoprint a, .gmnoprint span {
+display:none;
+}
+/* .gmnoprint div {
+background:none !important;
+} */
+.gm-style-cc{
+display:none;
+}
+.gm-control-active{
+color:white;
+}
