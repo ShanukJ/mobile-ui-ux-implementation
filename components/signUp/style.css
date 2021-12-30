@@ -1,0 +1,132 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter&display=swap');
+
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+  }
+
+.signup-logo{
+   position: absolute;
+   width: 117px;
+   height: 168px;
+   
+   left: 37%;
+   top: 127px;
+  }
+
+.input-fields{
+   width: 340px;
+   height: 456px;
+   left: 51px;
+   top: 616px;
+}
+
+.parent {
+  height: 926px;
+  background: #CCCCCC;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  }
+  .child {
+  background: #FFFF00;
+  align-items: center;
+  justify-content: center;
+  width: 80%;
+  height: 80%;
+  }
+
+
+.already-a-member{
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    padding: 10px;
+    color: #092C4C;
+    font-family: Inter;
+    position: absolute;
+    width: 320px;
+    font-size: 16px;
+    height: 40px;
+    left: 108px;
+    top: 730px;
+}
+
+ 
+
+@media screen and (min-width: 926px) {
+    .signup-logo{
+        width: 276px;
+        height: 248px;
+        left: 40px;
+        top: 86px;
+       }
+  }
+
+
+.input-placeholder1{
+   position: absolute;
+   width: 320px;
+   height: 56px;
+   left: 51px;
+   top: 400px; 
+   
+   font-family: Inter;
+   font-style: normal;
+   padding-left: 10px;
+   font-size: 16px;
+   line-height: 22px;
+   color: #092C4C;
+  
+  }
+
+.input-placeholder2{
+   position: absolute;
+   width: 320px;
+   height: 56px;
+   left: 51px;
+   top: 480px; 
+   font-family: Inter;
+   font-style: normal;
+   padding-left: 10px;
+   
+   font-size: 16px;
+   line-height: 22px;
+   color: #092C4C;
+  
+  }
+
+::placeholder { 
+    color: #092C4C;
+    opacity: 1; 
+  }
+
+.input-placeholder3{
+   position: absolute;
+   width: 320px;
+   height: 56px;
+   left: 51px;
+   top: 560px; 
+   
+   font-family: Inter;
+   font-style: normal;
+   padding-left: 10px;
+   font-size: 16px;
+   line-height: 22px;
+   color: #092C4C;
+  
+  }
+
+  .register-btn{
+    position: absolute;
+    width: 320px;
+    height: 60px;
+    left: 51px;
+    top: 650px;
+    font-size: 18px;
+    color: #ffffff;
+    font-family: Inter;
+    background: #092C4C;
+    border-radius: 8px;
+  }

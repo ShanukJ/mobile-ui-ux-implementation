@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter&display=swap');
 
 * {
     box-sizing: border-box;
@@ -7,20 +8,40 @@
 
 .signup-logo{
    position: absolute;
-   width: 236px;
-   height: 208px;
-   left: 92px;
-   top: 167px;
+   width: 117px;
+   height: 168px;
+   
+   left: 37%;
+   top: 127px;
   }
 
 .input-fields{
    width: 340px;
    height: 456px;
    left: 51px;
-   top: 616px;
+   top: 596px;
 }
 
-.already-a-member{
+
+
+.parent {
+  height: 926px;
+  background: #CCCCCC;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  }
+
+  .child {
+  background: #FFFF00;
+  align-items: center;
+  justify-content: center;
+  width: 80%;
+  height: 80%;
+  }
+
+
+.not-have-account{
     display: flex;
     flex-direction: row;
     align-items: flex-start;
@@ -31,18 +52,25 @@
     width: 320px;
     font-size: 16px;
     height: 40px;
-    left: 108px;
-    top: 802px;
+    left: 63px;
+    top: 730px;
 }
 
-.input-container {  
-    top: 800px; 
-    height: 900px;
-    width: 330px;
-    padding-left: 51px;
-    padding: 25px;   
-    background-color: lightblue;  
-}  
+.forgot-password{
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    
+    color: #092C4C;
+    font-family: Inter;
+    position: absolute;
+    width: 180px;
+    font-size: 14px;
+    height: 40px;
+    left: 242px;
+    top: 600px;
+}
+ 
 
 @media screen and (min-width: 926px) {
     .signup-logo{
@@ -54,36 +82,25 @@
   }
 
 
-.input-placeholder1{
+.input-placeholder2{
    position: absolute;
    width: 320px;
    height: 56px;
    left: 51px;
-   top: 470px; 
-   font-weight: bold;
+   top: 432px; 
    font-family: Inter;
    font-style: normal;
    padding-left: 10px;
+   
    font-size: 16px;
    line-height: 22px;
    color: #092C4C;
   
   }
 
-.input-placeholder2{
-   position: absolute;
-   width: 320px;
-   height: 56px;
-   left: 51px;
-   top: 550px; 
-   font-family: Inter;
-   font-style: normal;
-   padding-left: 10px;
-   font-weight: bold;
-   font-size: 16px;
-   line-height: 22px;
-   color: #092C4C;
-  
+::placeholder { 
+    color: #092C4C;
+    opacity: 1; 
   }
 
 .input-placeholder3{
@@ -91,8 +108,8 @@
    width: 320px;
    height: 56px;
    left: 51px;
-   top: 630px; 
-   font-weight: bold;
+   top: 512px; 
+   
    font-family: Inter;
    font-style: normal;
    padding-left: 10px;
@@ -102,12 +119,12 @@
   
   }
 
-  .register-btn{
+  .login-btn{
     position: absolute;
     width: 320px;
     height: 60px;
     left: 51px;
-    top: 726px;
+    top: 650px;
     font-size: 18px;
     color: #ffffff;
     font-family: Inter;
