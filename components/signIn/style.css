@@ -22,7 +22,10 @@
    top: 596px;
 }
 
-
+input:focus {
+  outline: none;
+    border: 2px solid #092C4C;
+}
 
 .parent {
   height: 926px;
