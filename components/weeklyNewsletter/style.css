@@ -1,0 +1,28 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter&display=swap');
+
+.card {
+   
+    transition: 0.3s;
+    width: 100%;
+    background-color: #E0E0E0;
+    height: 221px;
+
+  
+  }
+  
+.bottom-text{
+    text-align: center;
+    color: #B7B7B7;
+    font-style: italic;
+    width: 100%;
+    font-family: Inter;
+    font-weight: normal;
+    font-size: 8px;
+    line-height: 10px;
+    align-items: center;
+    letter-spacing: -0.01em;
+} 
+  .container {
+    padding: 2px 16px;
+    background-color: #E0E0E0;
+  }

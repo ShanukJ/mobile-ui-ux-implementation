@@ -6,6 +6,11 @@
     margin: 0;
   }
 
+input:focus {
+    outline: none;
+      border: 2px solid #092C4C;
+  }
+
 .signup-logo{
    position: absolute;
    width: 117px;
