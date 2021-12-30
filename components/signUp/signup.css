@@ -1,0 +1,116 @@
+
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+  }
+
+.signup-logo{
+   position: absolute;
+   width: 236px;
+   height: 208px;
+   left: 92px;
+   top: 167px;
+  }
+
+.input-fields{
+   width: 340px;
+   height: 456px;
+   left: 51px;
+   top: 616px;
+}
+
+.already-a-member{
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    padding: 10px;
+    color: #092C4C;
+    font-family: Inter;
+    position: absolute;
+    width: 320px;
+    font-size: 16px;
+    height: 40px;
+    left: 108px;
+    top: 802px;
+}
+
+.input-container {  
+    top: 800px; 
+    height: 900px;
+    width: 330px;
+    padding-left: 51px;
+    padding: 25px;   
+    background-color: lightblue;  
+}  
+
+@media screen and (min-width: 926px) {
+    .signup-logo{
+        width: 276px;
+        height: 248px;
+        left: 40px;
+        top: 86px;
+       }
+  }
+
+
+.input-placeholder1{
+   position: absolute;
+   width: 320px;
+   height: 56px;
+   left: 51px;
+   top: 470px; 
+   font-weight: bold;
+   font-family: Inter;
+   font-style: normal;
+   padding-left: 10px;
+   font-size: 16px;
+   line-height: 22px;
+   color: #092C4C;
+  
+  }
+
+.input-placeholder2{
+   position: absolute;
+   width: 320px;
+   height: 56px;
+   left: 51px;
+   top: 550px; 
+   font-family: Inter;
+   font-style: normal;
+   padding-left: 10px;
+   font-weight: bold;
+   font-size: 16px;
+   line-height: 22px;
+   color: #092C4C;
+  
+  }
+
+.input-placeholder3{
+   position: absolute;
+   width: 320px;
+   height: 56px;
+   left: 51px;
+   top: 630px; 
+   font-weight: bold;
+   font-family: Inter;
+   font-style: normal;
+   padding-left: 10px;
+   font-size: 16px;
+   line-height: 22px;
+   color: #092C4C;
+  
+  }
+
+  .register-btn{
+    position: absolute;
+    width: 320px;
+    height: 60px;
+    left: 51px;
+    top: 726px;
+    font-size: 18px;
+    color: #ffffff;
+    font-family: Inter;
+    background: #092C4C;
+    border-radius: 8px;
+  }
