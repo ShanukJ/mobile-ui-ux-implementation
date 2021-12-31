@@ -1,0 +1,59 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter&display=swap');
+
+.playBanner{
+    bottom: 56px;
+    padding: 10px;
+    border-radius: 10px;
+    height: 186px;
+    background: #092C4C;
+}
+
+.bannerHead{
+    margin-left: 10px;
+    font-family: Inter;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 32px;
+    line-height: 35px;
+    color: #ffffff;
+}
+
+.bannerBody{
+    width: 270px;
+    margin-top: 15px;
+    margin-left: 10px;
+    font-family: Inter;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 20px;
+    color: #FFFFFF;
+}
+
+.mario{
+    position: absolute;
+    right: 20px;
+    width: 127px;
+    height: 175px;
+}
+
+.playBtn{
+    margin-top: 15px;
+    width:160px;
+    height:40px;
+    background: #F2994A;
+    border-radius: 8px;
+    border-style: none;
+    font-family: Inter;
+    font-weight: bold;
+    font-size: 16px;
+    color: #FFFFFF;
+    position: absolute;
+}
+
+#btnIcon{
+    transform: rotate(-30deg);
+    position: absolute;
+    margin-top: -2px;
+    margin-left: -20px;
+}
