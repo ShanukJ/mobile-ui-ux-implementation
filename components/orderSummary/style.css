@@ -1,0 +1,68 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter&display=swap');
+
+
+.orderContainer{
+    width: 440px;
+    height: 375px;
+    background: rgb(255, 255, 255);
+}
+
+.title{
+    font-family: Inter;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 22px;
+    color: #092C4C;    
+}
+
+.itemContainer{
+    margin-top: 15px;
+    width: 360px;
+    height: 400px;
+}
+
+.item {
+    width: 360px;
+    height: 52px;
+    position: absolute;
+    margin-left: 20px;
+    margin-top: 10px;
+  }
+
+.itemIcon {
+    height: 52px;
+    width: 52px;
+    background: #F2F2F2;
+    border-radius: 8px;
+    position: absolute;
+}
+
+.iconify{
+    position: absolute;
+    margin-left: 12px;
+    margin-top: 12px;
+}
+
+.itemDesc {
+    color: rgba(9,44,76,1);
+    position: absolute;
+    font-family: Inter;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 20px;
+    color: #092C4C;
+    margin-left: 70px;
+    margin-top: 5px;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+
+li {
+    margin: 10px 0;
+}  
