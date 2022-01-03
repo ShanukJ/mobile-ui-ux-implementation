@@ -22,11 +22,9 @@ form {
     font-weight: bold;
     font-size: 16px;
     line-height: 22px;
-    max-width: 300px;
+    max-width: 370px;
     margin: 10px auto;
     padding: 10px 20px;
-
-    border-radius: 8px;
   }
 
 fieldset {
@@ -37,7 +35,8 @@ fieldset {
   label {
     display: block;
     margin-bottom: 8px;
-  }  
+    color: #4F4F4F;
+}  
 
   input[type="text"],
   input[type="email"],
@@ -57,3 +56,7 @@ fieldset {
     margin-bottom: 30px;
   }  
     
+input:focus {
+    outline: none;
+    border: 2px solid #092C4C;
+}  
