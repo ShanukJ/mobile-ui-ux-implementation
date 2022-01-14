@@ -1,0 +1,521 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter&display=swap");
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  color: #092c4c;
+}
+
+.header_local {
+  position: fixed;
+  width: 100%;
+  height: 128px;
+  left: 0px;
+  top: 0px;
+
+  background: #ffffff;
+  border: 1px solid #e0e0e0;
+}
+
+.logo_header {
+  position: absolute;
+  left: 25px;
+  top: 58px;
+  width: 118px;
+  height: 36px;
+}
+
+.search_icon {
+  color: #092c4c !important;
+}
+
+#searchI {
+  position: absolute;
+  right: 36px;
+  top: 64px;
+}
+
+.content_home {
+  position: relative;
+  top: 130px;
+}
+
+/* iPhone Potrait */
+@media screen and (min-width: 428px) {
+  .main-product-container {
+    display: flex;
+    flex: 100%;
+    flex-direction: column;
+    height: 740px;
+    overflow: scroll;
+  }
+
+  .sub-product-container {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .product-image {
+    display: flex;
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%;
+    height: 100%;
+    background-repeat: no-repeat;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .product-image-container {
+    height: 243px;
+  }
+
+  .product-details-container {
+    margin-right: 28px;
+    margin-left: 28px;
+    margin-top: 50px;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .product-title-container {
+    display: flex;
+    flex-direction: row;
+  }
+
+  .product-title {
+    font-family: Inter;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 20px;
+    line-height: 28px;
+    display: flex;
+    flex: 80%;
+    flex-direction: column;
+    /* border-style: solid;
+    border-width: 2px;
+    color: #092c4c; */
+  }
+
+  .product-favorite-icon {
+    display: flex;
+    flex: 10%;
+    /* border-style: solid;
+    border-width: 2px;
+    border-color: #91ca5c; */
+    justify-content: left;
+    color: #9098b1 !important;
+    padding-top: 5px;
+  }
+
+  .product-share-icon {
+    display: flex;
+    flex: 10%;
+    /* border-style: solid;
+    border-width: 2px;
+    border-color: #91ca5c; */
+    justify-content: right;
+    color: #9098b1 !important;
+    padding-top: 5px;
+  }
+
+  .product-star-rating-container {
+    display: flex;
+    flex-direction: row;
+    padding-top: 10px;
+    color: #f2994a !important;
+  }
+
+  .product-price-container {
+    padding-top: 8px;
+    font-family: Inter;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 14px;
+    line-height: 150%;
+    letter-spacing: 0.5px;
+  }
+
+  .product-description-container {
+    display: flex;
+    flex-direction: column;
+    padding-top: 12px;
+  }
+
+  .product-description-title {
+    font-family: Inter;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 16px;
+    line-height: 19px;
+    /* identical to box height */
+
+    letter-spacing: 1px;
+  }
+
+  .product-description {
+    padding-top: 12px;
+    font-family: Inter;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 22px;
+    /* or 157% */
+  }
+
+  .price-qty-container {
+    padding-top: 25px;
+    display: flex;
+    flex-direction: row;
+  }
+
+  .total-container {
+    display: flex;
+    flex: 50%;
+    flex-direction: row;
+  }
+
+  .total-text {
+    font-family: Inter;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 17px;
+  }
+
+  .price-text {
+    font-family: Inter;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 14px;
+    line-height: 17px;
+  }
+
+  .qty-text {
+    font-family: Inter;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 14px;
+    line-height: 17px;
+    letter-spacing: 1px;
+  }
+
+  .qty-container {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .ui-field-contain {
+    padding: 0 !important;
+  }
+
+  .product-button-container {
+    padding-top: 22px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  .product-add-to-cart-button {
+    background: #092c4c;
+    border-radius: 8px;
+    width: 179px;
+    height: 55px;
+    font-family: Inter;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 16px;
+    line-height: 22px;
+    /* identical to box height, or 140% */
+    text-align: center;
+    /* Color - White */
+    color: #ffffff !important;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .product-review-container {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .product-review-title {
+    padding-top: 33px;
+    padding-bottom: 10px;
+    font-family: Inter;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 22px;
+    color: #092c4c;
+  }
+
+  .product-reviews {
+    display: flex;
+    flex-direction: row;
+  }
+
+  .product-user-image-container {
+    width: 36px;
+    height: 36px;
+    display: flex;
+    flex: 20%;
+  }
+
+  .product-user-image {
+    display: flex;
+    width: 36px;
+    height: 36px;
+    background-repeat: no-repeat;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .product-review-content-container {
+    display: flex;
+    flex-direction: column;
+    flex: 50%;
+  }
+
+  .product-review-text {
+    font-family: Inter;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 20px;
+    color: #092c4c;
+  }
+
+  .product-review-view-more {
+    flex: 30%;
+    height: 31px;
+    left: 299px;
+    top: 943px;
+    background: #3867fa;
+    border-radius: 32px;
+    font-family: Inter;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 12px;
+    line-height: 15px;
+    color: #ffffff !important;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .product-asked-questions-container {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .product-question-title {
+    padding-top: 40px;
+    padding-bottom: 36px;
+    font-family: Inter;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 18px;
+    line-height: 25px;
+    color: #092c4c;
+  }
+
+  .product-qa-text {
+    font-family: Inter;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 20px;
+    color: #092c4c;
+  }
+
+  .product-question-content-container {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .product-qa-user-image-container {
+    width: 36px;
+    height: 36px;
+    display: flex;
+    flex: 10%;
+  }
+
+  .product-qa-content-container {
+    display: flex;
+    flex-direction: column;
+    flex: 80%;
+  }
+
+  .product-question-contents {
+    display: flex;
+    flex-direction: row;
+  }
+
+  .product-qa-asked-date {
+    font-family: Inter;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 12px;
+    line-height: 15px;
+    color: #8f8f8f !important;
+  }
+
+  .product-qa-reply {
+    height: 31px;
+    width: 99px;
+    left: 299px;
+    top: 943px;
+    background: #3867fa;
+    border-radius: 32px;
+    font-family: Inter;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 12px;
+    line-height: 15px;
+    color: #ffffff !important;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: auto; 
+    margin-right: 0;
+    margin-bottom: 20px;
+    text-shadow: none !important;
+  }
+  
+  .product-question-spacer {
+    display: flex;
+    flex-direction: column;
+    flex: 10%;
+  }
+
+  .product-qa-reply-spacer {
+    margin-top: 10px;
+  }
+}
+
+/* iPhone Landscape */
+@media screen and (min-width: 926px) {
+  .header_local {
+    height: 56px;
+  }
+
+  .logo_header {
+    left: 34px;
+    top: 10px;
+  }
+
+  .content_home {
+    position: relative;
+    top: 30px;
+  }
+
+  #searchI {
+    position: absolute;
+    right: 80px;
+    top: 16px;
+  }
+}
+
+/* iPad potraid */
+@media screen and (min-width: 834px) {
+  .header_local {
+    height: 56px;
+  }
+
+  .logo_header {
+    left: 25px;
+    top: 10px;
+  }
+
+  .content_home {
+    position: relative;
+    top: 60px;
+  }
+
+  #searchI {
+    position: absolute;
+    right: 45px;
+    top: 16px;
+  }
+}
+
+/* iPad Landscape */
+@media screen and (min-width: 1194px) {
+  .header_local {
+    height: 56px;
+  }
+
+  .logo_header {
+    left: 25px;
+    top: 10px;
+  }
+
+  .content_home {
+    position: relative;
+    top: 60px;
+  }
+
+  #searchI {
+    position: absolute;
+    right: 60px;
+    top: 16px;
+  }
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+.nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.nav__menu {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  background: #ffffff;
+  box-shadow: 0px -1px 4px rgba(0, 0, 0, 0.25);
+  width: 100%;
+  height: 56px;
+  padding: 0 1rem;
+  display: grid;
+  align-content: center;
+  transition: 0.4s;
+}
+
+.nav__list,
+.nav__link {
+  display: flex;
+}
+
+.nav__link {
+  flex-direction: column;
+  align-items: center;
+  row-gap: 4px;
+  color: #092c4c;
+}
+
+.nav__list {
+  justify-content: space-around;
+}
+
+.nav__name {
+  font-family: Inter;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 12px;
+  line-height: 15px;
+  display: flex;
+  align-items: flex-end;
+  color: #092c4c;
+}

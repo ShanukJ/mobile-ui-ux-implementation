@@ -13,7 +13,7 @@
   height: 128px;
   left: 0px;
   top: 0px;
-
+  z-index: 20;
   background: #FFFFFF;
   border: 1px solid #E0E0E0;
 }
@@ -81,55 +81,12 @@
     width: fit-content;
   }
  
-  .column{
-    margin: 10px 10px ;
-    width: calc(25% - 10px);
-    float: left;
-    background: rgb(239, 243, 14);
-    overflow: hidden;
-    
-  }
- 
-  .top h1{
-    width: fit-content;
-    margin: 0 auto;
-    color:rgb(231, 104, 104);
-    font-size: 2.5em;
-    padding-top: 10px;
-    text-shadow:0px 0px 20px #49566d;
-    cursor: default;
-    position: absolute;
-    left: 50%;
-    top: 45%;
-    margin-right: -50%;
-    transform: translate(-50%, -50%);
-  }
- 
-
-  *{
-    margin:0px;
-    padding:0px;
-  }
   
-  h1{
-    text-align: center;
-    margin-top: 30px;
- 
-  }
-  
-  .buttons{
-      font-size: 22px;
-      margin-top: 2%;
-      margin-left: 4.2%;
-  }
-  
-  .fa:hover{
-      color: darkcyan;
-  }
-  
-  .container{
+  .container-grids{
     display: flex;
     flex-flow: column nowrap;
+    height: 1000px;
+    background-color: aqua;
   }
   /*CSS Grid*/
   .section-grid{
@@ -148,7 +105,7 @@
     padding:0px;
     width: 173px;
     height: 221px;
-    border: 2px solid rgb(255, 255, 255);
+   
   }
   
   
@@ -158,90 +115,11 @@
     letter-spacing: 1px;
   }
   
-  .btn{
-      background: darkcyan;
-      border: 1px solid darkcyan;
-      border-radius: 6px;
-      color: white;
-      font-size: 22px;
-      width: 200px;
-      height: 40px;
-      position: right;
-      margin: 10px; 
-      letter-spacing: 1px;
-      display: inline-block;
-  }
-  .btn:hover{
-      background: white;
-      border: 2px solid darkcyan;
-      border-radius: 6px;
-      color: darkcyan;
-      font-size: 22px;
-      width: 200px;
-      height: 40px;
-      position: right;
-      margin: 10px; 
-      letter-spacing: 1px;
-      font-weight: bold;
-      display: inline-block;
-  }
-  button{
-    float: right;
-  }
-  
   /*CSS List*/
   .section-list{
      display: flex; 
      padding: 2% 4%; 
   }
-  table {
-    width: 100%;
-    margin: 10px 10px;
-    border:2px solid #000;
-    border-collapse: collapse;
-    border-spacing: 0;
-  }
-  table tr td {
-    padding: 10px;
-    border-top: 2px solid #000;
-  }
-  tr td img{
-    width:100%;
-  }
-  .btn-list{
-      background: darkcyan;
-      border: 1px solid darkcyan;
-      border-radius: 6px;
-      color: white;
-      font-size: 22px;
-      width: 200px;
-      height: 40px;
-      position: right;
-      margin: 10px; 
-      margin-top: 10%;
-      letter-spacing: 1px;
-      display: inline-block;
-      
-  }
-  .btn-list:hover{
-      background: white;
-      border: 2px solid darkcyan;
-      
-      color: darkcyan;
-  
-      margin: 10%; 
-  
-  }
-  button{
-    float: right;
-  }
-  
-  @media (min-width : 320px) and (max-width : 480px) { 
-    .section-list, .buttons{
-      display: none;
-    }
-  }
-  
  
 
 /* iphone landscape */
@@ -265,6 +143,8 @@
     right: 80px;
     top: 16px;
   }
+
+  
 }
 
 /* ipad portrait */
@@ -288,6 +168,19 @@
     right: 45px;
     top: 16px;
   }
+
+  .card {
+  
+    width: 160px;
+    height: 201px;
+  }
+
+  .prod-grid{
+    
+    width: 160px;
+    height: 201px;
+   
+  }
 }
 
 /* ipad landscape */
@@ -303,7 +196,7 @@
 
   .content_home{
     position: relative;
-    height: 1200px;
+   
     top: 60px;
   }
 
@@ -311,6 +204,18 @@
     position: absolute;
     right: 60px;
     top: 16px;
+  }
+
+  .card {
+   
+    width: 215px;
+    height: 261px;
+  }
+
+  .prod-grid{
+    width: 215px;
+    height: 261px;
+   
   }
 }
 
