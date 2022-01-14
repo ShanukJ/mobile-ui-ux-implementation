@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://fonts.googleapis.com/css?family=Material+Icons|Material+Icons+Outlined|Material+Icons+Two+Tone|Material+Icons+Round|Material+Icons+Sharp"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css"
+    />
+    <script src="https://code.jquery.com/jquery-1.11.1.min.js"></script>
+    <script src="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+    <script src="https://code.iconify.design/2/2.1.1/iconify.min.js"></script>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://code.jquery.com/mobile/1.4.0/jquery.mobile-1.4.0.min.css"
+    />
+    <link rel="stylesheet" href="../cartCard/style.css" />
+  
+    <script>
+      var person = [{ "name": "billy", "age": 23},{ "name": "ball", "age": 50},{ "name": "ball", "age": 50},{ "name": "ball", "age": 50}];
+
+      localStorage.setItem('person', JSON.stringify(person)); //stringify object and store
+var retrievedPerson = JSON.parse(localStorage.getItem('person')); //retrieve the object
+console.log(retrievedPerson.length);
+for (let i = 1; i < retrievedPerson.length; i++) {
+  let id = "#includedContent"+i;
+  $(function () {
+        $(id).load("../cartCard/index.html");
+       
+        
+      });
+}
+    </script>
+    <title>Card</title>
+  </head>
+
+  <body>
+   <h1>test</h1>
+    <div class="row">
+      <div class="column">
+        <div id="includedContent1"></div>  
+      </div>
+
+      <div class="column">
+        <div id="includedContent2"></div>  
+      </div>
+      <div class="column">
+        <div id="includedContent3"></div>  
+      </div>
+      <div class="column">
+        <div id="includedContent4"></div>  
+      </div>
+    </div>
+  </body>
+</html>
