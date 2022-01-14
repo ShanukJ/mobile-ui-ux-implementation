@@ -154,16 +154,44 @@ a{
 }
 
 .input_news{
-  width: 300px;
+ width: 100px;
+  display: flex;
+  flex-direction: row;
   
 }
 
 .email_input_newsletter{
-  width: 100px;
+  width: 150px !important;
+  position: absolute;
+  min-height: 25px !important;
+  left: 190px;
+  top: 105px;
+  height: 25px !important;
+  background-color: #FFFFFF !important;
 }
 
 .newsletter_btn{
-  width: 10px;
+  width: 65px;
+  position: absolute;
+  left: 336px;
+  top: 105px;
+  height: 25px !important;
+  font-family: Inter;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 9px;
+  line-height: 11px;
+  /* identical to box height */
+  
+  display: flex;
+  align-items: center;
+  text-align: right;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  
+  color: #FFFFFF;
+background: linear-gradient(274.05deg, #F2994A -37.86%, #FE6108 125.4%);
+border-radius: 0px 4px 4px 0px;
 }
 
 @media screen and (min-width: 926px) {
