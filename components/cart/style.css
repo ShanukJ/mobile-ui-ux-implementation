@@ -40,6 +40,52 @@
     background-color: #f1f1f1;
   }
 
+.cart-title1{
+    font-family: Inter;
+font-style: normal;
+font-weight: bold;
+font-size: 32px;
+line-height: 35px;
+margin-left: 23px;
+color: #092C4C;
+}
+.cart-title2{
+    font-family: Inter;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 20px;
+    line-height: 28px;
 
+    color: #092C4C;
+margin-left: 23px;
 
+}
+.cart-button{
+
+width: 380px;
+height: 55px;
+left: 23px;
+top: 273px;
+margin-left: 23px;
+
+/* Color - Secondary */
+
+background: #F2994A;
+border-radius: 8px;
+}
+.cart-button-text{
+    font-family: Inter;
+font-style: normal;
+font-weight: bold;
+font-size: 16px;
+line-height: 22px;
+padding-top: 15px;
+/* identical to box height, or 140% */
+
+text-align: center;
+
+/* Color - White */
+
+color: #FFFFFF;
+}
   
