@@ -1,136 +1,467 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter&display=swap');
 
 * {
-    box-sizing: border-box;
-    padding: 0;
-    margin: 0;
-  }
-
-.signup-logo{
-   position: absolute;
-   width: 117px;
-   height: 168px;
-   
-   left: 37%;
-   top: 127px;
-  }
-
-.input-fields{
-   width: 340px;
-   height: 456px;
-   left: 51px;
-   top: 596px;
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  color: #092C4C ;
 }
 
-input:focus {
-  outline: none;
-    border: 2px solid #092C4C;
+.header_local{
+  position: fixed;
+  width: 100%;
+  height: 128px;
+  left: 0px;
+  top: 0px;
+
+  background: #FFFFFF;
+  border: 1px solid #E0E0E0;
 }
 
-.parent {
-  height: 926px;
-  background: #CCCCCC;
+.logo_header{
+  position: absolute;
+  left: 25px;
+  top: 58px;
+  width: 118px;
+  height: 36px;
+}
+
+.search_icon{
+  color: #092C4C !important;
+}
+
+#searchI{
+  position: absolute;
+  right: 36px;
+  top: 64px;
+}
+
+.content_home{
+  position: relative;
+  top: 130px;
+}
+
+
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+.nav {
   display: flex;
+  justify-content: space-between;
   align-items: center;
-  justify-content: center;
-  }
+}
 
-  .child {
-  background: #FFFF00;
+.nav__menu {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    background: #FFFFFF;
+    box-shadow: 0px -1px 4px rgba(0, 0, 0, 0.25);
+    width: 100%;
+    height: 56px;
+    padding: 0 1rem;
+    display: grid;
+    align-content: center;
+    transition: .4s;
+}
+
+.nav__list, 
+.nav__link {
+  display: flex;
+}
+
+.nav__link {
+  flex-direction: column;
   align-items: center;
-  justify-content: center;
-  width: 80%;
-  height: 80%;
-  }
+  row-gap: 4px;
+  color: #092C4C;
+}
+
+.nav__list {
+  justify-content: space-around;
+}
+
+.nav__name {
+  font-family: Inter;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 12px;
+  line-height: 15px;
+  display: flex;
+  align-items: flex-end;
+  color: #092C4C;
+}
 
 
-.not-have-account{
-    display: flex;
-    flex-direction: row;
-    align-items: flex-start;
-    padding: 10px;
-    color: #092C4C;
-    font-family: Inter;
-    position: absolute;
-    width: 320px;
-    font-size: 16px;
-    height: 40px;
-    left: 63px;
-    top: 730px;
+
+.login-btn{
+  background-color: #092C4C;
+  color: #FFFFFF;
+  font-family: Inter;
+}
+
+.input-space{
+  margin-top: 20px;
 }
 
 .forgot-password{
-    display: flex;
-    flex-direction: row;
-    align-items: flex-start;
-    
-    color: #092C4C;
-    font-family: Inter;
-    position: absolute;
-    width: 180px;
-    font-size: 14px;
-    height: 40px;
-    left: 242px;
-    top: 600px;
+  margin-top: 20px;
+  font-size: 14px;
+  color: #092C4C;
+  font-family: Inter;
+  margin-bottom: 25px;
+  padding-left: 220px;
 }
- 
-
-@media screen and (min-width: 926px) {
-    .signup-logo{
-        width: 276px;
-        height: 248px;
-        left: 40px;
-        top: 86px;
-       }
-  }
-
-
-.input-placeholder2{
-   position: absolute;
-   width: 320px;
-   height: 56px;
-   left: 51px;
-   top: 432px; 
-   font-family: Inter;
-   font-style: normal;
-   padding-left: 10px;
-   
-   font-size: 16px;
-   line-height: 22px;
-   color: #092C4C;
-  
-  }
 
 ::placeholder { 
-    color: #092C4C;
-    opacity: 1; 
-  }
+  color: #092C4C;
+  font-family: Inter;
+  font-size: 16px;
+  opacity: 1; 
+}
 
-.input-placeholder3{
-   position: absolute;
-   width: 320px;
-   height: 56px;
-   left: 51px;
-   top: 512px; 
-   
-   font-family: Inter;
-   font-style: normal;
-   padding-left: 10px;
-   font-size: 16px;
-   line-height: 22px;
-   color: #092C4C;
+.input-set{
+  padding-top: 350px;
+}
+
+.dont-have-an-account{
+ padding-top: 18px;
+ margin-left: 38px;
+ color: #092C4C;
+  font-family: Inter;
+  font-size: 15px;
+}
+
+.login-form .card {
+  position: relative;
+  overflow: hidden;
+  background-color: rgb(255, 255, 255);
+  margin-left: 45px;
+  width: 80%;
+}
+
+
+.login-form .card .card-header i {
+   font-size: 54px;
+   margin-bottom: 15px;
+}
+
+.login-form .card .card-header h2 {
+   font-size: 25px;
+   font-weight: 700;
+}
+
+.login-form .card .card-body {
+  position: relative;
+}
+
+.login-form .card .card-body label {
+  font-size: 13px;
+}
+
+.login-form .card .card-body input,
+.login-form .card .card-body textarea {
+  border: 1px solid #BDBDBD;
+  height: 50px;
+
+  font-family: Inter;
+  color: #092C4C;
   
+  border-radius: 5px;
+}
+.login-form .card .card-body input:focus,
+.login-form .card .card-body textarea:focus {
+  color: #092C4C;
+  font-family: Inter;
+  
+  border: 2px solid #092C4C;
+}
+
+.login-form .card .card-body .btn {
+  background: #092C4C;
+  font-family: Inter;
+  color: #fff;
+  font-size: 16px;
+  height: 55px;
+  border-radius: 5px;
+}
+.login-form .card .card-body .btn:hover {
+  background: #092C4C;
+  color: #fff;
+}
+.login-form .card .card-body .custom-control label {
+  font-size: 16px;
+}
+
+
+
+.signup-logo{
+  position: absolute;
+  width: 117px;
+  height: 168px;
+  
+  left: 35%;
+  top: 117px;
+ }
+
+ .input-set{
+  padding-top: 350px;
+}
+
+@media screen and (min-width: 926px) {
+  .header_local {
+    height: 56px;
+  }
+  
+  .logo_header{
+    left: 34px;
+    top: 10px;
   }
 
-  .login-btn{
-    position: absolute;
-    width: 320px;
-    height: 60px;
-    left: 51px;
-    top: 650px;
-    font-size: 18px;
-    color: #ffffff;
-    font-family: Inter;
-    background: #092C4C;
-    border-radius: 8px;
+  .content_home{
+    position: relative;
+    top: 30px;
   }
+
+  #searchI{
+    position: absolute;
+    right: 80px;
+    top: 16px;
+  }
+
+  .signup-logo{
+   
+    width: 167px;
+    height: 218px;
+   
+    left: 10%;
+    top: 53px;
+   }
+
+   .input-set{
+    padding-left: 350px;
+    padding-top: 20px;
+    margin-top: 20px;
+    background-color: rgb(255, 255, 255);
+
+  }
+
+
+
+.login-form .card .card-body .btn {
+  background: #092C4C;
+  font-family: Inter;
+  color: #fff;
+  font-size: 16px;
+  width: 365px;
+  height: 55px;
+  border-radius: 5px;
+}
+
+.login-form .card .card-body input,
+.login-form .card .card-body textarea {
+  border: 1px solid #BDBDBD;
+  height: 50px;
+  width: 365px;
+  font-family: Inter;
+  color: #092C4C;
+  border-radius: 5px;
+}
+
+.login-form .card {
+ 
+  background-color: rgb(255, 255, 255);
+  margin-left: 65px;
+  width: 365px;
+  
+}
+
+
+.forgot-password{
+  margin-top: 15px;
+  margin-bottom: 20px;
+  padding-left: 240px;
+}
+
+.dont-have-an-account{
+  padding-top: 10px;
+  margin-left: 49px;
+ 
+ }
+
+}
+
+@media screen and (min-width: 834px) and (max-width:890px) {
+  .header_local {
+    height: 56px;
+  }
+  
+  .logo_header{
+    left: 25px;
+    top: 10px;
+  }
+
+  .content_home{
+    position: relative;
+    top: 60px;
+  }
+
+  #searchI{
+    position: absolute;
+    right: 45px;
+    top: 16px;
+  }
+
+  .signup-logo{
+   
+    width: 263px;
+    height: 380px;
+    left: 271px;
+    top: 124px;
+   }
+
+   .input-set{
+    padding-left: 150px;
+    padding-top: 10px;
+    background-color: rgb(255, 255, 255);
+
+  }
+
+
+
+.login-form .card .card-body .btn {
+  background: #092C4C;
+  font-family: Inter;
+  color: #fff;
+  font-size: 16px;
+  width: 465px;
+  height: 70px;
+  border-radius: 5px;
+}
+
+.login-form .card .card-body input,
+.login-form .card .card-body textarea {
+  border: 1px solid #BDBDBD;
+  height: 65px;
+  width: 465px;
+  font-family: Inter;
+  color: #092C4C;
+  border-radius: 5px;
+}
+
+.login-form .card {
+  
+  margin-left: 30px;
+  width: 465px;
+  top: 600px;
+  background-color: #ffffff;
+}
+
+
+.forgot-password{
+  margin-top: 25px;
+  margin-bottom: 20px;
+  padding-left: 340px;
+}
+
+.dont-have-an-account{
+  padding-top: 20px;
+  margin-left: 99px;
+ 
+ }
+}
+
+@media screen and (min-width: 1194px) {
+  .header_local {
+    height: 56px;
+  }
+  
+  .logo_header{
+    left: 25px;
+    top: 10px;
+  }
+
+  .content_home{
+    position: relative;
+    top: 60px;
+  }
+
+  #searchI{
+    position: absolute;
+    right: 60px;
+    top: 16px;
+  }
+
+  .signup-logo{
+   
+    width: 263px;
+    height: 380px;
+    left: 141px;
+    top: 150px;
+   }
+
+   .input-set{
+    padding-left: 150px;
+    padding-top: 10px;
+    background-color: rgb(255, 255, 255);
+
+  }
+
+
+  .input-space{
+    margin-top: 30px;
+  }
+
+.login-form .card .card-body .btn {
+  background: #092C4C;
+  font-family: Inter;
+  color: #fff;
+  font-size: 16px;
+  width: 465px;
+  height: 70px;
+  border-radius: 5px;
+}
+
+.login-form .card .card-body input,
+.login-form .card .card-body textarea {
+  border: 1px solid #BDBDBD;
+  height: 65px;
+  width: 465px;
+  font-family: Inter;
+  color: #092C4C;
+  border-radius: 5px;
+}
+
+.login-form .card {
+  
+  margin-left: 430px;
+  width: 465px;
+  top: 140px;
+  background-color: #ffffff;
+}
+
+
+.forgot-password{
+  margin-top: 25px;
+  margin-bottom: 40px;
+  padding-left: 340px;
+}
+
+.dont-have-an-account{
+  padding-top: 20px;
+  margin-left: 99px;
+ 
+ }
+
+}
+
+
+
+
+
+

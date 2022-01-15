@@ -36,7 +36,7 @@
       });
 
       var retrievedPerson = JSON.parse(localStorage.getItem("person")); //retrieve the object
-      if (typeof Storage !== "undefined") {
+      if (retrievedPerson) {
         // Store
         let no_items = retrievedPerson.length;
         let cart_title = no_items + " Items in your cart";
@@ -45,6 +45,7 @@
         document.getElementById("result").innerHTML =
           localStorage.getItem("cart_message");
       } else {
+        location.reload();
         document.getElementById("result").innerHTML =
           "Sorry, your browser does not support Web Storage...";
       }
