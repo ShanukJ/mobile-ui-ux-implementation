@@ -1,38 +1,373 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://fonts.googleapis.com/css?family=Material+Icons|Material+Icons+Outlined|Material+Icons+Two+Tone|Material+Icons+Round|Material+Icons+Sharp" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://code.jquery.com/jquery-1.11.1.min.js"></script>
+    <script src="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+    <script src="https://code.iconify.design/2/2.1.1/iconify.min.js"></script>
     <link rel="stylesheet" href="style.css" />
-    <title>Sign In</title>
+    <link rel="stylesheet" type="text/css" href="https://code.jquery.com/mobile/1.4.0/jquery.mobile-1.4.0.min.css">
+
+
+    <title>Sign in</title>
 </head>
 <body>
 
- 
-     <div >
-         <div>
+    <!--Page 1 - Home -->
+    <div data-role="page" id="home_page">
+
+        <div data-role="headerLocal" class="header_local"  >
+            <img src="https://res.cloudinary.com/dgly8b9lq/image/upload/v1640846393/Lkia/logo_rf4wm5.png"  alt="" class="logo_header">
+            <a href="#search" class="search_icon">
+                <span class="material-icons-outlined" id="searchI">search</span>
+            </a>
+        </div>
+
+        <div role="main_content" class="content_home">
+            <h1>home_content</h1>
+        </div>
+
+        <div data-role="footer_local" class="footer_local" id="navBar">
+            <nav class="navContainer">
+    
+                <div class="nav__menu" id="nav-menu">
+                    <ul class="nav__list">
+                        <li class="nav__item" id="home_nav">
+                            <a href="#home_page" class="nav__link">
+                                <span class="material-icons" id="home_icon">home</span>
+                                <span class="nav__name">Home</span>
+                            </a>
+                        </li>
+                        
+                        <li class="nav__item" id="category_nav">
+                            <a href="#category_page" class="nav__link">
+                                <span class="material-icons-outlined">grid_view</span>
+                                <span class="nav__name">Category</span>
+                            </a>
+                        </li>
+    
+                        <li class="nav__item">
+                            <a href="#cart_page" class="nav__link">
+                                <span class="material-icons-outlined">shopping_cart</span>
+                                <span class="nav__name">Cart</span>
+                            </a>
+                        </li>
+    
+                        <li class="nav__item">
+                            <a href="#notify_page" class="nav__link">
+                                <span class="material-icons-outlined">notifications_active</span>
+                                <span class="nav__name">Notifications</span>
+                            </a>
+                        </li>
+    
+                        <li class="nav__item">
+                            <a href="#account_page" class="nav__link">
+                                <span class="material-icons-outlined">account_circle</span>
+                                <span class="nav__name">Profile</span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+    
+            </nav>
+        </div>
+
+    </div>    
+
+    
+
+    <!--Page 2 - Category -->
+    <div data-role="page" id="category_page">
+
+        <div data-role="headerLocal" class="header_local"  >
+            <img src="https://res.cloudinary.com/dgly8b9lq/image/upload/v1640846393/Lkia/logo_rf4wm5.png"  alt="" class="logo_header">
+            <a href="#search" class="search_icon">
+                <span class="material-icons-outlined" id="searchI">search</span>
+            </a>
+        </div>
+
+        <div role="main_content" class="content_home">
+            <h1>category_content</h1>
+        </div>
+
+        <div data-role="footer_local" class="footer_local" id="navBar">
+            <nav class="navContainer">
+    
+                <div class="nav__menu" id="nav-menu">
+                    <ul class="nav__list">
+                        <li class="nav__item" id="home_nav">
+                            <a href="#home_page" class="nav__link">
+                                <span class="material-icons-outlined" id="home_icon">home</span>
+                                <span class="nav__name">Home</span>
+                            </a>
+                        </li>
+                        
+                        <li class="nav__item" id="category_nav">
+                            <a href="#category_page" class="nav__link">
+                                <span class="iconify" data-icon="mdi:view-grid" data-width="24" data-height="24"></span>
+                                <span class="nav__name">Category</span>
+                            </a>
+                        </li>
+    
+                        <li class="nav__item">
+                            <a href="#cart_page" class="nav__link">
+                                <span class="material-icons-outlined">shopping_cart</span>
+                                <span class="nav__name">Cart</span>
+                            </a>
+                        </li>
+    
+                        <li class="nav__item">
+                            <a href="#notify_page" class="nav__link">
+                                <span class="material-icons-outlined">notifications_active</span>
+                                <span class="nav__name">Notifications</span>
+                            </a>
+                        </li>
+    
+                        <li class="nav__item">
+                            <a href="#account_page" class="nav__link">
+                                <span class="material-icons-outlined">account_circle</span>
+                                <span class="nav__name">Profile</span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+    
+            </nav>
+        </div>
+
+
+    </div>   
+    
+    
+    <!--Page 3 - Cart -->
+    <div data-role="page" id="cart_page">
+
+        <div data-role="headerLocal" class="header_local"  >
+            <img src="https://res.cloudinary.com/dgly8b9lq/image/upload/v1640846393/Lkia/logo_rf4wm5.png"  alt="" class="logo_header">
+            <a href="#search" class="search_icon">
+                <span class="material-icons-outlined" id="searchI">search</span>
+            </a>
+        </div>
+
+        <div role="main_content" class="content_home">
+            <h1>cart_content</h1>
+        </div>
+
+        <div data-role="footer_local" class="footer_local" id="navBar">
+            <nav class="navContainer">
+    
+                <div class="nav__menu" id="nav-menu">
+                    <ul class="nav__list">
+                        <li class="nav__item" id="home_nav">
+                            <a href="#home_page" class="nav__link">
+                                <span class="material-icons-outlined" id="home_icon">home</span>
+                                <span class="nav__name">Home</span>
+                            </a>
+                        </li>
+                        
+                        <li class="nav__item" id="category_nav">
+                            <a href="#category_page" class="nav__link">
+                                <span class="material-icons-outlined">grid_view</span>
+                                <span class="nav__name">Category</span>
+                            </a>
+                        </li>
+    
+                        <li class="nav__item">
+                            <a href="#cart_page" class="nav__link">
+                                <span class="material-icons">shopping_cart</span>
+                                <span class="nav__name">Cart</span>
+                            </a>
+                        </li>
+    
+                        <li class="nav__item">
+                            <a href="#notify_page" class="nav__link">
+                                <span class="material-icons-outlined">notifications_active</span>
+                                <span class="nav__name">Notifications</span>
+                            </a>
+                        </li>
+    
+                        <li class="nav__item">
+                            <a href="#account_page" class="nav__link">
+                                <span class="material-icons-outlined">account_circle</span>
+                                <span class="nav__name">Profile</span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+    
+            </nav>
+        </div>
+
+
+    </div>
+
+    <!--Page 4 - Notifications -->
+    <div data-role="page" id="notify_page">
+
+        <div data-role="headerLocal" class="header_local"  >
+            <img src="https://res.cloudinary.com/dgly8b9lq/image/upload/v1640846393/Lkia/logo_rf4wm5.png"  alt="" class="logo_header">
+            <a href="#search" class="search_icon">
+                <span class="material-icons-outlined" id="searchI">search</span>
+            </a>
+        </div>
+
+        <div role="main_content" class="content_home">
+            <h1>notification_content</h1>
+        </div>
+
+        <div data-role="footer_local" class="footer_local" id="navBar">
+            <nav class="navContainer">
+    
+                <div class="nav__menu" id="nav-menu">
+                    <ul class="nav__list">
+                        <li class="nav__item" id="home_nav">
+                            <a href="#home_page" class="nav__link">
+                                <span class="material-icons-outlined" id="home_icon">home</span>
+                                <span class="nav__name">Home</span>
+                            </a>
+                        </li>
+                        
+                        <li class="nav__item" id="category_nav">
+                            <a href="#category_page" class="nav__link">
+                                <span class="material-icons-outlined">grid_view</span>
+                                <span class="nav__name">Category</span>
+                            </a>
+                        </li>
+    
+                        <li class="nav__item">
+                            <a href="#cart_page" class="nav__link">
+                                <span class="material-icons-outlined">shopping_cart</span>
+                                <span class="nav__name">Cart</span>
+                            </a>
+                        </li>
+    
+                        <li class="nav__item">
+                            <a href="#notify_page" class="nav__link">
+                                <span class="material-icons">notifications_active</span>
+                                <span class="nav__name">Notifications</span>
+                            </a>
+                        </li>
+    
+                        <li class="nav__item">
+                            <a href="#account_page" class="nav__link">
+                                <span class="material-icons-outlined">account_circle</span>
+                                <span class="nav__name">Profile</span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+    
+            </nav>
+        </div>
+
+
+    </div>
+
+
+    <!--Page 5 - Account -->
+    <div data-role="page" id="account_page">
+
+        <div data-role="headerLocal" class="header_local"  >
+            <img src="https://res.cloudinary.com/dgly8b9lq/image/upload/v1640846393/Lkia/logo_rf4wm5.png"  alt="" class="logo_header">
+            <a href="#search" class="search_icon">
+                <span class="material-icons-outlined" id="searchI">search</span>
+            </a>
+        </div>
+
+        <div role="main_content" class="content_home">
+           <div>
             <img src="https://res.cloudinary.com/dgly8b9lq/image/upload/v1640846394/Lkia/main_p0wjoy.png" alt="" class="signup-logo">
-         </div>
-        
-        <div>
-            <form action="/action_page.php">
-                <input class="input-placeholder2" type="text" id="email" placeholder="Email" name="email">
-                <input class="input-placeholder3" type="password" id="password" placeholder="Password" name="password">
-                <a href="components/signUp/signUp.html" class="forgot-password">Forgot password ?</a>
-                <input class="login-btn" type="submit" value="Login">
-            </form>
-        </div>
-        
-        <div>
-            <a href="components/signUp/signUp.html" class="not-have-account">Don’t have an account, Sign Up now.</a>
-        </div>
+           </div>
+              <!-- Login Form -->
+              <div class="input-set">
+                <div class="login-form py-4">
   
-     </div>
-  
+                    <div class="card shadow-sm">
+               
+                      <div class="card-body py-4">
+                        <form action="#">
+                          <div >
+                            <input type="text"  placeholder="Email">
+                          </div>
+                          <div class="input-space" >
+                             <input type="password"  placeholder="Password">
+                          </div>
+                            <div class="forgot-password">
+                             <p>forgot password ?</p>
+                            </div>
+                          <div>
+                            <button type="submit" class="btn">Login</button>
+                          </div>
+                          <div class="dont-have-an-account">
+                            <p>Don’t have an account, Sign Up now.</p>
+                          </div>
+                        </form>
+                      </div>
+                    </div>
+                 
+                
+              
+            </div>
+              </div>
+
+  <!-- /Login Form -->  
+                  
+        </div>
+              
+        </div>
+
+        <div data-role="footer_local" class="footer_local" id="navBar">
+            <nav class="navContainer">
+    
+                <div class="nav__menu" id="nav-menu">
+                    <ul class="nav__list">
+                        <li class="nav__item" id="home_nav">
+                            <a href="#home_page" class="nav__link">
+                                <span class="material-icons-outlined" id="home_icon">home</span>
+                                <span class="nav__name">Home</span>
+                            </a>
+                        </li>
+                        
+                        <li class="nav__item" id="category_nav">
+                            <a href="#category_page" class="nav__link">
+                                <span class="material-icons-outlined">grid_view</span>
+                                <span class="nav__name">Category</span>
+                            </a>
+                        </li>
+    
+                        <li class="nav__item">
+                            <a href="#cart_page" class="nav__link">
+                                <span class="material-icons-outlined">shopping_cart</span>
+                                <span class="nav__name">Cart</span>
+                            </a>
+                        </li>
+    
+                        <li class="nav__item">
+                            <a href="#notify_page" class="nav__link">
+                                <span class="material-icons-outlined">notifications_active</span>
+                                <span class="nav__name">Notifications</span>
+                            </a>
+                        </li>
+    
+                        <li class="nav__item">
+                            <a href="#account_page" class="nav__link">
+                                <span class="material-icons">account_circle</span>
+                                <span class="nav__name">Profile</span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+    
+            </nav>
+        </div>
+
+
+    </div>
+    
+
 </body>
 </html>
