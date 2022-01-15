@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://fonts.googleapis.com/css?family=Material+Icons|Material+Icons+Outlined|Material+Icons+Two+Tone|Material+Icons+Round|Material+Icons+Sharp"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css"
+    />
+    <script src="https://code.jquery.com/jquery-1.11.1.min.js"></script>
+    <script src="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+    <script src="https://code.iconify.design/2/2.1.1/iconify.min.js"></script>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://code.jquery.com/mobile/1.4.0/jquery.mobile-1.4.0.min.css"
+    />
+    <link rel="stylesheet" href="../cartCard/style.css" />
+
+    <script>
+      $(document).ready(function () {
+        var person = [
+          { name: "billy", age: 23 },
+          { name: "ball", age: 50 },
+          { name: "ball", age: 50 },
+          { name: "ball", age: 50 },
+        ];
+        localStorage.setItem("person", JSON.stringify(person)); //stringify object and store
+        console.log("ready!", person);
+      });
+
+      var retrievedPerson = JSON.parse(localStorage.getItem("person")); //retrieve the object
+      if (retrievedPerson) {
+        // Store
+        let no_items = retrievedPerson.length;
+        let cart_title = no_items + " Items in your cart";
+        localStorage.setItem("cart_message", cart_title);
+        // Retrieve
+        document.getElementById("result").innerHTML =
+          localStorage.getItem("cart_message");
+      } else {
+        location.reload();
+        document.getElementById("result").innerHTML =
+          "Sorry, your browser does not support Web Storage...";
+      }
+      console.log(retrievedPerson.length);
+      for (let i = 0; i < retrievedPerson.length; i++) {
+        let id = "#includedContent" + i;
+        $(function () {
+          $(id).load("../cartCard/index.html");
+        });
+      }
+
+      $("#includedContent0").click(function () {
+        let newone = JSON.parse(localStorage.getItem("person"));
+        console.log(newone);
+
+        let new_person = newone.splice(0, 3);
+        console.log(new_person);
+        localStorage.setItem("person", JSON.stringify(new_person)); //stringify object and store
+        location.reload();
+      });
+    </script>
+    <script></script>
+    <title>Cart</title>
+  </head>
+
+  <body>
+    <div class="cart-title">
+      <h1 class="cart-title1" id="result"></h1>
+      <h1 class="cart-title2">Total (3 items) - GBP 261.00</h1>
+      <a href=""
+        ><div id="button-cart-add" class="cart-button">
+          <h1 class="cart-button-text">Proceed to checkout</h1>
+        </div></a
+      >
+    </div>
+    <div class="row">
+      <div class="column">
+        <div id="includedContent0"></div>
+      </div>
+
+      <div class="column">
+        <div id="includedContent1"></div>
+      </div>
+      <div class="column">
+        <div id="includedContent2"></div>
+      </div>
+      <div class="column">
+        <div id="includedContent3"></div>
+      </div>
+    </div>
+  </body>
+</html>
