@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Page Title</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+		
+	<link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css" />
+	<script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
+	<script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+	
+	<script src="https://checkout.stripe.com/checkout.js"></script>
+
+</head>
+
+<body>
+
+
+
+    <div role="main" class="ui-content">
+		<h1>payment gateway</h1>
+		
+		
+		<form id="frmBooking" name="bookingForm" action="_self">
+			<input id="item_name" name="item_name" type="text" >
+			<input id="total_value" name="total_value" type="text" >
+			<button id="customButton">Purchase</button>
+		</form>
+		
+    <div align="center" id="thankyouPayment"></div>
+
+<!-- This is the script that connects the form to StripeCheckout -->
+<!-- Code Section A Grab the booking form and initialise the stripe checkout form -->
+
+    <script>
+    jQuery(function($) {
+      var $form = $('#frmBooking');
+      var handler = StripeCheckout.configure({
+        key: 'pk_test_cp21BcECf4kMMUbSlRlZlsMo',
+        token: function(token) {
+          // Use the token to create the charge with a server-side script.
+          // You can access the token ID with `token.id`
+
+          //This will be printed when the transaction is successful. To charge, server side scripting is required.
+          if(token.id){
+                    $("#thankyouPayment").html("Thank you, your payment was successful!");
+                    
+                    //You can also use the following code to re-submit the form content to another file for further processing.
+                    //Don't forget to add action to your form
+                    //$form.get(0).submit();
+
+                    //Or save form data locally, using local storage.
+          }
+        }
+      });
+	  
+
+      $('#customButton').on('click', function(e) {
+        // Code Section B  Open Checkout with further options
+        handler.open({
+          name: 'Payment',
+          currency: 'gbp',
+          description: $('#item_name').val(),
+          amount: $('#total_value').val() * 100
+        });
+        e.preventDefault();
+      });
+
+      // Code Section C  Close Checkout on page navigation
+      $(window).on('popstate', function() {
+        handler.close();
+      });
+      });
+    </script>
+	
+	</div>
+		
+   
+
+</div>
+</body>
+</html>
