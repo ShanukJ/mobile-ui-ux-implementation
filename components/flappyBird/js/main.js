@@ -403,11 +403,13 @@ function showScore()
    //show the scoreboard
    $("#scoreboard").css({ y: '40px', opacity: 0 }); //move it down so we can slide it up
    $("#replay").css({ y: '40px', opacity: 0 });
+   $("#exit").css({ y: '40px', opacity: 0 });
    $("#scoreboard").transition({ y: '0px', opacity: 1}, 600, 'ease', function() {
       //When the animation is done, animate in the replay button and SWOOSH!
       soundSwoosh.stop();
       soundSwoosh.play();
       $("#replay").transition({ y: '0px', opacity: 1}, 600, 'ease');
+      $("#exit").transition({ y: '0px', opacity: 1}, 600, 'ease');
 
       //also animate in the MEDAL! WOO!
       if(wonmedal)
@@ -464,6 +466,12 @@ function updatePipes()
    var newpipe = $('<div class="pipe animated"><div class="pipe_upper" style="height: ' + topheight + 'px;"></div><div class="pipe_lower" style="height: ' + bottomheight + 'px;"></div></div>');
    $("#flyarea").append(newpipe);
    pipes.push(newpipe);
+}
+
+function exitGame()
+{
+   console.log("Exit game");
+   window.location.href = 'index.html';
 }
 
 var isIncompatible = {
