@@ -60,6 +60,27 @@ $('.addValue').on("click", function( event ) {
 
 //prepare conatct object's HTML
 function contactHtmlFromObject(contact){
+console.log(JSON.stringify(contact)+"Jaye");
+  let count = contact.star;
+
+  var star = '';
+
+  for (let i = 0; i < 5; i++) {
+    if(count != 'undefined'){
+      if(count > 0){
+        star +=  '<span class="active">';
+    star +=  '<a id="readonly_rating">1</a>';
+    star +='</span>';
+    count--;
+      } else{
+        star +=  '<span class="read-only">';
+        star +=  '<a id="readonly_rating">1</a>';
+        star +='</span>';
+      }
+  }}
+
+
+
 
   var html = '';
   html +=  '<section class="section-50">';
@@ -75,14 +96,10 @@ function contactHtmlFromObject(contact){
     html += 	'<p class="text-muted">'+contact.email+'</p>';
     html += 	'<p class="text-muted"><p class="stars-read-only">';
     html += '<span class="read-only">'
-    html +=  '<a>1</a>'
-    html +=  '<a>2</a>'
-    html +=  '<a>3</a>'
-    html +=  '<a>4</a>'
-    html +=  '<a>5</a>'
+    html += star;
     html +='</span>'
     html +='</p></p>';
-    html += 	'<p class="text-muted"><small>'+contact.date+'</small></p>';
+    html += 	'<p class="text-muted"><small>'+contact.star+'</small></p>';
     html += 	'</div>';
     html += 	'</div>';
     html += '<div class="notification-list_feature-img">';
