@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://fonts.googleapis.com/css?family=Material+Icons|Material+Icons+Outlined|Material+Icons+Two+Tone|Material+Icons+Round|Material+Icons+Sharp"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css"
+    />
+    <script src="https://code.jquery.com/jquery-1.11.1.min.js"></script>
+    <script src="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+    <script src="https://code.iconify.design/2/2.1.1/iconify.min.js"></script>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://code.jquery.com/mobile/1.4.0/jquery.mobile-1.4.0.min.css"
+    />
+    <link rel="stylesheet" type="text/css" href="css/style.css" />
+    <title>Reviews</title>
+  </head>
+
+  <body>
+    <!--Page 6 - Account -->
+    <div data-role="page" id="product_page">
+      <div data-role="headerLocal" class="header_local">
+        <img
+          src="https://res.cloudinary.com/dgly8b9lq/image/upload/v1640846393/Lkia/logo_rf4wm5.png"
+          alt=""
+          class="logo_header"
+        />
+        <a href="#search" class="search_icon">
+          <span class="material-icons-outlined" id="searchI">search</span>
+        </a>
+      </div>
+
+      <div role="main_content" class="content_home">
+        <div class="col-md-6">
+          <ul id="contacts" class="review-list">
+            <!-- Conatct Object li.list-group-item.contact will be added here by js -->
+          </ul>
+        </div>
+
+        <a
+          href="#popupLogin"
+          data-rel="popup"
+          data-position-to="window"
+          class="ui-btn ui-corner-all ui-shadow ui-btn-inline ui-btn-a"
+          data-transition="pop"
+          style="background: #3867FA; color: white; border-radius: 32px; float:right; text-shadow:none;"
+          id="reviewbtn"
+          >Add review</a
+        >
+        <div
+          data-role="popup"
+          id="popupLogin"
+          data-theme="a"
+          class="ui-corner-all"
+        >
+          <form method="post" name="contactForm">
+            <div style="padding: 10px 20px">
+              <h3>Add your review</h3>
+              <input
+                type="text"
+                class="form-control"
+                id="name"
+                required
+                placeholder="Enter name"
+              />
+              <textarea
+                name="textarea-enhanced"
+                id="email"
+                data-enhanced="true"
+                class="ui-input-text ui-shadow-inset ui-body-inherit ui-corner-all"
+                required
+                placeholder="Your Review"
+              ></textarea>
+              <a href="#">
+                <button
+                  type="submit"
+                  class="btn btn-primary addValue"
+                  id="addValue"
+                  data-rel="back"
+                  data-transition="flow"
+                >
+                  Submit
+                </button>
+              </a>
+            </div>
+          </form>
+        </div>
+      </div>
+
+      <div data-role="footer_local" class="footer_local" id="navBar">
+        <nav class="navContainer">
+          <div class="nav__menu" id="nav-menu">
+            <ul class="nav__list">
+              <li class="nav__item" id="redirect-main-home">
+                <a href="#home_page" class="nav__link">
+                  <span class="material-icons-outlined" id="home_icon"
+                    >home</span
+                  >
+                  <span class="nav__name">Home</span>
+                </a>
+              </li>
+
+              <li class="nav__item" id="redirect-main-cat">
+                <a href="#category_page" class="nav__link">
+                  <span class="material-icons-outlined">grid_view</span>
+                  <span class="nav__name">Category</span>
+                </a>
+              </li>
+
+              <li class="nav__item" id="redirect-main-cart">
+                <a href="#cart_page" class="nav__link">
+                  <span class="material-icons-outlined">shopping_cart</span>
+                  <span class="nav__name">Cart</span>
+                </a>
+              </li>
+
+              <li class="nav__item" id="redirect-main-noti">
+                <a href="#notify_page" class="nav__link">
+                  <span class="material-icons-outlined"
+                    >notifications_active</span
+                  >
+                  <span class="nav__name">Notifications</span>
+                </a>
+              </li>
+
+              <li class="nav__item" id="redirect-main-prof">
+                <a href="#account_page" class="nav__link">
+                  <span class="material-icons-outlined">account_circle</span>
+                  <span class="nav__name">Profile</span>
+                </a>
+              </li>
+            </ul>
+          </div>
+        </nav>
+      </div>
+    </div>
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+    <!-- Latest compiled and minified Bootstrap -->
+
+    <!-- Include Firebase Library -->
+    <script src="https://www.gstatic.com/firebasejs/4.5.0/firebase.js"></script>
+    <!-- Contacts Store JavaScript -->
+    <script src="script.js"></script>
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+  </body>
+</html>
