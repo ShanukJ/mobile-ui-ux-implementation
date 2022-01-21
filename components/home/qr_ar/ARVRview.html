@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- this line calls aframe -->
+    <script src="https://aframe.io/releases/0.8.2/aframe.min.js"></script>
+    <script src="https://cdn.rawgit.com/donmccurdy/aframe-extras/v5.0.1/dist/aframe-extras.min.js"></script>
+
+    
+
+    <title>Profile</title>
+    <!-- this line calls the AR.js component to be used for aframe and finds the source of different assets like the description of 3D objects, the camera calibration-->
+  </head>
+
+  <body>
+    <div data-role="page" id="qr-ar-home-page">
+      <a-scene>
+        <a-assets>
+          <a-asset-item id="mBox" src="../assets/mystreyBox.glb"></a-asset-item>
+          <a-asset-item id="selectTextBox" src="../assets/select.glb"></a-asset-item>
+          <a-asset-item id="mysteryCrate" src="../assets/crate.glb"></a-asset-item>
+          <img id="panoramaQR" src="../assets/stock.jpg" />
+        </a-assets>
+
+        <a-entity gltf-model="#selectTextBox" scale="20 20 8" position="4 5 2">
+        </a-entity>
+
+        <a-entity
+          gltf-model="#mBox"
+          scale="4 4 4"
+          position="0 1 2"
+          id="mBox-without-code"
+        >
+          <a-animation
+            attribute="rotation"
+            to="0 360 0"
+            repeat="indefinite"
+          >
+          </a-animation>
+        </a-entity>
+
+        <a-entity
+          gltf-model="#mBox"
+          scale="4 4 4"
+          position="8 1 2"
+          id="mBox-with-code"
+        >
+          <a-animation attribute="rotation" to="0 -360 0 " repeat="indefinite">
+          </a-animation>
+        </a-entity>
+
+        <a-entity
+          gltf-model="#mysteryCrate"
+          scale="1 1 1"
+          position="20 -30 220"
+          id="mBox-crate"
+        >
+        </a-entity>
+
+        <a-entity position="4 0 8">
+          <a-camera></a-camera>
+        </a-entity>
+
+        <a-sky src="#panoramaQR"></a-sky>
+      </a-scene>
+    </div>
+
+    <!-- <script>
+            var wrongBox = document.getElementById('mBox-without-code');
+            var correctBox = document.getElementById('mBox-with-code');
+            var treasureCrate = document.getElementById('mBox-crate');
+
+            wrongBox.addEventListener('mouseenter', function(){
+                    
+            });
+
+            
+      </script> -->
+
+
+
+    <script>
+      $(function () {
+        $("#mBox-without-code").load("ARwithCode.html");
+        $("#mBox-with-code").load("ARwithCode.html");
+        $("#mBox-crate").load("ARwithCode.html");
+      });
+    </script>
+  </body>
+</html>
