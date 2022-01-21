@@ -270,7 +270,18 @@
     position: absolute;
     opacity: 0;
     top: 205px;
-    left: 61px;
+    left: 1px;
+    height: 115px;
+    width: 70px;
+    cursor: pointer;
+ }
+
+ #exit
+ {
+    position: absolute;
+    opacity: 0;
+    top: 205px;
+    left: 121px;
     height: 115px;
     width: 70px;
     cursor: pointer;

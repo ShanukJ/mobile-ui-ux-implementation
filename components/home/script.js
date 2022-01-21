@@ -9,10 +9,11 @@ var config = {
   appId: "1:67930827677:web:15fafd962274021bd15d74"
 };
 firebase.initializeApp(config);
-
+var product_page_data;
 //create firebase database reference
 var dbRef = firebase.database();
 var contactsRef = dbRef.ref('contacts');
+var productsRef = dbRef.ref('products');
 
 var today  = new Date();
 var options = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };
@@ -24,13 +25,39 @@ contactsRef.on("child_added", function(snap) {
   $('#contacts').append(contactHtmlFromObject(snap.val()));
 });
 
+productsRef.on("child_added", function(snap) {
+  $('#display_products').append(productHtmlFromObject(snap.key,snap.val()));
+  product_page_data = snap.val();
+  console.log("page",product_page_data.main_title);
+  console.log("added", snap.key, snap.val());
+});
+
 $('.stars a').on('click', function(){
   $('.stars span, .stars a').removeClass('active');
-  console.log("stars-" + stars)
-
+  let st = $(this).attr("id");
+  console.log("stars+   " + st)
+switch (st) {
+  case "st-1":
+    stars = 1;
+    break;
+  case "st-2":
+    stars = 2;
+    break;
+  case "st-3":
+    stars = 3;
+    break;
+  case "st-4":
+    stars = 4;
+    break;
+  case "st-5":
+    stars = 5;
+    break;
+  default:
+    stars = 0;
+    break;
+}
   $(this).addClass('active');
   $('.stars span').addClass('active');
-  stars += 1;
   console.log("stars+" + stars)
 });
 
@@ -44,11 +71,11 @@ $('.addValue').on("click", function( event ) {
         email: $('#email').val().replace(/<[^>]*>/ig, ""),
         date: today.toLocaleDateString("en-US", options),
         star : stars
-        // location: {
-        //   city: $('#city').val().replace(/<[^>]*>/ig, ""),
-        //   state: $('#state').val().replace(/<[^>]*>/ig, ""),
-        //   zip: $('#zip').val().replace(/<[^>]*>/ig, "")
-        // }
+        // description: "Lighting makes the room. Strategically placed, lamps can bring any room into a deeper perspective and showcase your compelling decor. This guide will introduce you to many types of lamp shades available from The Home Depot that will address your lighting needs while enhancing your decor.",
+        // main_img: "https://res.cloudinary.com/dgly8b9lq/image/upload/v1642139960/Lkia/joel-henry-pdIwPL3HU2s-unsplash_jtp9rn.jpg",
+        // main_title: "Tripod Table Lamp - Modern Bedside Lamp for Room Lighting",
+        // price: "£ 39.80",
+        // stars: 5
       })
       contactForm.reset();
       $('.stars span, .stars a').removeClass('active');
@@ -60,6 +87,24 @@ $('.addValue').on("click", function( event ) {
 
 //prepare conatct object's HTML
 function contactHtmlFromObject(contact){
+console.log(JSON.stringify(contact)+"Jaye");
+  let count = contact.star;
+
+  var star = '';
+
+  for (let i = 0; i < 5; i++) {
+    if(count != 'undefined'){
+      if(count > 0){
+        star +=  '<span class="active">';
+    star +=  '<a id="readonly_rating">1</a>';
+    star +='</span>';
+    count--;
+      } else{
+        star +=  '<span class="read-only">';
+        star +=  '<a id="readonly_rating">1</a>';
+        star +='</span>';
+      }
+  }}
 
   var html = '';
   html +=  '<section class="section-50">';
@@ -75,11 +120,7 @@ function contactHtmlFromObject(contact){
     html += 	'<p class="text-muted">'+contact.email+'</p>';
     html += 	'<p class="text-muted"><p class="stars-read-only">';
     html += '<span class="read-only">'
-    html +=  '<a>1</a>'
-    html +=  '<a>2</a>'
-    html +=  '<a>3</a>'
-    html +=  '<a>4</a>'
-    html +=  '<a>5</a>'
+    html += star;
     html +='</span>'
     html +='</p></p>';
     html += 	'<p class="text-muted"><small>'+contact.date+'</small></p>';
@@ -94,3 +135,25 @@ function contactHtmlFromObject(contact){
     html += '</section>';
   return html;
 }
+
+function productHtmlFromObject(id,product){
+  console.log(JSON.stringify(product)+"prod", id);
+  var str = product.main_title;
+  if(str.length > 10) str = str.substring(0,19);
+    var prd = '';
+    prd += '<div id="id'+id+'" class="prod-grid1">';
+    prd += ' <a href="#new_product_page">';
+    prd += ' <div class="card_elements" id="redirect-product">';
+    prd += ' <div class="card-image">';
+    prd +=
+      ' <img alt="home"src="'+product.main_img+'"class="image_card"/>';
+    prd += " </div>";
+    prd += ' <h5 class="card-product-title"> &nbsp;' + str;
+    prd += ' <h6 class="card-product-desc"> &nbsp;' + product.price;
+    prd += " </h6>";
+    prd += " </div>";
+    prd += " </a>";
+    prd += "</div>";
+    return prd;
+  }
+  
