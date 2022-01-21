@@ -9,7 +9,7 @@ var config = {
   appId: "1:67930827677:web:15fafd962274021bd15d74"
 };
 firebase.initializeApp(config);
-
+var product_page_data;
 //create firebase database reference
 var dbRef = firebase.database();
 var contactsRef = dbRef.ref('contacts');
@@ -26,8 +26,9 @@ contactsRef.on("child_added", function(snap) {
 });
 
 productsRef.on("child_added", function(snap) {
-  $('#display_products').append(productHtmlFromObject(snap.val()));
-
+  $('#display_products').append(productHtmlFromObject(snap.key,snap.val()));
+  product_page_data = snap.val();
+  console.log("page",product_page_data.main_title);
   console.log("added", snap.key, snap.val());
 });
 
@@ -135,13 +136,13 @@ console.log(JSON.stringify(contact)+"Jaye");
   return html;
 }
 
-function productHtmlFromObject(product){
-  console.log(JSON.stringify(product)+"prod");
+function productHtmlFromObject(id,product){
+  console.log(JSON.stringify(product)+"prod", id);
   var str = product.main_title;
   if(str.length > 10) str = str.substring(0,19);
     var prd = '';
-    prd += '<div class="prod-grid">';
-    prd += ' <a href="http://127.0.0.1:5500/components/product/index.prd">';
+    prd += '<div id="id'+id+'" class="prod-grid1">';
+    prd += ' <a href="#new_product_page">';
     prd += ' <div class="card_elements" id="redirect-product">';
     prd += ' <div class="card-image">';
     prd +=
@@ -155,3 +156,4 @@ function productHtmlFromObject(product){
     prd += "</div>";
     return prd;
   }
+  
