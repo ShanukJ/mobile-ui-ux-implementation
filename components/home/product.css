@@ -366,7 +366,7 @@
     border-color: #635527;
   }
 
-  .product_review_sample_container{
+  .product_review_sample_container {
     display: flex;
     border-style: solid;
     flex-direction: row;
@@ -374,13 +374,17 @@
     border-color: #0de94f;
   }
 
-  .product_review_user_image{
+  .product_review_user_image {
     display: flex;
     border-style: solid;
-    flex:20%;
+    flex: 20%;
     border-width: 2px;
     border-color: #e9530d;
     justify-content: center;
+  }
+
+  .product_review_star_container {
+    display: flex;
   }
 
   .product_reviews_text {
@@ -394,10 +398,35 @@
     padding-bottom: 12px;
   }
 
-  .product_review_content_container{
+  .product_review_user_comment {
     display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  .product_review_commment_time {
+    font-family: Inter;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 12px;
+    line-height: 15px;
+    color: #8f8f8f;
+  }
+
+  .product_review_commment {
+    font-family: Inter;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 20px;
+    color: #092c4c;
+  }
+
+  .product_review_content_container {
+    display: flex;
+    flex-direction: column;
     border-style: solid;
-    flex:80%;
+    flex: 80%;
     border-width: 2px;
     border-color: #e9530d;
   }
