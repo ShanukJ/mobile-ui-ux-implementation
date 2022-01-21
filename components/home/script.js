@@ -26,11 +26,30 @@ contactsRef.on("child_added", function(snap) {
 
 $('.stars a').on('click', function(){
   $('.stars span, .stars a').removeClass('active');
-  console.log("stars-" + stars)
-
+  let st = $(this).attr("id");
+  console.log("stars+   " + st)
+switch (st) {
+  case "st-1":
+    stars = 1;
+    break;
+  case "st-2":
+    stars = 2;
+    break;
+  case "st-3":
+    stars = 3;
+    break;
+  case "st-4":
+    stars = 4;
+    break;
+  case "st-5":
+    stars = 5;
+    break;
+  default:
+    stars = 0;
+    break;
+}
   $(this).addClass('active');
   $('.stars span').addClass('active');
-  stars += 1;
   console.log("stars+" + stars)
 });
 
@@ -44,11 +63,11 @@ $('.addValue').on("click", function( event ) {
         email: $('#email').val().replace(/<[^>]*>/ig, ""),
         date: today.toLocaleDateString("en-US", options),
         star : stars
-        // location: {
-        //   city: $('#city').val().replace(/<[^>]*>/ig, ""),
-        //   state: $('#state').val().replace(/<[^>]*>/ig, ""),
-        //   zip: $('#zip').val().replace(/<[^>]*>/ig, "")
-        // }
+        // description: "Lighting makes the room. Strategically placed, lamps can bring any room into a deeper perspective and showcase your compelling decor. This guide will introduce you to many types of lamp shades available from The Home Depot that will address your lighting needs while enhancing your decor.",
+        // main_img: "https://res.cloudinary.com/dgly8b9lq/image/upload/v1642139960/Lkia/joel-henry-pdIwPL3HU2s-unsplash_jtp9rn.jpg",
+        // main_title: "Tripod Table Lamp - Modern Bedside Lamp for Room Lighting",
+        // price: "£ 39.80",
+        // stars: 5
       })
       contactForm.reset();
       $('.stars span, .stars a').removeClass('active');
@@ -79,9 +98,6 @@ console.log(JSON.stringify(contact)+"Jaye");
       }
   }}
 
-
-
-
   var html = '';
   html +=  '<section class="section-50">';
 		html +=  '<div class="container">';
@@ -99,7 +115,7 @@ console.log(JSON.stringify(contact)+"Jaye");
     html += star;
     html +='</span>'
     html +='</p></p>';
-    html += 	'<p class="text-muted"><small>'+contact.star+'</small></p>';
+    html += 	'<p class="text-muted"><small>'+contact.date+'</small></p>';
     html += 	'</div>';
     html += 	'</div>';
     html += '<div class="notification-list_feature-img">';
