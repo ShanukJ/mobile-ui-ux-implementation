@@ -13,6 +13,7 @@ firebase.initializeApp(config);
 //create firebase database reference
 var dbRef = firebase.database();
 var contactsRef = dbRef.ref('contacts');
+var productsRef = dbRef.ref('products');
 
 var today  = new Date();
 var options = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };
@@ -22,6 +23,12 @@ var stars =0;
 contactsRef.on("child_added", function(snap) {
   console.log("added", snap.key, snap.val());
   $('#contacts').append(contactHtmlFromObject(snap.val()));
+});
+
+productsRef.on("child_added", function(snap) {
+  $('#display_products').append(productHtmlFromObject(snap.val()));
+
+  console.log("added", snap.key, snap.val());
 });
 
 $('.stars a').on('click', function(){
@@ -127,3 +134,24 @@ console.log(JSON.stringify(contact)+"Jaye");
     html += '</section>';
   return html;
 }
+
+function productHtmlFromObject(product){
+  console.log(JSON.stringify(product)+"prod");
+  var str = product.main_title;
+  if(str.length > 10) str = str.substring(0,19);
+    var prd = '';
+    prd += '<div class="prod-grid">';
+    prd += ' <a href="http://127.0.0.1:5500/components/product/index.prd">';
+    prd += ' <div class="card_elements" id="redirect-product">';
+    prd += ' <div class="card-image">';
+    prd +=
+      ' <img alt="home"src="'+product.main_img+'"class="image_card"/>';
+    prd += " </div>";
+    prd += ' <h5 class="card-product-title"> &nbsp;' + str;
+    prd += ' <h6 class="card-product-desc"> &nbsp;' + product.price;
+    prd += " </h6>";
+    prd += " </div>";
+    prd += " </a>";
+    prd += "</div>";
+    return prd;
+  }
