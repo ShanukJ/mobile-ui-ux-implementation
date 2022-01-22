@@ -57,6 +57,11 @@
   font-weight: normal;
 }
 
+.footerContainerAccount{
+  margin-top: 30px;
+  display: none;
+}
+
 
 @media screen and (min-width: 926px) {
 
@@ -118,6 +123,11 @@
     padding: 0 1em;
   }
 
+  .footerContainerAccount{
+    margin-top: 30px;
+    display: none;
+  }
+
 
 }
 
@@ -145,7 +155,7 @@
 .acc-image{
   width: 236px;
   height: 308px;
-  margin-top: 90px;
+  margin-top: 30px;
   margin-left: 30px;
 }
 
@@ -176,6 +186,12 @@
     line-height: 50px;
     border-bottom: 1px solid #B7B7B7;
     padding: 0 1em;
+  }
+
+  .footerContainerAccount{
+    background-color: #092C4C;
+    margin-bottom: 60px;
+    display: block;
   }
 
 }
@@ -230,6 +246,12 @@
     line-height: 50px;
     border-bottom: 1px solid #B7B7B7;
     padding: 0 1em;
+  }
+
+  .footerContainerAccount{
+    background-color: #092C4C;
+    margin-bottom: 60px;
+    display: block;
   }
 }
 
