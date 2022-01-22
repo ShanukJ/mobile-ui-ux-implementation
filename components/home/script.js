@@ -221,3 +221,110 @@ function productHtmlFromObject(product,key){
       message => alert("mail sent successfully")
     );
   }
+
+  var answersRef = dbRef.ref('answers');
+
+var today  = new Date();
+var options = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };
+
+//load older conatcts as well as any newly added one...
+answersRef.on("child_added", function(snap) {
+  console.log("added", snap.key, snap.val());
+  $('#answers').append(answerHtmlFromObject(snap.val()));
+});
+
+//save contact
+$('.addReply').on("click", function( event ) { 
+  //  $('#popupLogin').addClass('hidden');
+    event.preventDefault();
+    if( $('#name_ans_user').val() != '' || $('#user_answer').val() != '' ){
+      answersRef.push({
+        name: $('#name_ans_user').val().replace(/<[^>]*>/ig, ""),
+        email: $('#user_answer').val().replace(/<[^>]*>/ig, ""),
+        date: today.toLocaleDateString("en-US", options)
+      })
+      contactForm.reset();
+    } else {
+      alert('Please fill atlease name nn!');
+    }
+  });
+
+//prepare conatct object's HTML
+function answerHtmlFromObject(reply){
+  console.log('Jaye' +reply );
+  var html = '';
+  html +=  '<section class="section-50">';
+		html +=  '<div class="container">';
+		html += 	'<div class="notification-ui_dd-content">';
+    html += 	'<div class="notification-list">';
+    html += 	'<div class="notification-list_content">';
+    html += 	'<div class="notification-list_img">';
+    html += 	'<img src="https://res.cloudinary.com/dgly8b9lq/image/upload/v1642155403/Lkia/man_1_ilhh9d.png" alt="Feature image" alt="user">';
+    html += 	'</div>';
+    html += 	'<div class="notification-list_detail">';
+    html += 	'<p><b>'+reply.name+'</b> Replied to <b>Stefani</b>,</p>';
+    html += 	'<p class="text-muted">'+reply.email+'</p>';
+    html += 	'<p class="text-muted"><small>'+reply.date+'</small></p>';
+    html += 	'</div>';
+    html += 	'</div>';
+    html += 	'</div>';
+		html += 	'</div>';
+    html += 	'</div>';
+    html += '</section>';
+  return html;
+}
+
+// Questions
+
+var questionRef = dbRef.ref('question');
+
+var today  = new Date();
+var options = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };
+
+//load older conatcts as well as any newly added one...
+questionRef.on("child_added", function(snap) {
+  console.log("added", snap.key, snap.val());
+  $('#questions').append(questionHtmlFromObject(snap.val()));
+});
+
+//save contact
+$('.addQuestion').on("click", function( event ) { 
+  //  $('#popupLogin').addClass('hidden');
+    event.preventDefault();
+    if( $('#name_qc_user').val() != '' || $('#user_question').val() != '' ){
+      questionRef.push({
+        name: $('#name_qc_user').val().replace(/<[^>]*>/ig, ""),
+        email: $('#user_question').val().replace(/<[^>]*>/ig, ""),
+        date: today.toLocaleDateString("en-US", options)
+      })
+      contactForm.reset();
+      popupLogin.popup('close');
+    } else {
+      alert('Please fill atlease name!');
+    }
+  });
+
+//prepare conatct object's HTML
+function questionHtmlFromObject(question){
+  console.log('Jaye' +question );
+  var html = '';
+  html +=  '<section class="section-50">';
+		html +=  '<div class="container">';
+		html += 	'<div class="notification-ui_dd-content">';
+    html += 	'<div class="notification-list">';
+    html += 	'<div class="notification-list_content">';
+    html += 	'<div class="notification-list_img">';
+    html += 	'<img src="https://res.cloudinary.com/dgly8b9lq/image/upload/v1642155403/Lkia/man_1_ilhh9d.png" alt="Feature image" alt="user">';
+    html += 	'</div>';
+    html += 	'<div class="notification-list_detail">';
+    html += 	'<p><b>'+question.name+'</b> asked a question</p>';
+    html += 	'<p class="text-muted">'+question.email+'</p>';
+    html += 	'<p class="text-muted"><small>'+question.date+'</small></p>';
+    html += 	'</div>';
+    html += 	'</div>';
+    html += 	'</div>';
+		html += 	'</div>';
+    html += 	'</div>';
+    html += '</section>';
+  return html;
+}
