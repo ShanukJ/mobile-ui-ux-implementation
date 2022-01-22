@@ -9,14 +9,15 @@
     <script src="https://aframe.io/releases/0.8.2/aframe.min.js"></script>
     <script src="https://cdn.rawgit.com/donmccurdy/aframe-extras/v5.0.1/dist/aframe-extras.min.js"></script>
 
-    
+    <script src="https://code.iconify.design/2/2.1.1/iconify.min.js"></script>
 
-    <title>Profile</title>
+    <title>AR-VR</title>
     <!-- this line calls the AR.js component to be used for aframe and finds the source of different assets like the description of 3D objects, the camera calibration-->
   </head>
-
+  
   <body>
-    <div data-role="page" id="qr-ar-home-page">
+    <a href="http://127.0.0.1:5500/components/home/index.html#account_page"><span class="iconify" id="back-qr" data-icon="bi:arrow-left-circle-fill" style="color: white; position: absolute; top: 20px; left: 30px;" data-width="24" data-height="24"></span>
+    </a> 
       <a-scene>
         <a-assets>
           <a-asset-item id="mBox" src="../assets/mystreyBox.glb"></a-asset-item>
@@ -25,14 +26,16 @@
           <img id="panoramaQR" src="../assets/stock.jpg" />
         </a-assets>
 
+        <!-- Text title -->
         <a-entity gltf-model="#selectTextBox" scale="20 20 8" position="4 5 2">
         </a-entity>
 
+        <!-- Box code 1 -->
         <a-entity
           gltf-model="#mBox"
           scale="4 4 4"
           position="0 1 2"
-          id="mBox-without-code"
+          id="mBox-code1"
         >
           <a-animation
             attribute="rotation"
@@ -42,16 +45,20 @@
           </a-animation>
         </a-entity>
 
+
+        <!-- Box code 2 -->
         <a-entity
           gltf-model="#mBox"
           scale="4 4 4"
           position="8 1 2"
-          id="mBox-with-code"
+          id="mBox-code2"
         >
           <a-animation attribute="rotation" to="0 -360 0 " repeat="indefinite">
           </a-animation>
         </a-entity>
 
+
+        <!--Mystery Box -->
         <a-entity
           gltf-model="#mysteryCrate"
           scale="1 1 1"
@@ -60,17 +67,17 @@
         >
         </a-entity>
 
+
         <a-entity position="4 0 8">
           <a-camera></a-camera>
         </a-entity>
 
         <a-sky src="#panoramaQR"></a-sky>
       </a-scene>
-    </div>
 
     <!-- <script>
-            var wrongBox = document.getElementById('mBox-without-code');
-            var correctBox = document.getElementById('mBox-with-code');
+            var wrongBox = document.getElementById('mBox-code1');
+            var correctBox = document.getElementById('mBox-code2');
             var treasureCrate = document.getElementById('mBox-crate');
 
             wrongBox.addEventListener('mouseenter', function(){
@@ -82,12 +89,13 @@
 
 
 
-    <script>
+    <!-- <script>
       $(function () {
-        $("#mBox-without-code").load("ARwithCode.html");
-        $("#mBox-with-code").load("ARwithCode.html");
+        $("#mBox-code1").load("ARCode1.html");
+        $("#mBox-code2").load("ARwithCode.html");
         $("#mBox-crate").load("ARwithCode.html");
       });
-    </script>
+    </script> -->
+
   </body>
 </html>
