@@ -357,10 +357,10 @@ function playerDead()
 
   
       console.log('Data adding ...');
-      name = 'lkiea 44';
+      
       scores = localStorage.getItem("Player score");
-      firebase.database().ref('scoreboard').push({
-         PlayerName: name,
+      firebase.database().ref('scoreboard').set({
+         
          Points: scores
       });
 
