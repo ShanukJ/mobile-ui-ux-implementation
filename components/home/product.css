@@ -2,7 +2,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Megrim&display=swap");
 
 /* iPhone/iPad potraid */
-@media screen and (max-width: 834px) {
+@media screen and (max-width: 835px) {
   .product_main_content_container {
     display: flex;
     flex-direction: column;
