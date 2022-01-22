@@ -14,15 +14,16 @@ var dbRef = firebase.database();
 var scoreRef = dbRef.ref('scoreboard');
 var scoreArray = [];
 var latestScore;
+let ps;
 
 
 scoreRef.on("child_added", function (snap) {
     $('#userScore').append(scoreHtmlFromObject(snap.val()));
-    console.log("added", snap.key, snap.val());
-    let ps = snap.val()
+    console.log("added", snap.val());
+    ps = snap.val()
     scoreArray.push(ps.Points)
+    console.log('snap val '+ps)
     
-    console.log('array ' + scoreArray)
     latestScore = scoreArray[scoreArray.length - 1]
     // localStorage.setItem('latest score',latestScore)
 
@@ -30,12 +31,13 @@ scoreRef.on("child_added", function (snap) {
 
 });
 
-function scoreHtmlFromObject(latestScore) {
-    console.log(JSON.stringify(latestScore) + "scr");
+function scoreHtmlFromObject(ps) {
+    console.log(JSON.stringify(ps) + "scr");
 
     var scr = '';
 
-    scr += 'LP : ' + latestScore.Points
+    scr += 'LP : ' + ps
+    console.log('ps ',ps)
 
     return scr;
 }
