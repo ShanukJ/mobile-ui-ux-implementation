@@ -1101,3 +1101,23 @@ input[type="text"] {
   margin:0;
   height:32px;
 }
+
+#proceed-btn{
+  display: flex;
+  width: 60%;
+  height: 50px;
+  margin-left: 65px;
+  margin-top: 20px;
+  justify-content: center;
+  align-items: center;
+  background: #092c4c;
+  border-radius: 8px;
+  font-family: Inter;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 20px;
+  line-height: 22px;
+  text-align: center;
+  color: #ffffff;
+  text-shadow: none !important;
+}
