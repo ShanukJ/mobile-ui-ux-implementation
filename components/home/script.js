@@ -99,7 +99,8 @@ $('.addValue').on("click", function( event ) {
         // price: "£ 39.80",
         // stars: 5
       })
-      contactForm.reset();
+      // reviewForm.reset();
+      $('#reviewForm')[0].reset();
       $('.stars span, .stars a').removeClass('active');
       stars = 0;
     } else {
@@ -135,7 +136,7 @@ console.log(JSON.stringify(contact)+"Jaye");
     html += 	'<div class="notification-list">';
     html += 	'<div class="notification-list_content">';
     html += 	'<div class="notification-list_img">';
-    html += 	'<img src="https://res.cloudinary.com/dgly8b9lq/image/upload/v1642155403/Lkia/man_1_ilhh9d.png" alt="Feature image" alt="user">';
+    html += 	'<img src="https://res.cloudinary.com/dgly8b9lq/image/upload/v1642155403/Lkia/gamer_dosam6.png" alt="user">';
     html += 	'</div>';
     html += 	'<div class="notification-list_detail">';
     html += 	'<p><b>'+contact.name+'</b></p>';
@@ -243,7 +244,7 @@ $('.addReply').on("click", function( event ) {
         email: $('#user_answer').val().replace(/<[^>]*>/ig, ""),
         date: today.toLocaleDateString("en-US", options)
       })
-      contactForm.reset();
+      $('#answersForm')[0].reset();
     } else {
       alert('Please fill atlease name nn!');
     }
@@ -259,7 +260,7 @@ function answerHtmlFromObject(reply){
     html += 	'<div class="notification-list">';
     html += 	'<div class="notification-list_content">';
     html += 	'<div class="notification-list_img">';
-    html += 	'<img src="https://res.cloudinary.com/dgly8b9lq/image/upload/v1642155403/Lkia/man_1_ilhh9d.png" alt="Feature image" alt="user">';
+    html += 	'<img src="https://res.cloudinary.com/dgly8b9lq/image/upload/v1642155403/Lkia/gamer_dosam6.png" alt="user">';
     html += 	'</div>';
     html += 	'<div class="notification-list_detail">';
     html += 	'<p><b>'+reply.name+'</b> Replied to <b>Stefani</b>,</p>';
@@ -297,8 +298,7 @@ $('.addQuestion').on("click", function( event ) {
         email: $('#user_question').val().replace(/<[^>]*>/ig, ""),
         date: today.toLocaleDateString("en-US", options)
       })
-      contactForm.reset();
-      popupLogin.popup('close');
+      $('#questionsForm')[0].reset();
     } else {
       alert('Please fill atlease name!');
     }
@@ -314,7 +314,7 @@ function questionHtmlFromObject(question){
     html += 	'<div class="notification-list">';
     html += 	'<div class="notification-list_content">';
     html += 	'<div class="notification-list_img">';
-    html += 	'<img src="https://res.cloudinary.com/dgly8b9lq/image/upload/v1642155403/Lkia/man_1_ilhh9d.png" alt="Feature image" alt="user">';
+    html += 	'<img src="https://res.cloudinary.com/dgly8b9lq/image/upload/v1642155403/Lkia/gamer_dosam6.png" alt="user">';
     html += 	'</div>';
     html += 	'<div class="notification-list_detail">';
     html += 	'<p><b>'+question.name+'</b> asked a question</p>';
