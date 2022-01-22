@@ -15,8 +15,24 @@
     <link rel="stylesheet" href="style.css" />
     <link rel="stylesheet" type="text/css" href="https://code.jquery.com/mobile/1.4.0/jquery.mobile-1.4.0.min.css">
 
+    <script src="https://www.gstatic.com/firebasejs/9.6.4/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.6.4/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.6.4/firebase-database.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/4.5.0/firebase.js"></script>
 
     <title>Game menu</title>
+
+    <script>
+
+        function backToGameMenu() {
+            window.location.href = '../gameMenu/index.html'
+        }
+
+ 
+
+    </script>
+     <script src="./script.js"></script>
+
 </head>
 
 <body>
@@ -26,7 +42,8 @@
 
         <div>
             <div class="leadrbord-text">
-                <span class="iconify" data-icon="mdi:arrow-left-circle" style="color: #092c4c; font-size: 24px;"></span>
+                <span class="iconify" data-icon="mdi:arrow-left-circle" style="color: #092c4c; font-size: 24px;"
+                    onclick="backToGameMenu()"></span>
                 <div class="text-lb">
                     Leaderboard
                 </div>
@@ -39,7 +56,7 @@
                             <div class="game-image-container">
                                 <div class="game-product-image-container">
                                     <div class="game-image-container">
-                                        <img src="https://res.cloudinary.com/dgly8b9lq/image/upload/v1638297434/AyoOsLab_wvvflo.png"
+                                        <img src="https://res.cloudinary.com/dgly8b9lq/image/upload/v1642155403/Lkia/man_1_ilhh9d.png"
                                             class="game-product-image">
                                     </div>
                                 </div>
@@ -57,7 +74,7 @@
                         </div>
                     </div>
                     <div class="game-sub-container-bottom">
-                        <div class="game-description-title-container">LP : 500</div>
+                        <div class="game-description-title-container" id="userScore"></div>
                         <div class="game-description-content-container">1st</div>
                     </div>
                 </div>
@@ -70,7 +87,7 @@
                             <div class="game-image-container">
                                 <div class="game-product-image-container">
                                     <div class="game-image-container">
-                                        <img src="https://res.cloudinary.com/dgly8b9lq/image/upload/v1638297434/AyoOsLab_wvvflo.png"
+                                        <img src="https://res.cloudinary.com/dgly8b9lq/image/upload/v1642155403/Lkia/man_1_ilhh9d.png"
                                             class="game-product-image">
                                     </div>
                                 </div>
@@ -80,7 +97,7 @@
                                 <div class="game-price-container">
                                     <div class="game-price">
 
-                                        <div class="game-price-value-holder">Jack Harper</div>
+                                        <div class="game-price-value-holder">New player 1</div>
                                     </div>
 
                                 </div>
@@ -88,7 +105,7 @@
                         </div>
                     </div>
                     <div class="game-sub-container-bottom">
-                        <div class="game-description-title-container">LP : 480</div>
+                        <div class="game-description-title-container">LP : 0</div>
                         <div class="game-description-content-container">2nd</div>
                     </div>
                 </div>
@@ -101,7 +118,7 @@
                             <div class="game-image-container">
                                 <div class="game-product-image-container">
                                     <div class="game-image-container">
-                                        <img src="https://res.cloudinary.com/dgly8b9lq/image/upload/v1638297434/AyoOsLab_wvvflo.png"
+                                        <img src="https://res.cloudinary.com/dgly8b9lq/image/upload/v1642155403/Lkia/man_1_ilhh9d.png"
                                             class="game-product-image">
                                     </div>
                                 </div>
@@ -111,7 +128,7 @@
                                 <div class="game-price-container">
                                     <div class="game-price">
 
-                                        <div class="game-price-value-holder">Riley Carter</div>
+                                        <div class="game-price-value-holder">New player 2</div>
                                     </div>
 
                                 </div>
@@ -119,7 +136,7 @@
                         </div>
                     </div>
                     <div class="game-sub-container-bottom">
-                        <div class="game-description-title-container">LP : 460</div>
+                        <div class="game-description-title-container">LP : 0</div>
                         <div class="game-description-content-container">3rd</div>
                     </div>
                 </div>
@@ -134,7 +151,7 @@
                                 <div class="length-image-container">
                                     <div class="length-product-image-container">
                                         <div class="length-image-container">
-                                            <img src="https://res.cloudinary.com/dgly8b9lq/image/upload/v1638297434/AyoOsLab_wvvflo.png"
+                                            <img src="https://res.cloudinary.com/dgly8b9lq/image/upload/v1642155403/Lkia/man_1_ilhh9d.png"
                                                 class="length-product-image">
                                         </div>
                                     </div>
@@ -144,7 +161,7 @@
                                     <div class="length-price-container">
                                         <div class="length-price">
 
-                                            <div class="length-price-value-holder">Player 1</div>
+                                            <div class="length-price-value-holder">New player 3</div>
                                         </div>
 
                                     </div>
@@ -168,7 +185,7 @@
                                 <div class="length-image-container">
                                     <div class="length-product-image-container">
                                         <div class="length-image-container">
-                                            <img src="https://res.cloudinary.com/dgly8b9lq/image/upload/v1638297434/AyoOsLab_wvvflo.png"
+                                            <img src="https://res.cloudinary.com/dgly8b9lq/image/upload/v1642155403/Lkia/man_1_ilhh9d.png"
                                                 class="length-product-image">
                                         </div>
                                     </div>
@@ -178,7 +195,41 @@
                                     <div class="length-price-container">
                                         <div class="length-price">
 
-                                            <div class="length-price-value-holder">Player 3</div>
+                                            <div class="length-price-value-holder">New player 4</div>
+                                        </div>
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="length-sub-container-bottom">
+                            <div class="length-description-title-container">LP : 0</div>
+                            <div class="length-description-content-container">5th</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="Scnd-score-card">
+
+                <div class="length-score-card">
+                    <div class="length-card-container">
+                        <div class="length-sub-container-top">
+                            <div class="length-content-container">
+                                <div class="length-image-container">
+                                    <div class="length-product-image-container">
+                                        <div class="length-image-container">
+                                            <img src="https://res.cloudinary.com/dgly8b9lq/image/upload/v1642155403/Lkia/man_1_ilhh9d.png"
+                                                class="length-product-image">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="length-details-container">
+
+                                    <div class="length-price-container">
+                                        <div class="length-price">
+
+                                            <div class="length-price-value-holder">New player 5</div>
                                         </div>
 
                                     </div>
@@ -202,7 +253,7 @@
                                 <div class="length-image-container">
                                     <div class="length-product-image-container">
                                         <div class="length-image-container">
-                                            <img src="https://res.cloudinary.com/dgly8b9lq/image/upload/v1638297434/AyoOsLab_wvvflo.png"
+                                            <img src="https://res.cloudinary.com/dgly8b9lq/image/upload/v1642155403/Lkia/man_1_ilhh9d.png"
                                                 class="length-product-image">
                                         </div>
                                     </div>
@@ -212,7 +263,7 @@
                                     <div class="length-price-container">
                                         <div class="length-price">
 
-                                            <div class="length-price-value-holder">Player 4</div>
+                                            <div class="length-price-value-holder">New player 6</div>
                                         </div>
 
                                     </div>
@@ -236,7 +287,7 @@
                                 <div class="length-image-container">
                                     <div class="length-product-image-container">
                                         <div class="length-image-container">
-                                            <img src="https://res.cloudinary.com/dgly8b9lq/image/upload/v1638297434/AyoOsLab_wvvflo.png"
+                                            <img src="https://res.cloudinary.com/dgly8b9lq/image/upload/v1642155403/Lkia/man_1_ilhh9d.png"
                                                 class="length-product-image">
                                         </div>
                                     </div>
@@ -246,7 +297,7 @@
                                     <div class="length-price-container">
                                         <div class="length-price">
 
-                                            <div class="length-price-value-holder">Player 5</div>
+                                            <div class="length-price-value-holder">New player 7</div>
                                         </div>
 
                                     </div>
@@ -270,7 +321,7 @@
                                 <div class="length-image-container">
                                     <div class="length-product-image-container">
                                         <div class="length-image-container">
-                                            <img src="https://res.cloudinary.com/dgly8b9lq/image/upload/v1638297434/AyoOsLab_wvvflo.png"
+                                            <img src="https://res.cloudinary.com/dgly8b9lq/image/upload/v1642155403/Lkia/man_1_ilhh9d.png"
                                                 class="length-product-image">
                                         </div>
                                     </div>
@@ -280,7 +331,7 @@
                                     <div class="length-price-container">
                                         <div class="length-price">
 
-                                            <div class="length-price-value-holder">Player 6</div>
+                                            <div class="length-price-value-holder">New player 8</div>
                                         </div>
 
                                     </div>
@@ -295,39 +346,7 @@
                 </div>
             </div>
 
-            <div class="Scnd-score-card">
-
-                <div class="length-score-card">
-                    <div class="length-card-container">
-                        <div class="length-sub-container-top">
-                            <div class="length-content-container">
-                                <div class="length-image-container">
-                                    <div class="length-product-image-container">
-                                        <div class="length-image-container">
-                                            <img src="https://res.cloudinary.com/dgly8b9lq/image/upload/v1638297434/AyoOsLab_wvvflo.png"
-                                                class="length-product-image">
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="length-details-container">
-
-                                    <div class="length-price-container">
-                                        <div class="length-price">
-
-                                            <div class="length-price-value-holder">Player 7</div>
-                                        </div>
-
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="length-sub-container-bottom">
-                            <div class="length-description-title-container">LP : 0</div>
-                            <div class="length-description-content-container">10th</div>
-                        </div>
-                    </div>
-                </div>
-            </div>
+ 
 
 
         </div>
