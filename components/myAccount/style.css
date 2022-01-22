@@ -103,12 +103,8 @@ a {
 }
 
 .icons-menu{
-    
     background-color: #f8f8f8;
-    margin-left: -20px;
-   
-    
-    
+    margin-left: -20px; 
 }
 
 .myAcc{
@@ -125,9 +121,7 @@ a {
     height: 20px;
     width: 20px;
     
-    
 }
-
 
   #menu ul {
     background: #f8f8f8;
@@ -137,33 +131,23 @@ a {
     padding: 0;
     list-style-type: none;
     text-align: left;
+    
   }
   #menu li {
     width: 380px;
     height: 60px;
     color: #092C4C;
-    
     font-family: Inter;
     font-size: 18px;
     line-height: 50px;
     border-bottom: 1px solid #B7B7B7;
     padding: 0 1em;
-  }
-  #menu li a {
-   
-    color: #092C4C;
-    
-    font-family: Inter;
-    font-size: 18px;
     
   }
-  #menu li:hover {
-    background: #f8f8f8;
-  }
 
-
-
-
+#menu a{
+  font-weight: normal;
+}
 
 
 @media screen and (min-width: 926px) {
@@ -200,7 +184,6 @@ a {
     
     background-color: rgb(247, 247, 247);
     margin-left: -20px;
-    
     
 }
 
@@ -240,23 +223,6 @@ a {
     border-bottom: 1px solid #B7B7B7;
     padding: 0 1em;
   }
-  #menu li a {
-   
-    color: #092C4C;
-    
-    font-family: Inter;
-    font-size: 18px;
-    
-  }
-  #menu li:hover {
-    background: #f8f8f8;
-  }
-
-
-
-
-
-
 
 
 }
@@ -282,16 +248,11 @@ a {
     top: 16px;
   }
 
- 
- 
-
-
   .icons-menu{
     
     background-color: rgb(247, 247, 247);
     margin-left: -20px;
-    
-    
+  
 }
 
 .myAcc{
@@ -300,9 +261,6 @@ a {
     margin-top: 20px;
    
 }
-
-
-
 
 .acc-image{
   width: 236px;
@@ -315,11 +273,9 @@ a {
 .menu-items-card{
     background-color: rgb(255, 255, 255);
     height: 20px;
-    width: 20px;
-    
+    width: 20px;   
     
 }
-
 
   #menu ul {
     background: #f8f8f8;
@@ -341,21 +297,6 @@ a {
     border-bottom: 1px solid #B7B7B7;
     padding: 0 1em;
   }
-  #menu li a {
-   
-    color: #092C4C;
-    
-    font-family: Inter;
-    font-size: 18px;
-    
-  }
-  #menu li:hover {
-    background: #f8f8f8;
-  }
-
-
-
-
 
 }
 
@@ -382,18 +323,13 @@ a {
 
 
   .icons-menu{
-    
     background-color: rgb(247, 247, 247);
     margin-left: -20px;
-    
-    
 }
 
 .myAcc{
-     
     margin-left: 35px;
     margin-top: 20px;
-   
 }
 
 .acc-image{
@@ -433,20 +369,86 @@ a {
     border-bottom: 1px solid #B7B7B7;
     padding: 0 1em;
   }
-  #menu li a {
-   
-    color: #092C4C;
-    
-    font-family: Inter;
-    font-size: 18px;
-    
-  }
-  #menu li:hover {
-    background: #f8f8f8;
-  }
 
 
+}
 
+
+.popUp-qr-ar .overlay-qr {
+  height: 100vh;
+  width: 100vw;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background: rgba(0, 0, 0, 0.7);
+  z-index: 1;
+  display: none;
+}
+.popUp-qr-ar .content-qr {
+  background: #fff;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(0);
+  height: 250px;
+  width: 336px;
+  z-index: 2;
+  text-align: center;
+  padding: 20px;
+  box-sizing: border-box;
+  border-radius: 10px;
+}
+.popUp-qr-ar .close-btn-qr {
+  user-select: none;
+  position: absolute;
+  right: 20px;
+  top: 20px;
+  width: 30px;
+  height: 30px;
+  background: #222;
+  color: #fff;
+  font-size: 25px;
+  font-weight: 600;
+  line-height: 30px;
+  text-align: center;
+  border-radius: 50%;
+  cursor: pointer;
+}
+.popUp-qr-ar.active .overlay-qr {
+  display: block;
+}
+.popUp-qr-ar.active .content-qr {
+  transition: all 300ms ease-in-out;
+  transform: translate(-50%, -50%) scale(1);
+}
+
+.show-qr-ar {
+  padding: 0.5em 1em;
+  font-size: 25px;
+  font-family: "Titillium Web";
+  border: 5px solid black;
+  border-radius: 5px;
+  text-transform: uppercase;
+  user-select: none;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  cursor: pointer;
+}
+
+.popup-body-qr{
+  font-family: Inter;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 16px;
+  margin-top: 10px;
+  text-align: center;
+  color: #092C4C;
+}
+
+.qr-ar-button{
+  margin-top:20px;
 }
 
 
