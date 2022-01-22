@@ -18,7 +18,7 @@ var productsRef = dbRef.ref('products');
 var today  = new Date();
 var options = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };
 var stars =0;
-
+var remove_key;
 //load older conatcts as well as any newly added one...
 contactsRef.on("child_added", function(snap) {
   console.log("added", snap.key, snap.val());
@@ -26,10 +26,30 @@ contactsRef.on("child_added", function(snap) {
 });
 
 productsRef.on("child_added", function(snap) {
-  $('#display_products').append(productHtmlFromObject(snap.key,snap.val()));
-  product_page_data = snap.val();
-  console.log("page",product_page_data.main_title);
+  $('#display_fav').append(productHtmlFromObject(snap.val(),snap.key));
   console.log("added", snap.key, snap.val());
+});
+
+database.ref("products").on("child_added", function (data) {
+  add_data_table(
+    data.val().username,
+    data.val().profile_picture,
+    data.val().email,
+    data.key
+  );
+  var lastkey = data.key;
+  nextkey = parseInt(lastkey) + 1;
+});
+database.ref("products").on("child_changed", function (data) {
+  update_data_table(
+    data.val().username,
+    data.val().profile_picture,
+    data.val().email,
+    data.key
+  );
+});
+database.ref("products").on("child_removed", function (data) {
+  remove_data_table(data.key);
 });
 
 $('.stars a').on('click', function(){
@@ -136,12 +156,13 @@ console.log(JSON.stringify(contact)+"Jaye");
   return html;
 }
 
-function productHtmlFromObject(id,product){
-  console.log(JSON.stringify(product)+"prod", id);
+function productHtmlFromObject(product,key){
+  console.log(JSON.stringify(product)+"prod",key);
+  remove_key=key;
   var str = product.main_title;
   if(str.length > 10) str = str.substring(0,19);
     var prd = '';
-    prd += '<div id="id'+id+'" class="prod-grid1">';
+    prd += '<div id="id " class="prod-grid1">';
     prd += ' <a href="#new_product_page">';
     prd += ' <div class="card_elements" id="redirect-product">';
     prd += ' <div class="card-image">';
@@ -151,9 +172,40 @@ function productHtmlFromObject(id,product){
     prd += ' <h5 class="card-product-title"> &nbsp;' + str;
     prd += ' <h6 class="card-product-desc"> &nbsp;' + product.price;
     prd += " </h6>";
+    prd += '<a href="#" class="card-product-desc-remove" data-key="'+key+'style="position: relative; left: 10px;" >Remove From Favourite</a>'
     prd += " </div>";
     prd += " </a>";
     prd += "</div>";
     return prd;
   }
   
+  function add_data_table(id) {
+    productsRef.push({ main_img: "https://res.cloudinary.com/dgly8b9lq/image/upload/v1642139960/Lkia/joel-henry-pdIwPL3HU2s-unsplash_jtp9rn.jpg",
+        main_title: "Tripod Table Lamp - Modern Bedside Lamp for Room Lighting",
+        price: "£ 39.80",
+        stars: 5})
+  }
+  $(document).on("click", "#t2", function (event) {
+    alert("scksjdf");
+  });
+  function remove_data_table(key) {
+    console.log("awa1",key)
+    dbRef.ref("products/" + remove_key).remove();
+  }
+  function sendEmail() {
+    Email.send({
+    Host: "smtp.gmail.com",
+    Username : "uturnuds@gmail.com",
+    Password : "UDS@12345",
+    To : 'kavindu199805@gmail.com',
+    From : "uturnuds@gmail.com",
+    Subject : "<email subject>",
+    Body : "<email body>",
+    }).then(
+      message => alert("mail sent successfully")
+    );
+  }
+  
+  // $(document).on("click", ".card-product-desc-remove", function (event) {
+  //   console.log("awa2",key);
+  // });
