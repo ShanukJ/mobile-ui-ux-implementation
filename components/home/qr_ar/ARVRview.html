@@ -9,16 +9,24 @@
     <script src="https://aframe.io/releases/0.8.2/aframe.min.js"></script>
     <script src="https://cdn.rawgit.com/donmccurdy/aframe-extras/v5.0.1/dist/aframe-extras.min.js"></script>
 
-    <script src="https://code.iconify.design/2/2.1.1/iconify.min.js"></script>
+    <script>
+      AFRAME.registerComponent("mylink", {
+        init: function() {
+          this.el.addEventListener("click", (e) => {
+            window.location = this.data.href;
+          })
+        }
+      })
+    </script>
+
+    
 
     <title>AR-VR</title>
     <!-- this line calls the AR.js component to be used for aframe and finds the source of different assets like the description of 3D objects, the camera calibration-->
   </head>
   
   <body>
-    <a href="http://127.0.0.1:5500/components/home/index.html#account_page"><span class="iconify" id="back-qr" data-icon="bi:arrow-left-circle-fill" style="color: white; position: absolute; top: 20px; left: 30px;" data-width="24" data-height="24"></span>
-    </a> 
-      <a-scene>
+      <a-scene cursor="rayOrigin: mouse" >
         <a-assets>
           <a-asset-item id="mBox" src="../assets/mystreyBox.glb"></a-asset-item>
           <a-asset-item id="selectTextBox" src="../assets/select.glb"></a-asset-item>
@@ -36,6 +44,7 @@
           scale="4 4 4"
           position="0 1 2"
           id="mBox-code1"
+          mylink="href: ARCode1.html;"
         >
           <a-animation
             attribute="rotation"
@@ -52,6 +61,7 @@
           scale="4 4 4"
           position="8 1 2"
           id="mBox-code2"
+          mylink="href: ARCode2.html;"
         >
           <a-animation attribute="rotation" to="0 -360 0 " repeat="indefinite">
           </a-animation>
@@ -64,6 +74,7 @@
           scale="1 1 1"
           position="20 -30 220"
           id="mBox-crate"
+          mylink="href: ARCrate.html;"
         >
         </a-entity>
 
