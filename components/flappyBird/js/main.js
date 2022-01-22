@@ -38,6 +38,19 @@ var loopGameloop;
 var loopPipeloop;
 var currentScore = 0;
 
+const firebaseConfig = {
+
+   apiKey: "AIzaSyCfShr3T2oBF6q0jy3IZNgxNIjnfKpKNmo",
+   authDomain: "test-project-b5e7d.firebaseapp.com",
+   databaseURL: "https://test-project-b5e7d-default-rtdb.firebaseio.com",
+   projectId: "test-project-b5e7d",
+   storageBucket: "test-project-b5e7d.appspot.com",
+   messagingSenderId: "751578353460",
+   appId: "1:751578353460:web:819a5c83c9911d88625f61"
+};
+
+firebase.initializeApp(firebaseConfig);
+
 $(document).ready(function() {
    if(window.location.search == "?debug")
       debugmode = true;
@@ -338,6 +351,22 @@ function setMedal()
 function playerDead()
 {
    getCurrentScore();
+   localStorage.setItem("Player score", score);
+
+   var name, scores;
+
+  
+      console.log('Data adding ...');
+      name = 'lkiea 44';
+      scores = localStorage.getItem("Player score");
+      firebase.database().ref('scoreboard').push({
+         PlayerName: name,
+         Points: scores
+      });
+
+      console.log('Data added');
+
+      
    //stop animating everything!
    $(".animated").css('animation-play-state', 'paused');
    $(".animated").css('-webkit-animation-play-state', 'paused');
@@ -468,10 +497,11 @@ function updatePipes()
    pipes.push(newpipe);
 }
 
-function exitGame()
+function exitting()
 {
    console.log("Exit game");
-   window.location.href = 'index.html';
+ 
+
 }
 
 var isIncompatible = {
