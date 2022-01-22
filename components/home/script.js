@@ -14,7 +14,7 @@ var product_page_data;
 var dbRef = firebase.database();
 var contactsRef = dbRef.ref('contacts');
 var productsRef = dbRef.ref('products');
-
+var share = "No items in favourite list"
 var today  = new Date();
 var options = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };
 var stars =0;
@@ -24,31 +24,33 @@ contactsRef.on("child_added", function(snap) {
   console.log("added", snap.key, snap.val());
   $('#contacts').append(contactHtmlFromObject(snap.val()));
 });
-
+let arr =[];
+let sendThis="";
 productsRef.on("child_added", function(snap) {
   $('#display_fav').append(productHtmlFromObject(snap.val(),snap.key));
-  console.log("added", snap.key, snap.val());
+  arr.push(snap.val());
+  console.log("arrarr",arr);
 });
 
-database.ref("products").on("child_added", function (data) {
-  add_data_table(
-    data.val().username,
-    data.val().profile_picture,
-    data.val().email,
-    data.key
-  );
-  var lastkey = data.key;
-  nextkey = parseInt(lastkey) + 1;
-});
-database.ref("products").on("child_changed", function (data) {
-  update_data_table(
-    data.val().username,
-    data.val().profile_picture,
-    data.val().email,
-    data.key
-  );
-});
-database.ref("products").on("child_removed", function (data) {
+// database.ref("products").on("child_added", function (data) {
+//   add_data_table(
+//     data.val().username,
+//     data.val().profile_picture,
+//     data.val().email,
+//     data.key
+//   );
+//   var lastkey = data.key;
+//   nextkey = parseInt(lastkey) + 1;
+// });
+// database.ref("products").on("child_changed", function (data) {
+//   update_data_table(
+//     data.val().username,
+//     data.val().profile_picture,
+//     data.val().email,
+//     data.key
+//   );
+// });
+productsRef.on("child_removed", function (data) {
   remove_data_table(data.key);
 });
 
@@ -157,6 +159,7 @@ console.log(JSON.stringify(contact)+"Jaye");
 }
 
 function productHtmlFromObject(product,key){
+  
   console.log(JSON.stringify(product)+"prod",key);
   remove_key=key;
   var str = product.main_title;
@@ -192,20 +195,29 @@ function productHtmlFromObject(product,key){
     console.log("awa1",key)
     dbRef.ref("products/" + remove_key).remove();
   }
-  function sendEmail() {
+  
+  
+  function sendEmail(mail) {
+    sendThis+="\n === FAVOURITE LIST === \n";
+    for (let i = 0; i < arr.length; i++) {
+      sendThis+="\nItem Title - "+arr[i].main_title+"\n";
+      sendThis+="Item Price - "+arr[i].price+"\n";
+    }
+    
     Email.send({
     Host: "smtp.gmail.com",
-    Username : "uturnuds@gmail.com",
-    Password : "UDS@12345",
-    To : 'kavindu199805@gmail.com',
-    From : "uturnuds@gmail.com",
-    Subject : "<email subject>",
-    Body : "<email body>",
+    Username : "lkialk2022@gmail.com",
+    Password : "This@1234",
+    To : mail,
+    From : "lkialk2022@gmail.com",
+    Subject : "Favourite List",
+    Body : sendThis,
+    Attachments : [
+      {
+        name : "lkia.png",
+        path:"https://res.cloudinary.com/dgly8b9lq/image/upload/v1640846394/Lkia/main_p0wjoy.png"
+      }]
     }).then(
       message => alert("mail sent successfully")
     );
   }
-  
-  // $(document).on("click", ".card-product-desc-remove", function (event) {
-  //   console.log("awa2",key);
-  // });

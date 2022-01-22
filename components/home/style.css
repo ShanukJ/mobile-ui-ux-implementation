@@ -224,7 +224,6 @@ a {
   width: 100%;
   height: auto;
 }
-
 .email_input_newsletter {
   width: 150px !important;
   position: absolute;
@@ -958,3 +957,147 @@ span.active a:after,
     width:100%;
     height:100%;
 } */
+
+
+.popUp-home-view .overlay-home {
+  height: 100%;
+  width: 100%;
+  position: fixed;
+  top: 0px;
+  left: 0;
+  background: rgba(0, 0, 0, 0.7);
+  z-index: 1;
+  display: none;
+}
+.popUp-home-view .content-home {
+  background: #fff;
+  position: absolute;
+  top: 15%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(0);
+  height: 400px;
+  width: 380px;
+  z-index: 2;
+  text-align: center;
+  padding: 20px;
+  box-sizing: border-box;
+  border-radius: 10px;
+}
+.popUp-home-view .close-btn-home {
+  user-select: none;
+  position: absolute;
+  right: 10px;
+  top: 10px;
+  width: 30px;
+  height: 30px;
+  background: #222;
+  color: #fff;
+  font-size: 25px;
+  font-weight: 600;
+  line-height: 30px;
+  text-align: center;
+  border-radius: 50%;
+  cursor: pointer;
+}
+.popUp-home-view.active .overlay-home {
+  display: block;
+}
+.popUp-home-view.active .content-home {
+  transition: all 300ms ease-in-out;
+  transform: translate(-50%, -50%) scale(1);
+}
+
+.show-qr-ar {
+  padding: 0.5em 1em;
+  font-size: 25px;
+  font-family: "Titillium Web";
+  border: 5px solid black;
+  border-radius: 5px;
+  text-transform: uppercase;
+  user-select: none;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  cursor: pointer;
+}
+
+.popup-body-home{
+  font-family: Inter;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 22px;
+  margin-top: 30px;
+  text-align: center;
+  color: #092C4C;
+}
+
+#homePop-btn{
+    display: flex;
+    width: 80%;
+    height: 20%;
+    margin-left: 30px;
+    margin-top: 20px;
+    justify-content: center;
+    align-items: center;
+    background: #092c4c;
+    border-radius: 8px;
+    font-family: Inter;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 20px;
+    line-height: 22px;
+    text-align: center;
+    color: #ffffff;
+    text-shadow: none !important;
+}
+
+
+
+/* email send */
+input[type="text"] {
+  background-color:#fafafa;
+  padding:7px;
+  font-family:helvetica, arial, sans-serif;
+  font-size:1.2em;
+  margin-bottom:20px;
+  display:block;
+  /* border:solid 2px #bbb; */
+  color:#6f6f6f;
+}
+
+.favouritetext {
+  background-color:#fafafa;
+  font-family:helvetica, arial, sans-serif;
+  font-size:1.0em;
+  font-weight:bold;
+  padding:7px;
+  color:#6f6f6f;
+}
+
+#subscription-email-text-field {
+  vertical-align:top;
+  display:inline-block;
+  font-size:0.9em;
+  font-weight:400;
+  border:0;
+  width:300px;
+  height:32px;
+  margin:0;
+}
+
+#subscribe-button {
+  display: flex;
+  align-items: center;
+  text-align: center;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: #ffffff;
+  background: linear-gradient(274.05deg, #f2994a -37.86%, #fe6108 125.4%);
+  border-radius: 0px 4px 4px 0px;
+  /* display:inline-block; */
+  /* border:1px solid black; */
+  border-width:0px 0px 0px 1px;
+  margin:0;
+  height:32px;
+}
