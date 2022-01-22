@@ -1095,11 +1095,10 @@ input[type="text"] {
   color: #ffffff;
   background: linear-gradient(274.05deg, #f2994a -37.86%, #fe6108 125.4%);
   border-radius: 0px 4px 4px 0px;
-  /* display:inline-block; */
-  /* border:1px solid black; */
   border-width:0px 0px 0px 1px;
   margin:0;
   height:32px;
+  width:65px;
 }
 
 #proceed-btn{
