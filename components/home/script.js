@@ -189,7 +189,9 @@ function productHtmlFromObject(product,key){
         stars: 5})
   }
   $(document).on("click", "#t2", function (event) {
-    alert("scksjdf");
+    var x = document.getElementById("snackbar-fav-rem");
+        x.className = "show";
+        setTimeout(function(){ x.className = x.className.replace("show", ""); }, 3000);
   });
   function remove_data_table(key) {
     console.log("awa1",key)
@@ -218,7 +220,7 @@ function productHtmlFromObject(product,key){
         path:"https://res.cloudinary.com/dgly8b9lq/image/upload/v1640846394/Lkia/main_p0wjoy.png"
       }]
     }).then(
-      message => alert("mail sent successfully")
+      console.log()
     );
   }
 
