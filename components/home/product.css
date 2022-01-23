@@ -265,6 +265,7 @@
     flex-direction: column;
     margin-left: 55px;
     margin-right: 55px;
+    padding-top: 65px;
   }
 
   .product_image_content_container {
