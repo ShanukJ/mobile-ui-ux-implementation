@@ -28,7 +28,6 @@ let arr =[];
 let sendThis="";
 productsRef.on("child_added", function(snap) {
   $('#display_fav').append(productHtmlFromObject(snap.val(),snap.key));
-  $('#display_cart').append(productCartHtmlFromObject(snap.val(),snap.key));
   arr.push(snap.val());
   console.log("arrarr",arr);
 });
@@ -100,8 +99,7 @@ $('.addValue').on("click", function( event ) {
         // price: "£ 39.80",
         // stars: 5
       })
-      // reviewForm.reset();
-      $('#reviewForm')[0].reset();
+      contactForm.reset();
       $('.stars span, .stars a').removeClass('active');
       stars = 0;
     } else {
@@ -137,7 +135,7 @@ console.log(JSON.stringify(contact)+"Jaye");
     html += 	'<div class="notification-list">';
     html += 	'<div class="notification-list_content">';
     html += 	'<div class="notification-list_img">';
-    html += 	'<img src="https://res.cloudinary.com/dgly8b9lq/image/upload/v1642155403/Lkia/gamer_dosam6.png" alt="user">';
+    html += 	'<img src="https://res.cloudinary.com/dgly8b9lq/image/upload/v1642155403/Lkia/man_1_ilhh9d.png" alt="Feature image" alt="user">';
     html += 	'</div>';
     html += 	'<div class="notification-list_detail">';
     html += 	'<p><b>'+contact.name+'</b></p>';
@@ -183,30 +181,6 @@ function productHtmlFromObject(product,key){
     prd += "</div>";
     return prd;
   }
-
-  function productCartHtmlFromObject(product,key){
-  
-    console.log(JSON.stringify(product)+"prod",key);
-    remove_key=key;
-    var str = product.main_title;
-    if(str.length > 10) str = str.substring(0,19);
-      var prd = '';
-      prd += '<div id="id " class="prod-grid1">';
-      prd += ' <a href="#new_product_page">';
-      prd += ' <div class="card_elements" id="redirect-product">';
-      prd += ' <div class="card-image">';
-      prd +=
-        ' <img alt="home"src="https://res.cloudinary.com/dgly8b9lq/image/upload/v1642863590/Lkia/unsplash_UYHhyLwM1Wk_imxslj.png"class="image_card"/>';
-      prd += " </div>";
-      prd += ' <h5 class="card-product-title"> &nbsp;' + str;
-      prd += ' <h6 class="card-product-desc"> &nbsp;' + product.price;
-      prd += " </h6>";
-      prd += '<a href="#" class="card-product-desc-remove" data-key="'+key+'style="position: relative; left: 10px;" >Remove From Cart</a>'
-      prd += " </div>";
-      prd += " </a>";
-      prd += "</div>";
-      return prd;
-    }
   
   function add_data_table(id) {
     productsRef.push({ main_img: "https://res.cloudinary.com/dgly8b9lq/image/upload/v1642139960/Lkia/joel-henry-pdIwPL3HU2s-unsplash_jtp9rn.jpg",
@@ -246,7 +220,7 @@ function productHtmlFromObject(product,key){
         path:"https://res.cloudinary.com/dgly8b9lq/image/upload/v1640846394/Lkia/main_p0wjoy.png"
       }]
     }).then(
-      console.log()
+     
     );
   }
 
@@ -271,7 +245,7 @@ $('.addReply').on("click", function( event ) {
         email: $('#user_answer').val().replace(/<[^>]*>/ig, ""),
         date: today.toLocaleDateString("en-US", options)
       })
-      $('#answersForm')[0].reset();
+      contactForm.reset();
     } else {
       alert('Please fill atlease name nn!');
     }
@@ -287,7 +261,7 @@ function answerHtmlFromObject(reply){
     html += 	'<div class="notification-list">';
     html += 	'<div class="notification-list_content">';
     html += 	'<div class="notification-list_img">';
-    html += 	'<img src="https://res.cloudinary.com/dgly8b9lq/image/upload/v1642155403/Lkia/gamer_dosam6.png" alt="user">';
+    html += 	'<img src="https://res.cloudinary.com/dgly8b9lq/image/upload/v1642155403/Lkia/man_1_ilhh9d.png" alt="Feature image" alt="user">';
     html += 	'</div>';
     html += 	'<div class="notification-list_detail">';
     html += 	'<p><b>'+reply.name+'</b> Replied to <b>Stefani</b>,</p>';
@@ -325,7 +299,8 @@ $('.addQuestion').on("click", function( event ) {
         email: $('#user_question').val().replace(/<[^>]*>/ig, ""),
         date: today.toLocaleDateString("en-US", options)
       })
-      $('#questionsForm')[0].reset();
+      contactForm.reset();
+      popupLogin.popup('close');
     } else {
       alert('Please fill atlease name!');
     }
@@ -341,7 +316,7 @@ function questionHtmlFromObject(question){
     html += 	'<div class="notification-list">';
     html += 	'<div class="notification-list_content">';
     html += 	'<div class="notification-list_img">';
-    html += 	'<img src="https://res.cloudinary.com/dgly8b9lq/image/upload/v1642155403/Lkia/gamer_dosam6.png" alt="user">';
+    html += 	'<img src="https://res.cloudinary.com/dgly8b9lq/image/upload/v1642155403/Lkia/man_1_ilhh9d.png" alt="Feature image" alt="user">';
     html += 	'</div>';
     html += 	'<div class="notification-list_detail">';
     html += 	'<p><b>'+question.name+'</b> asked a question</p>';
