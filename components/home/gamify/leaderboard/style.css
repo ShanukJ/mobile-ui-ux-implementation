@@ -1,0 +1,897 @@
+@import url('https://fonts.googleapis.com/css?family=Inter');
+
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  color: #092C4C ;
+}
+
+
+.leadrbord-text{
+    margin-top: 60px;
+    margin-left: 15px;
+    font-family: Inter;
+    font-size: 22px;
+    font-weight: bold;
+    
+    height: 30px;
+    width: 35px;
+}
+
+.text-lb{
+    margin-top: -35px;
+    margin-left: 33px;
+    font-family: Inter;
+    font-size: 22px;
+    font-weight: bold;
+    
+    height: 30px;
+    width: 350px;
+}
+
+.first-score-card{
+    margin-left: 250px;
+    margin-top: 30px;
+    padding-left: 20px;
+    
+
+}
+
+.second-score-card{
+    margin-left: 50px;
+    margin-top: -215px;
+   
+
+}
+
+.third-score-card{
+    margin-left: 450px;
+    margin-top: -215px;
+    padding-left: 40px;
+
+}
+
+.length-score-card{
+    width: 440px;
+    height: 150px;
+    
+}
+
+.Frst-score-card{
+    margin-left: 730px;
+    margin-top: -215px;
+    
+}
+
+.Scnd-score-card{
+    margin-left: 730px;
+    margin-top: -48px;
+    
+}
+
+.Thrd-score-card{
+    margin-left: 730px;
+    margin-top: -48px;
+    
+}
+.Frth-score-card{
+    margin-left: 730px;
+    margin-top: -48px;
+    
+}
+.Five-score-card{
+    margin-left: 730px;
+    margin-top: -48px;
+    
+}
+.game-card-container {
+    background: #fff;
+    border: 2px solid rgba(118, 117, 129, 0.25);
+    box-shadow: 0px 2px 3px 0px #aaa;
+    
+    padding: 0px;
+    margin-top: 15px;
+    margin-right: 7.5px;
+    margin-bottom: 15px;
+    margin-left: -17.5px;
+    overflow: hidden;
+    border-radius: 16px;
+    width: 200px;
+    height: 200px;
+    display: flex;
+    flex-direction: column;
+    color: #000000;
+  }
+  .game-sub-container-top {
+    padding-top: 24px;
+    padding-left: 24px;
+    padding-right: 24px;
+    padding-bottom: 7px;
+    flex: 50%;
+    display: flex;
+    flex-direction: row;
+  }
+  .game-sub-container-bottom {
+    padding-left: 24px;
+    padding-right: 24px;
+    padding-bottom: 10px;
+    padding-top: 7px;
+    flex: 50%;
+    display: flex;
+    flex-direction: column;
+  }
+  .game-content-container {
+    display: flex;
+    flex: 70%;
+    flex-direction: row;
+  }
+  .game-details-sub-container {
+    display: flex;
+    flex-direction: row;
+  }
+  .game-title-container {
+    font-family: Inter;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 20px;
+    line-height: 28px;
+    display: flex;
+    flex: 80%;
+    flex-direction: column;
+  }
+ 
+  .game-image-container {
+    flex: 30%;
+  }
+  .game-details-container {
+    display: flex;
+    flex: 70%;
+    flex-direction: column;
+    padding-left: 16px;
+  }
+  .game-product-image-container {
+    border-radius: 16px;
+    width: 107px;
+    height: 102px;
+    border: 1px solid rgb(255, 255, 255);
+  }
+  .game-product-image {
+    display: flex;
+    
+    margin-right: auto;
+    margin-left: 35px;
+    margin-top: -10px;
+    width: 70%;
+    height:70%;
+    background-repeat: no-repeat;
+    position: relative;
+    overflow: hidden;
+    border-radius: 56px;
+  }
+  .game-title-container {
+    display: flex;
+    flex: 30%;
+    flex-direction: column;
+  }
+  .game-price-container {
+    margin-top: 75px;
+    margin-left: -85px;
+    display: flex;
+    flex: 70%;
+    flex-direction: row;
+  }
+  .game-price {
+    display: flex;
+    flex: 50%;
+    flex-direction: column;
+  }
+  .game-quantity {
+    display: flex;
+    position: relative;
+    justify-content: center;
+    align-items: center;
+    flex: 50%;
+    flex-direction: column;
+  }
+  .game-price-text-holder {
+    display: flex;
+    flex: 40%;
+   
+    font-family: Inter;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 14px;
+    line-height: 17px;
+    /* identical to box height */
+  
+    letter-spacing: 1px;
+  }
+  .game-price-value-holder {
+    display: flex;
+    flex: 60%;
+    font-family: Inter;
+    margin-left: -15px;
+    font-style: normal;
+    
+    
+    font-weight: bold;
+    font-size: 18px;
+    line-height: 22px;
+    color: black;
+    /* identical to box height */
+  }
+ 
+  
+  .game-description-title-container {
+    display: flex;
+    flex: 30%;
+    font-family: Inter;
+    font-style: normal;
+    color: #EB5757;
+    margin-left: 40px;
+    padding-left: 10px;
+    margin-top: -6px;
+    font-weight: bold;
+    font-size: 16px;
+    line-height: 19px;
+    /* identical to box height */
+  
+    letter-spacing: 1px;
+  }
+  .game-description-content-container {
+    display: flex;
+    flex: 70%;
+    font-family: Inter;
+    color: #000000;
+    margin-top: 10px;
+    margin-left: 34px;
+    padding-left: 27px;
+    font-style: normal;
+    font-weight: bold;
+    height: 15px;
+    width: 80px;
+    background-color: #FFDD55;
+    border-radius: 20px;
+    font-size: 14px;
+    line-height: 22px;
+  }
+
+
+  /* -------------------*/
+
+
+
+  .length-card-container {
+    background: #fff;
+    border: 2px solid rgba(118, 117, 129, 0.25);
+    box-shadow: 0px 2px 3px 0px #aaa;
+    
+    padding: 0px;
+    margin-top: 15px;
+    margin-right: 7.5px;
+    margin-bottom: 15px;
+    margin-left: 7.5px;
+    overflow: hidden;
+    border-radius: 16px;
+    width: 430px;
+    height: 110px;
+    display: flex;
+    flex-direction: column;
+    color: #000000;
+  }
+  .length-sub-container-top {
+    padding-top: 24px;
+    padding-left: 24px;
+    padding-right: 24px;
+    padding-bottom: 7px;
+    flex: 50%;
+    display: flex;
+    flex-direction: row;
+  }
+  .length-sub-container-bottom {
+    padding-left: 24px;
+    padding-right: 24px;
+    padding-bottom: 10px;
+    padding-top: 7px;
+    flex: 50%;
+    display: flex;
+    flex-direction: column;
+  }
+  .length-content-container {
+    display: flex;
+    flex: 70%;
+    flex-direction: row;
+  }
+  .length-details-sub-container {
+    display: flex;
+    flex-direction: row;
+  }
+  .length-title-container {
+    font-family: Inter;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 20px;
+    line-height: 28px;
+    display: flex;
+    flex: 80%;
+    flex-direction: column;
+  }
+ 
+  .length-image-container {
+    flex: 30%;
+  }
+  .length-details-container {
+    display: flex;
+    flex: 70%;
+    flex-direction: column;
+    padding-left: 16px;
+  }
+  .length-product-image-container {
+    border-radius: 16px;
+    width: 107px;
+    height: 102px;
+    border: 1px solid rgb(255, 255, 255);
+  }
+  .length-product-image {
+    display: flex;
+    
+    margin-right: auto;
+    margin-left: 5px;
+    margin-top: -5px;
+    width: 65%;
+    height:65%;
+    background-repeat: no-repeat;
+    position: relative;
+    overflow: hidden;
+    border-radius: 56px;
+  }
+  .length-title-container {
+    display: flex;
+    flex: 30%;
+    flex-direction: column;
+  }
+  .length-price-container {
+    margin-top: 15px;
+    margin-left: -35px;
+    display: flex;
+    flex: 70%;
+    flex-direction: row;
+  }
+  .length-price {
+    display: flex;
+    flex: 50%;
+    flex-direction: column;
+  }
+  .length-quantity {
+    display: flex;
+    position: relative;
+    justify-content: center;
+    align-items: center;
+    flex: 50%;
+    flex-direction: column;
+  }
+  .length-price-text-holder {
+    display: flex;
+    flex: 40%;
+    padding-top: -30px;
+    font-family: Inter;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 14px;
+    line-height: 17px;
+    /* identical to box height */
+  
+    letter-spacing: 1px;
+  }
+  .length-price-value-holder {
+    display: flex;
+    flex: 60%;
+    font-family: Inter;
+    margin-left: -5px;
+    margin-top: -15px;
+    font-style: normal;
+    
+    
+    font-weight: bold;
+    font-size: 18px;
+    line-height: 22px;
+    color: black;
+    /* identical to box height */
+  }
+ 
+  
+  .length-description-title-container {
+    display: flex;
+    flex: 30%;
+    font-family: Inter;
+    font-style: normal;
+    color: #EB5757;
+    margin-left: 90px;
+    margin-top: -80px;
+    font-weight: bold;
+    font-size: 16px;
+    line-height: 19px;
+    /* identical to box height */
+  
+    letter-spacing: 1px;
+  }
+  .length-description-content-container {
+    display: flex;
+    flex: 70%;
+    font-family: Inter;
+    color: #000000;
+    margin-top: -60px;
+    margin-left: 320px;
+    padding-left: 9px;
+    padding-bottom: 4px;
+    padding-top: 7px;
+    margin-bottom: 80px;
+    font-style: normal;
+    font-weight: bold;
+    height: 15px;
+    width: 40px;
+    background-color: #FFDD55;
+    border-radius: 10px;
+    font-size: 14px;
+    line-height: 22px;
+  }
+
+
+@media screen and (min-width: 926px) {
+ 
+
+
+}
+
+@media screen and (min-width: 834px) and (max-width:890px) {
+  
+
+
+
+
+}
+
+@media screen and (min-width: 1194px) {
+ 
+
+    .leadrbord-text{
+        margin-top: 60px;
+        margin-left: 15px;
+        font-family: Inter;
+        font-size: 22px;
+        font-weight: bold;
+        
+        height: 30px;
+        width: 35px;
+    }
+    
+    .text-lb{
+        margin-top: -35px;
+        margin-left: 33px;
+        font-family: Inter;
+        font-size: 22px;
+        font-weight: bold;
+        
+        height: 30px;
+        width: 350px;
+    }
+    
+    .first-score-card{
+        margin-left: 250px;
+        margin-top: 30px;
+        padding-left: 20px;
+        
+    
+    }
+    
+    .second-score-card{
+        margin-left: 50px;
+        margin-top: -215px;
+       
+    
+    }
+    
+    .third-score-card{
+        margin-left: 450px;
+        margin-top: -215px;
+        padding-left: 40px;
+    
+    }
+    
+    .length-score-card{
+        width: 440px;
+        height: 150px;
+        
+    }
+    
+    .Frst-score-card{
+        margin-left: 730px;
+        margin-top: -215px;
+        
+    }
+    
+    .Scnd-score-card{
+        margin-left: 730px;
+        margin-top: -48px;
+        
+    }
+    
+    .Thrd-score-card{
+        margin-left: 730px;
+        margin-top: -48px;
+        
+    }
+    .Frth-score-card{
+        margin-left: 730px;
+        margin-top: -48px;
+        
+    }
+    .Five-score-card{
+        margin-left: 730px;
+        margin-top: -48px;
+        
+    }
+    .game-card-container {
+        background: #fff;
+        border: 2px solid rgba(118, 117, 129, 0.25);
+        box-shadow: 0px 2px 3px 0px #aaa;
+        
+        padding: 0px;
+        margin-top: 15px;
+        margin-right: 7.5px;
+        margin-bottom: 15px;
+        margin-left: -17.5px;
+        overflow: hidden;
+        border-radius: 16px;
+        width: 200px;
+        height: 200px;
+        display: flex;
+        flex-direction: column;
+        color: #000000;
+      }
+      .game-sub-container-top {
+        padding-top: 24px;
+        padding-left: 24px;
+        padding-right: 24px;
+        padding-bottom: 7px;
+        flex: 50%;
+        display: flex;
+        flex-direction: row;
+      }
+      .game-sub-container-bottom {
+        padding-left: 24px;
+        padding-right: 24px;
+        padding-bottom: 10px;
+        padding-top: 7px;
+        flex: 50%;
+        display: flex;
+        flex-direction: column;
+      }
+      .game-content-container {
+        display: flex;
+        flex: 70%;
+        flex-direction: row;
+      }
+      .game-details-sub-container {
+        display: flex;
+        flex-direction: row;
+      }
+      .game-title-container {
+        font-family: Inter;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 20px;
+        line-height: 28px;
+        display: flex;
+        flex: 80%;
+        flex-direction: column;
+      }
+     
+      .game-image-container {
+        flex: 30%;
+      }
+      .game-details-container {
+        display: flex;
+        flex: 70%;
+        flex-direction: column;
+        padding-left: 16px;
+      }
+      .game-product-image-container {
+        border-radius: 16px;
+        width: 107px;
+        height: 102px;
+        border: 1px solid rgb(255, 255, 255);
+      }
+      .game-product-image {
+        display: flex;
+        
+        margin-right: auto;
+        margin-left: 35px;
+        margin-top: -10px;
+        width: 70%;
+        height:70%;
+        background-repeat: no-repeat;
+        position: relative;
+        overflow: hidden;
+        border-radius: 56px;
+      }
+      .game-title-container {
+        display: flex;
+        flex: 30%;
+        flex-direction: column;
+      }
+      .game-price-container {
+        margin-top: 75px;
+        margin-left: -85px;
+        display: flex;
+        flex: 70%;
+        flex-direction: row;
+      }
+      .game-price {
+        display: flex;
+        flex: 50%;
+        flex-direction: column;
+      }
+      .game-quantity {
+        display: flex;
+        position: relative;
+        justify-content: center;
+        align-items: center;
+        flex: 50%;
+        flex-direction: column;
+      }
+      .game-price-text-holder {
+        display: flex;
+        flex: 40%;
+       
+        font-family: Inter;
+        font-style: normal;
+        font-weight: bold;
+        font-size: 14px;
+        line-height: 17px;
+        /* identical to box height */
+      
+        letter-spacing: 1px;
+      }
+      .game-price-value-holder {
+        display: flex;
+        flex: 60%;
+        font-family: Inter;
+        margin-left: -15px;
+        font-style: normal;
+        
+        
+        font-weight: bold;
+        font-size: 18px;
+        line-height: 22px;
+        color: black;
+        /* identical to box height */
+      }
+     
+      
+      .game-description-title-container {
+        display: flex;
+        flex: 30%;
+        font-family: Inter;
+        font-style: normal;
+        color: #EB5757;
+        margin-left: 40px;
+        margin-top: -6px;
+        font-weight: bold;
+        font-size: 16px;
+        line-height: 19px;
+        /* identical to box height */
+      
+        letter-spacing: 1px;
+      }
+      .game-description-content-container {
+        display: flex;
+        flex: 70%;
+        font-family: Inter;
+        color: #000000;
+        margin-top: 10px;
+        margin-left: 34px;
+        padding-left: 27px;
+        font-style: normal;
+        font-weight: bold;
+        height: 15px;
+        width: 80px;
+        background-color: #FFDD55;
+        border-radius: 20px;
+        font-size: 14px;
+        line-height: 22px;
+      }
+    
+    
+      /* -------------------*/
+    
+    
+    
+      .length-card-container {
+        background: #fff;
+        border: 2px solid rgba(118, 117, 129, 0.25);
+        box-shadow: 0px 2px 3px 0px #aaa;
+        
+        padding: 0px;
+        margin-top: 15px;
+        margin-right: 7.5px;
+        margin-bottom: 15px;
+        margin-left: 7.5px;
+        overflow: hidden;
+        border-radius: 16px;
+        width: 430px;
+        height: 110px;
+        display: flex;
+        flex-direction: column;
+        color: #000000;
+      }
+      .length-sub-container-top {
+        padding-top: 24px;
+        padding-left: 24px;
+        padding-right: 24px;
+        padding-bottom: 7px;
+        flex: 50%;
+        display: flex;
+        flex-direction: row;
+      }
+      .length-sub-container-bottom {
+        padding-left: 24px;
+        padding-right: 24px;
+        padding-bottom: 10px;
+        padding-top: 7px;
+        flex: 50%;
+        display: flex;
+        flex-direction: column;
+      }
+      .length-content-container {
+        display: flex;
+        flex: 70%;
+        flex-direction: row;
+      }
+      .length-details-sub-container {
+        display: flex;
+        flex-direction: row;
+      }
+      .length-title-container {
+        font-family: Inter;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 20px;
+        line-height: 28px;
+        display: flex;
+        flex: 80%;
+        flex-direction: column;
+      }
+     
+      .length-image-container {
+        flex: 30%;
+      }
+      .length-details-container {
+        display: flex;
+        flex: 70%;
+        flex-direction: column;
+        padding-left: 16px;
+      }
+      .length-product-image-container {
+        border-radius: 16px;
+        width: 107px;
+        height: 102px;
+        border: 1px solid rgb(255, 255, 255);
+      }
+      .length-product-image {
+        display: flex;
+        
+        margin-right: auto;
+        margin-left: 5px;
+        margin-top: -5px;
+        width: 65%;
+        height:65%;
+        background-repeat: no-repeat;
+        position: relative;
+        overflow: hidden;
+        border-radius: 56px;
+      }
+      .length-title-container {
+        display: flex;
+        flex: 30%;
+        flex-direction: column;
+      }
+      .length-price-container {
+        margin-top: 15px;
+        margin-left: -35px;
+        display: flex;
+        flex: 70%;
+        flex-direction: row;
+      }
+      .length-price {
+        display: flex;
+        flex: 50%;
+        flex-direction: column;
+      }
+      .length-quantity {
+        display: flex;
+        position: relative;
+        justify-content: center;
+        align-items: center;
+        flex: 50%;
+        flex-direction: column;
+      }
+      .length-price-text-holder {
+        display: flex;
+        flex: 40%;
+        padding-top: -30px;
+        font-family: Inter;
+        font-style: normal;
+        font-weight: bold;
+        font-size: 14px;
+        line-height: 17px;
+        /* identical to box height */
+      
+        letter-spacing: 1px;
+      }
+      .length-price-value-holder {
+        display: flex;
+        flex: 60%;
+        font-family: Inter;
+        margin-left: -5px;
+        margin-top: -15px;
+        font-style: normal;
+        
+        
+        font-weight: bold;
+        font-size: 18px;
+        line-height: 22px;
+        color: black;
+        /* identical to box height */
+      }
+     
+      
+      .length-description-title-container {
+        display: flex;
+        flex: 30%;
+        font-family: Inter;
+        font-style: normal;
+        color: #EB5757;
+        margin-left: 90px;
+        margin-top: -80px;
+        font-weight: bold;
+        font-size: 16px;
+        line-height: 19px;
+        /* identical to box height */
+      
+        letter-spacing: 1px;
+      }
+      .length-description-content-container {
+        display: flex;
+        flex: 70%;
+        font-family: Inter;
+        color: #000000;
+        margin-top: -60px;
+        margin-left: 320px;
+        padding-left: 9px;
+        padding-bottom: 4px;
+        padding-top: 7px;
+        margin-bottom: 80px;
+        font-style: normal;
+        font-weight: bold;
+        height: 15px;
+        width: 40px;
+        background-color: #FFDD55;
+        border-radius: 10px;
+        font-size: 14px;
+        line-height: 22px;
+      }
+    
+    
+
+
+
+}
+
+
+
+
+
+

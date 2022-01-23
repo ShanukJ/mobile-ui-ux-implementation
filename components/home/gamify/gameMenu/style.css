@@ -1,0 +1,266 @@
+@import url('https://fonts.googleapis.com/css?family=Iceberg');
+
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  color: #092C4C ;
+}
+
+
+.back-to-home{
+    margin-top: 40px;
+    margin-left: 15px;
+    font-family: Iceberg;
+    font-size: 24px;
+    font-weight: bold;
+    
+    height: 30px;
+    width: 35px;
+}
+
+.home-text{
+    margin-top: -35px;
+    margin-left: 33px;
+    font-family: Iceberg;
+    font-size: 24px;
+    font-weight: bold;
+    
+    height: 30px;
+    width: 350px;
+}
+
+.play-and-win{
+    font-size: 64px;
+    margin-left: 69px;
+    margin-top: 42px;
+    font-family: Iceberg;
+}
+
+.flappy-bird{
+    width: 303px;
+    height: 186px;
+    margin-left: 61px;
+    margin-top: 50px;  
+}
+
+.car-game{
+    width: 303px;
+    height: 186px;
+    margin-left: 61px;
+    margin-top: 50px;  
+}
+
+.leadrboard{
+    width: 303px;
+    height: 186px;
+    margin-left: 81px;
+   
+    margin-top: 55px;  
+}
+
+.rules-points{
+    width: 303px;
+    height: 186px;
+   
+    margin-left: 233px;
+    margin-top: -187px;  
+}
+
+@media screen and (min-width: 926px) {
+ 
+    .back-to-home{
+        margin-top: 40px;
+        margin-left: 15px;
+        font-family: Iceberg;
+        font-size: 24px;
+        font-weight: bold;
+        
+        height: 30px;
+        width: 35px;
+    }
+    
+    .home-text{
+        margin-top: -35px;
+        margin-left: 33px;
+        font-family: Iceberg;
+        font-size: 24px;
+        font-weight: bold;
+        
+        height: 30px;
+        width: 350px;
+    }
+    
+    .play-and-win{
+        font-size: 64px;
+        margin-left: 318px;
+        margin-top: -10px;
+        font-family: Iceberg;
+    }
+    
+    .flappy-bird{
+        width: 303px;
+        height: 186px;
+        margin-left: 62px;
+        margin-top: 30px;  
+    }
+    
+    .car-game{
+        width: 303px;
+        height: 186px;
+        margin-left: 407px;
+        margin-top: -186px;  
+    }
+    
+    .leadrboard{
+        width: 303px;
+        height: 186px;
+        margin-left: 771px;
+       
+        margin-top: -225px;  
+    }
+    
+    .rules-points{
+        width: 303px;
+        height: 186px;
+       
+        margin-left: 771px;
+        margin-top: -40px;  
+    }
+
+}
+
+@media screen and (min-width: 834px) and (max-width:890px) {
+  
+.back-to-home{
+    margin-top: 90px;
+    margin-left: 40px;
+    font-family: Iceberg;
+    font-size: 24px;
+    font-weight: bold;
+    
+    height: 30px;
+    width: 35px;
+}
+
+.home-text{
+    margin-top: -35px;
+    margin-left: 33px;
+    font-family: Iceberg;
+    font-size: 24px;
+    font-weight: bold;
+    
+    height: 30px;
+    width: 350px;
+}
+
+.play-and-win{
+    font-size: 64px;
+    margin-left: 274px;
+    margin-top: 142px;
+    font-family: Iceberg;
+}
+
+.flappy-bird{
+    width: 303px;
+    height: 186px;
+    margin-left: 93px;
+    margin-top: 90px;  
+}
+
+.car-game{
+    width: 303px;
+    height: 186px;
+    margin-left: 438px;
+    margin-top: -185px;  
+}
+
+.leadrboard{
+    width: 303px;
+    height: 186px;
+    margin-left: 277px;
+   
+    margin-top: 80px;  
+}
+
+.rules-points{
+    width: 303px;
+    height: 186px;
+   
+    margin-left: 438px;
+    margin-top: -187px;  
+}
+
+}
+
+@media screen and (min-width: 1194px) {
+ 
+
+    .back-to-home{
+        margin-top: 90px;
+        margin-left: 40px;
+        font-family: Iceberg;
+        font-size: 24px;
+        font-weight: bold;
+        
+        height: 30px;
+        width: 35px;
+    }
+    
+    .home-text{
+        margin-top: -35px;
+        margin-left: 33px;
+        font-family: Iceberg;
+        font-size: 24px;
+        font-weight: bold;
+        
+        height: 30px;
+        width: 350px;
+    }
+    
+    .play-and-win{
+        font-size: 64px;
+        margin-left: 454px;
+        margin-top: 42px;
+        font-family: Iceberg;
+    }
+    
+    .flappy-bird{
+        width: 303px;
+        height: 186px;
+        margin-left: 273px;
+        margin-top: 60px;  
+    }
+    
+    .car-game{
+        width: 303px;
+        height: 186px;
+        margin-left: 618px;
+        margin-top: -185px;  
+    }
+    
+    .leadrboard{
+        width: 303px;
+        height: 186px;
+        margin-left: 457px;
+       
+        margin-top: 80px;  
+    }
+    
+    .rules-points{
+        width: 303px;
+        height: 186px;
+       
+        margin-left: 618px;
+        margin-top: -187px;  
+    }
+
+
+}
+
+
+
+
+
+
