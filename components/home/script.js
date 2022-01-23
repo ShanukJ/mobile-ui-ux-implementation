@@ -28,6 +28,7 @@ let arr =[];
 let sendThis="";
 productsRef.on("child_added", function(snap) {
   $('#display_fav').append(productHtmlFromObject(snap.val(),snap.key));
+  $('#display_cart').append(productCartHtmlFromObject(snap.val(),snap.key));
   arr.push(snap.val());
   console.log("arrarr",arr);
 });
@@ -182,6 +183,30 @@ function productHtmlFromObject(product,key){
     prd += "</div>";
     return prd;
   }
+
+  function productCartHtmlFromObject(product,key){
+  
+    console.log(JSON.stringify(product)+"prod",key);
+    remove_key=key;
+    var str = product.main_title;
+    if(str.length > 10) str = str.substring(0,19);
+      var prd = '';
+      prd += '<div id="id " class="prod-grid1">';
+      prd += ' <a href="#new_product_page">';
+      prd += ' <div class="card_elements" id="redirect-product">';
+      prd += ' <div class="card-image">';
+      prd +=
+        ' <img alt="home"src="https://res.cloudinary.com/dgly8b9lq/image/upload/v1642863590/Lkia/unsplash_UYHhyLwM1Wk_imxslj.png"class="image_card"/>';
+      prd += " </div>";
+      prd += ' <h5 class="card-product-title"> &nbsp;' + str;
+      prd += ' <h6 class="card-product-desc"> &nbsp;' + product.price;
+      prd += " </h6>";
+      prd += '<a href="#" class="card-product-desc-remove" data-key="'+key+'style="position: relative; left: 10px;" >Remove From Cart</a>'
+      prd += " </div>";
+      prd += " </a>";
+      prd += "</div>";
+      return prd;
+    }
   
   function add_data_table(id) {
     productsRef.push({ main_img: "https://res.cloudinary.com/dgly8b9lq/image/upload/v1642139960/Lkia/joel-henry-pdIwPL3HU2s-unsplash_jtp9rn.jpg",
