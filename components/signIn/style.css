@@ -99,7 +99,7 @@ a {
 
 
 
-.login-btn{
+.login-button{
   background-color: #092C4C;
   color: #FFFFFF;
   font-family: Inter;
@@ -126,7 +126,8 @@ a {
 }
 
 .input-set{
-  padding-top: 350px;
+  padding-top: 450px;
+  background-color: antiquewhite;
 }
 
 .dont-have-an-account{
@@ -137,68 +138,6 @@ a {
   font-size: 15px;
 }
 
-.login-form .card {
-  position: relative;
-  overflow: hidden;
-  background-color: rgb(255, 255, 255);
-  margin-left: 45px;
-  width: 80%;
-}
-
-
-.login-form .card .card-header i {
-   font-size: 54px;
-   margin-bottom: 15px;
-}
-
-.login-form .card .card-header h2 {
-   font-size: 25px;
-   font-weight: 700;
-}
-
-.login-form .card .card-body {
-  position: relative;
-}
-
-.login-form .card .card-body label {
-  font-size: 13px;
-}
-
-.login-form .card .card-body input,
-.login-form .card .card-body textarea {
-  border: 1px solid #BDBDBD;
-  height: 50px;
-
-  font-family: Inter;
-  color: #092C4C;
-  
-  border-radius: 5px;
-}
-.login-form .card .card-body input:focus,
-.login-form .card .card-body textarea:focus {
-  color: #092C4C;
-  font-family: Inter;
-  
-  border: 2px solid #092C4C;
-}
-
-.login-form .card .card-body .btn {
-  background: #092C4C;
-  font-family: Inter;
-  color: #fff;
-  font-size: 16px;
-  height: 55px;
-  border-radius: 5px;
-}
-.login-form .card .card-body .btn:hover {
-  background: #092C4C;
-  color: #fff;
-}
-.login-form .card .card-body .custom-control label {
-  font-size: 16px;
-}
-
-
 
 .signup-logo{
   position: absolute;
@@ -206,12 +145,16 @@ a {
   height: 168px;
   
   left: 35%;
-  top: 117px;
+  top: 107px;
  }
 
- .input-set{
-  padding-top: 350px;
-}
+ .password-width{
+   background-color: aqua;
+   height: 53px;
+  
+   
+ }
+
 
 @media screen and (min-width: 926px) {
   .header_local {
@@ -253,33 +196,9 @@ a {
 
 
 
-.login-form .card .card-body .btn {
-  background: #092C4C;
-  font-family: Inter;
-  color: #fff;
-  font-size: 16px;
-  width: 365px;
-  height: 55px;
-  border-radius: 5px;
-}
 
-.login-form .card .card-body input,
-.login-form .card .card-body textarea {
-  border: 1px solid #BDBDBD;
-  height: 50px;
-  width: 365px;
-  font-family: Inter;
-  color: #092C4C;
-  border-radius: 5px;
-}
 
-.login-form .card {
- 
-  background-color: rgb(255, 255, 255);
-  margin-left: 65px;
-  width: 365px;
-  
-}
+
 
 
 .forgot-password{
@@ -333,34 +252,6 @@ a {
   }
 
 
-
-.login-form .card .card-body .btn {
-  background: #092C4C;
-  font-family: Inter;
-  color: #fff;
-  font-size: 16px;
-  width: 465px;
-  height: 70px;
-  border-radius: 5px;
-}
-
-.login-form .card .card-body input,
-.login-form .card .card-body textarea {
-  border: 1px solid #BDBDBD;
-  height: 65px;
-  width: 465px;
-  font-family: Inter;
-  color: #092C4C;
-  border-radius: 5px;
-}
-
-.login-form .card {
-  
-  margin-left: 30px;
-  width: 465px;
-  top: 600px;
-  background-color: #ffffff;
-}
 
 
 .forgot-password{
@@ -417,33 +308,7 @@ a {
     margin-top: 30px;
   }
 
-.login-form .card .card-body .btn {
-  background: #092C4C;
-  font-family: Inter;
-  color: #fff;
-  font-size: 16px;
-  width: 465px;
-  height: 70px;
-  border-radius: 5px;
-}
 
-.login-form .card .card-body input,
-.login-form .card .card-body textarea {
-  border: 1px solid #BDBDBD;
-  height: 65px;
-  width: 465px;
-  font-family: Inter;
-  color: #092C4C;
-  border-radius: 5px;
-}
-
-.login-form .card {
-  
-  margin-left: 430px;
-  width: 465px;
-  top: 140px;
-  background-color: #ffffff;
-}
 
 
 .forgot-password{
