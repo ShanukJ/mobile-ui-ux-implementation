@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link
+        href="https://fonts.googleapis.com/css?family=Material+Icons|Material+Icons+Outlined|Material+Icons+Two+Tone|Material+Icons+Round|Material+Icons+Sharp"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css">
+    <script src="https://code.jquery.com/jquery-1.11.1.min.js"></script>
+    <script src="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+    <script src="https://code.iconify.design/2/2.1.1/iconify.min.js"></script>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" type="text/css" href="https://code.jquery.com/mobile/1.4.0/jquery.mobile-1.4.0.min.css">
+
+    <script>
+        $(function () {
+          $("#").load("../cart/index.html");
+          
+        });
+
+        function startFlappyBird() {  
+            window.location.href='../flappyBird/index.html'
+         }  
+
+         function showLeaderBoard() {  
+            window.location.href='../leaderboard/index.html'
+         }  
+
+      </script>
+
+    <title>Game menu</title>
+</head>
+
+<body>
+
+    <div data-role="page" id="game-menu_page">
+
+
+        <div role="gameMenupage">
+
+            <div>
+                <a href="http://127.0.0.1:5500/components/home/index.html" rel="external" style="text-decoration: none">
+                <div class="back-to-home">
+                    <span class="iconify" data-icon="mdi:arrow-left-circle"
+                        style="color: #092c4c; font-size: 24px;"></span>
+                    <div class="home-text">
+                        Back to home
+                    </div>
+                </div>
+                </a>
+            </div>
+
+            <div class="play-and-win">
+                Play & Win
+            </div>
+
+            <div class="flappy-bird">
+                <img src="https://res.cloudinary.com/dgly8b9lq/image/upload/v1642705649/Lkia/image_5_kcrnh4.png"
+                    style="border-radius: 25px; height: 200px; width: 310px;" id="flappy-bird-game" onclick="startFlappyBird()">
+            </div>
+
+            <div class="car-game">
+                <img src="https://res.cloudinary.com/dgly8b9lq/image/upload/v1642705659/Lkia/image_6_c71bvc.png"
+                    style="border-radius: 25px; height: 200px; width: 310px;">
+            </div>
+
+            <div class="leadrboard">
+                <img src="https://res.cloudinary.com/dgly8b9lq/image/upload/v1642705662/Lkia/image_7_tix5f0.png"
+                    style="height: 115px; width: 120px;" onclick="showLeaderBoard()">
+            </div>
+
+            <div class="rules-points">
+                <img src="https://res.cloudinary.com/dgly8b9lq/image/upload/v1642705668/Lkia/image_8_ulzuco.png"
+                    style="height: 115px; width: 120px;">
+            </div>
+
+
+        </div>
+    </div>
+
+</body>
+
+</html>
