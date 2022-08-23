@@ -2,13 +2,16 @@
 <p>
 </p>
 
-> This is the MODULE: (2021) 6MMCS003C.1 Mobile User Experience Course work 02
+> This is the MODULE: (2021) 6MMCS003C.1 Mobile User Experience Coursework
 
-## Install
+## Lkiea : Your Neighbourhood Online Marketplace
 
-```sh
-npm install
-```
+
+Lkiea serves as a neighbourhood online marketplace, where people come together to make, sell, buy, and collect DIY items. The main concept of the Lkiea is to connect people/neighbours in need of a service with others that could offer a service working from home or working near the area they live.
+
+* [Design Demo](https://youtu.be/YdpPE1YSISw)
+* [Implementation Demo](https://youtu.be/DiyOmYwhVqs)
+
 
 ## Authors
 
@@ -33,4 +36,3 @@ npm install
 Give a ⭐️ if this project helped you!
 
 ***
-_This README was generated with ❤️ by [readme-md-generator](https://github.com/kefranabg/readme-md-generator)_
