@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://fonts.googleapis.com/css?family=Material+Icons|Material+Icons+Outlined|Material+Icons+Two+Tone|Material+Icons+Round|Material+Icons+Sharp"
+      rel="stylesheet"
+    />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
+    <script
+      src="https://maps.googleapis.com/maps/api/js?key=API_KEY&callback=initMap"
+      defer
+    ></script>
+
+    <script>
+      // Initialize and add the map
+      function initMap() {
+        const uluru = { lat: 51.520919, lng: -0.140126 };
+        // Styles a map in night mode.
+        const map = new google.maps.Map(document.getElementById("map"), {
+          center: uluru,
+          zoom: 12,
+          mapTypeControl: false,
+          streetViewControl: false,
+          //disableDefaultUI: true,
+          styles: [
+            { elementType: "geometry", stylers: [{ color: "#242f3e" }] },
+            {
+              elementType: "labels.text.stroke",
+              stylers: [{ color: "#242f3e" }],
+            },
+            {
+              elementType: "labels.text.fill",
+              stylers: [{ color: "#746855" }],
+            },
+            {
+              featureType: "administrative.locality",
+              elementType: "labels.text.fill",
+              stylers: [{ color: "#d59563" }],
+            },
+            {
+              featureType: "poi",
+              elementType: "labels.text.fill",
+              stylers: [{ color: "#d59563" }],
+            },
+            {
+              featureType: "poi.park",
+              elementType: "geometry",
+              stylers: [{ color: "#263c3f" }],
+            },
+            {
+              featureType: "poi.park",
+              elementType: "labels.text.fill",
+              stylers: [{ color: "#6b9a76" }],
+            },
+            {
+              featureType: "road",
+              elementType: "geometry",
+              stylers: [{ color: "#38414e" }],
+            },
+            {
+              featureType: "road",
+              elementType: "geometry.stroke",
+              stylers: [{ color: "#212a37" }],
+            },
+            {
+              featureType: "road",
+              elementType: "labels.text.fill",
+              stylers: [{ color: "#9ca5b3" }],
+            },
+            {
+              featureType: "road.highway",
+              elementType: "geometry",
+              stylers: [{ color: "#746855" }],
+            },
+            {
+              featureType: "road.highway",
+              elementType: "geometry.stroke",
+              stylers: [{ color: "#1f2835" }],
+            },
+            {
+              featureType: "road.highway",
+              elementType: "labels.text.fill",
+              stylers: [{ color: "#f3d19c" }],
+            },
+            {
+              featureType: "transit",
+              elementType: "geometry",
+              stylers: [{ color: "#2f3948" }],
+            },
+            {
+              featureType: "transit.station",
+              elementType: "labels.text.fill",
+              stylers: [{ color: "#d59563" }],
+            },
+            {
+              featureType: "water",
+              elementType: "geometry",
+              stylers: [{ color: "#17263c" }],
+            },
+            {
+              featureType: "water",
+              elementType: "labels.text.fill",
+              stylers: [{ color: "#515c6d" }],
+            },
+            {
+              featureType: "water",
+              elementType: "labels.text.stroke",
+              stylers: [{ color: "#17263c" }],
+            },
+          ],
+        });
+
+        const marker = new google.maps.Marker({
+          position: uluru,
+          map: map,
+          title: "University of Westminster",
+        });
+      }
+    </script>
+
+    <title>Home</title>
+  </head>
+  <body>
+    <!-- Footer -->
+    <div role="main">
+      <div class="footer-map" id="map"></div>
+
+      <div class="footerContainer">
+        <div class="feedWrap">
+          <a href="#"
+            ><img
+              src="https://res.cloudinary.com/dgly8b9lq/image/upload/v1640853422/Lkia/feedback_bxnmx8.png"
+              alt=""
+              class="feedback"
+          /></a>
+        </div>
+        <div class="footer_head">Lkiea</div>
+        <div class="footer_body">
+          +44-7911-2947<br />lkiea@gmail.com<br />40 Cunnery Rd, Manchester, UK
+        </div>
+
+        <div class="social_container">
+          <a href="https://www.facebook.com/"
+            ><img src="image6.png" alt="" class="social_circle"
+          /></a>
+          <a href="https://twitter.com/"
+            ><img src="image7.png" alt="" class="social_circle"
+          /></a>
+          <a href="https://telegram.org/"
+            ><img src="image8.png" alt="" class="social_circle"
+          /></a>
+          <a href="https://www.instagram.com/"
+            ><img src="image5.png" alt="" class="social_circle"
+          /></a>
+        </div>
+
+        <div class="footer_rights">
+          Copyright © 2021, Lkiea Inc. All Rights Reserved.
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

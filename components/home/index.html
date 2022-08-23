@@ -1,0 +1,2542 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="lkia-theme.css" />
+  <link rel="stylesheet" href="jquery.mobile.icons.min.css" />
+  <link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile.structure-1.4.5.min.css" />
+  <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+  <link rel="stylesheet" type="text/css"
+    href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" type="text/css" href="css/style.css">
+  <link rel="stylesheet" type="text/css" href="product.css">
+  <link rel="stylesheet" type="text/css" href="account.css">
+  <link
+    href="https://fonts.googleapis.com/css?family=Material+Icons|Material+Icons+Outlined|Material+Icons+Two+Tone|Material+Icons+Round|Material+Icons+Sharp"
+    rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css" />
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+    integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous" />
+  <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+    integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+    integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+    crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+    integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+    crossorigin="anonymous"></script>
+  <script src="https://code.jquery.com/jquery-1.11.1.min.js"></script>
+  <script src="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+  <script src="https://code.iconify.design/2/2.1.1/iconify.min.js"></script>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css" />
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" type="text/css" href="https://code.jquery.com/mobile/1.4.0/jquery.mobile-1.4.0.min.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+  <link rel="stylesheet" href="../cart/style.css" />
+  <link rel="stylesheet" href="../product/style.css" />
+  <link rel="stylesheet" type="text/css" href="css/style.css" />
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
+  <script src="https://maps.googleapis.com/maps/api/js?key=API_KEY&callback=initMap"
+    defer></script>
+  <script src="https://unpkg.com/querybase@0.4.0"></script>
+  <script>
+    $(function () {
+      $("#cart-page").load("../cart/index.html");
+      $("#product-page1").load("../product/index.html");
+    });
+  </script>
+  <script src="https://smtpjs.com/v3/smtp.js"></script>
+  <script>
+    // Initialize and add the map
+    function initMap() {
+      const uluru = { lat: 51.520919, lng: -0.140126 };
+      // Styles a map in night mode.
+      const map = new google.maps.Map(document.getElementById("map"), {
+        center: uluru,
+        zoom: 12,
+        mapTypeControl: false,
+        streetViewControl: false,
+        //disableDefaultUI: true,
+        styles: [
+          { elementType: "geometry", stylers: [{ color: "#242f3e" }] },
+          {
+            elementType: "labels.text.stroke",
+            stylers: [{ color: "#242f3e" }],
+          },
+          {
+            elementType: "labels.text.fill",
+            stylers: [{ color: "#746855" }],
+          },
+          {
+            featureType: "administrative.locality",
+            elementType: "labels.text.fill",
+            stylers: [{ color: "#d59563" }],
+          },
+          {
+            featureType: "poi",
+            elementType: "labels.text.fill",
+            stylers: [{ color: "#d59563" }],
+          },
+          {
+            featureType: "poi.park",
+            elementType: "geometry",
+            stylers: [{ color: "#263c3f" }],
+          },
+          {
+            featureType: "poi.park",
+            elementType: "labels.text.fill",
+            stylers: [{ color: "#6b9a76" }],
+          },
+          {
+            featureType: "road",
+            elementType: "geometry",
+            stylers: [{ color: "#38414e" }],
+          },
+          {
+            featureType: "road",
+            elementType: "geometry.stroke",
+            stylers: [{ color: "#212a37" }],
+          },
+          {
+            featureType: "road",
+            elementType: "labels.text.fill",
+            stylers: [{ color: "#9ca5b3" }],
+          },
+          {
+            featureType: "road.highway",
+            elementType: "geometry",
+            stylers: [{ color: "#746855" }],
+          },
+          {
+            featureType: "road.highway",
+            elementType: "geometry.stroke",
+            stylers: [{ color: "#1f2835" }],
+          },
+          {
+            featureType: "road.highway",
+            elementType: "labels.text.fill",
+            stylers: [{ color: "#f3d19c" }],
+          },
+          {
+            featureType: "transit",
+            elementType: "geometry",
+            stylers: [{ color: "#2f3948" }],
+          },
+          {
+            featureType: "transit.station",
+            elementType: "labels.text.fill",
+            stylers: [{ color: "#d59563" }],
+          },
+          {
+            featureType: "water",
+            elementType: "geometry",
+            stylers: [{ color: "#17263c" }],
+          },
+          {
+            featureType: "water",
+            elementType: "labels.text.fill",
+            stylers: [{ color: "#515c6d" }],
+          },
+          {
+            featureType: "water",
+            elementType: "labels.text.stroke",
+            stylers: [{ color: "#17263c" }],
+          },
+        ],
+      });
+      const marker = new google.maps.Marker({
+        position: uluru,
+        map: map,
+        title: "University of Westminster",
+      });
+    }
+  </script>
+  <script>
+    jQuery(document).ready(function () {
+      showIntro();
+      let x = 1;
+      if (x === 0) {
+        $("#t1").addClass("hidden");
+      } else {
+        $("#t2").addClass("hidden");
+      }
+
+      $("#popup-one").addClass("hidden");
+    });
+  </script>
+  <script>
+    function showQR() {
+      document.getElementById("popUp-qr").classList.toggle("active");
+    }
+  </script>
+  <script>
+    function showQRCode() {
+      document.getElementById("popUp-qr-generate").classList.toggle("active");
+    }
+  </script>
+  <script>
+    function showIntro() {
+      document.getElementById("popUp-home-intro").classList.toggle("active");
+    }
+  </script>
+  <script>
+    $(document).ready(function () {
+      $(document).on('click', '.card-product-desc-remove', function (e) {
+        remove_data_table(1);
+        window.location.reload();
+      });
+      $(document).on('click', '#subscribe-button', function (e) {
+        console.log("email-", document.getElementById('subscription-email-text-field').value);
+        let emailAddress = document.getElementById('subscription-email-text-field').value;
+        if (/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(emailAddress)) {
+          sendEmail(emailAddress);
+          var x = document.getElementById("snackbar-fav-send");
+          x.className = "show";
+          setTimeout(function(){ x.className = x.className.replace("show", ""); }, 3000);
+          console.log("fav")
+        } else {
+          var x = document.getElementById("snackbar-fav-inv");
+          x.className = "show";
+          setTimeout(function(){ x.className = x.className.replace("show", ""); }, 3000);
+          console.log(" not fav",x)
+        }
+      });
+    });
+  </script>
+  <script>
+    function gridToggle(){
+      var l1 = document.getElementById("list_view");
+      var g2 = document.getElementById("grid_view");
+      l1.classList.toggle("hidden");
+      g2.classList.toggle("hidden");
+    }
+    function wifiToggle(from) {
+      if (from) {
+        add_data_table(1);
+        var x = document.getElementById("snackbar-fav");
+        x.className = "show";
+        setTimeout(function(){ x.className = x.className.replace("show", ""); }, 3000);
+        console.log("Fav")
+      } else {
+
+        remove_data_table(1);
+        console.log("not Fav")
+      }
+      var t1 = document.getElementById("t1");
+      var t2 = document.getElementById("t2");
+      t1.classList.toggle("hidden");
+      t2.classList.toggle("hidden");
+    }
+  </script>
+  <script type="text/javascript">
+    function SwapDivsWithClick(div1, div2, div3) {
+      d1 = document.getElementById(div1);
+      d2 = document.getElementById(div2);
+      d3 = document.getElementById(div3);
+      if (d2.style.display == "none") {
+        d1.style.display = "none";
+        d2.style.display = "block";
+        d3.style.display = "none";
+      }
+      else if (d2.style.display == "none") {
+        d1.style.display = "block";
+        d2.style.display = "none";
+        d3.style.display = "none";
+      }
+      else {
+        d1.style.display = "none";
+        d2.style.display = "none";
+        d3.style.display = "block";
+      }
+    }
+  </script>
+  <script src="https://smtpjs.com/v3/smtp.js">
+  </script>
+  <style>
+    .hide-element {
+      display: none;
+    }
+  </style>
+  <link rel="stylesheet" type="text/css" href="../shippingForm/style.css">
+  <script src="https://checkout.stripe.com/checkout.js"></script>
+  <script>
+    jQuery(function($) {
+      var $form = $('#Shipping-Form');
+      var handler = StripeCheckout.configure({
+        key: 'pk_test_cp21BcECf4kMMUbSlRlZlsMo',
+        token: function(token) {
+          if(token.id){
+                    $("#thankyouPayment").html("Thank you, your payment was successful!");
+                    window.location.replace("http://127.0.0.1:5500/components/home/index.html");
+          }
+        }
+      }); 
+
+      $('#proceed-btn').on('click', function(e) {
+        // Code Section B  Open Checkout with further options
+        handler.open({
+          name: 'Payment',
+          currency: 'gbp',
+          description: "Tripod Table Lamp",
+          amount: 38.80 * 100
+        });
+        e.preventDefault();
+      });
+
+      // Code Section C  Close Checkout on page navigation
+      $(window).on('popstate', function() {
+        handler.close();
+      });
+
+      $('#go-to-ship').on('click', function(e) {
+        window.location.replace("http://127.0.0.1:5500/components/home/index.html#buynowform_page");
+      });
+
+      });
+    </script>
+    <link rel="stylesheet" type="text/css" href="../signIn/style.css">
+
+  <title>Home</title>
+</head>
+
+<body>
+  <!--Page 1 - Home -->
+  <div data-role="page" id="home_page">
+    <div data-role="headerLocal" class="header_local">
+      <a href="#home_page"><img src="https://res.cloudinary.com/dgly8b9lq/image/upload/v1640846393/Lkia/logo_rf4wm5.png"
+          alt="" class="logo_header" /></a>
+      <a href="#search" class="search_icon">
+        <span class="material-icons-outlined" id="searchI">search</span>
+      </a>
+    </div>
+    <div role="main_content" class="content_home">
+      <!--Popup -->
+      <div class="popUp-home-view" id="popUp-home-intro">
+        <div class="overlay-home" onclick="showIntro();"></div>
+        <div class="content-home">
+          <div class="close-btn-home" onclick="showIntro();">&times;</div>
+          <br>
+          <div id="swap-first">
+            <img
+              src="https://res.cloudinary.com/dgly8b9lq/image/upload/v1642264855/Lkia/unsplash_afW1hht0NSs_ihgukz.png"
+              alt="" width="306" height="180" class="qr-ar-button" id="popImage" />
+
+            <h4 class="popup-body-home">Search your Dream Product !</h4>
+          </div>
+
+          <div id="swap-second" style="display:none;">
+            <img
+              src="https://res.cloudinary.com/dgly8b9lq/image/upload/v1642888262/Lkia/image_35_q1dmpr.png"
+              alt="" width="306" height="180" class="qr-ar-button" id="popImage" />
+
+            <h4 class="popup-body-home">Order products with one tap</h4>
+          </div>
+
+          <div id="swap-third" style="display:none;">
+            <img
+              src="https://res.cloudinary.com/dgly8b9lq/image/upload/v1642888858/Lkia/istockphoto-821114486-170667a_hqdypj.jpg"
+              alt="" width="306" height="180" class="qr-ar-button" id="popImage" />
+
+            <h4 class="popup-body-home">Get started</h4>
+          </div>
+
+          <a href="javascript:SwapDivsWithClick('swap-first','swap-second','swap-third')">
+            <div class="homePop-button" id="homePop-btn">Next</div>
+          </a>
+        </div>
+      </div>
+
+      <!--Banner carousel -->
+      <div class="container_banner">
+        <div id="myCarousel" class="carousel slide" data-ride="carousel">
+          <!-- Wrapper for slides -->
+          <div class="carousel-inner">
+            <div class="item active">
+              <img src="https://res.cloudinary.com/dgly8b9lq/image/upload/v1642097622/Lkia/landscape_1_on9nsa.png"
+                alt="" class="bannerHead" />
+            </div>
+
+            <div class="item">
+              <img src="https://res.cloudinary.com/dgly8b9lq/image/upload/v1642097622/Lkia/landscape_2_saactl.png"
+                alt="" class="bannerHead" />
+            </div>
+          </div>
+          <!-- Indicators -->
+          <ol class="carousel-indicators">
+            <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+            &nbsp;&nbsp;&nbsp;
+            <li data-target="#myCarousel" data-slide-to="1"></li>
+          </ol>
+        </div>
+      </div>
+
+      <h3>
+        Look for items that you enjoy. Help out small business owners by
+        purchasing from them.<br /><b>Only from Lkiea.</b>
+      </h3>
+
+      <div class="story_container">
+        <a href="#popupVideo" id="opendialog" data-rel="popup" data-transition="pop"><span class="story_circle">
+            <img
+              src="https://res.cloudinary.com/dgly8b9lq/image/upload/v1642852989/Lkia/Screenshot_2022-01-22_at_17.29.31-modified_bitwyb.png"
+              style="width: 60px; height:60px" />
+          </span></a>
+        <a href="#popupVideo2" id="opendialog" data-rel="popup" data-transition="pop"><span class="story_circle">
+            <img
+              src="https://res.cloudinary.com/dgly8b9lq/image/upload/v1642852992/Lkia/Screenshot_2022-01-22_at_17.28.01-modified_ajhlws.png"
+              style="width: 60px; height:60px" />
+          </span></a>
+        <a href="#popupVideo3" id="opendialog" data-rel="popup" data-transition="pop"><span class="story_circle">
+            <img
+              src="https://res.cloudinary.com/dgly8b9lq/image/upload/v1642852993/Lkia/Screenshot_2022-01-22_at_17.27.13-modified_sfvoth.png"
+              style="width: 60px; height:60px" />
+          </span></a>
+        <a href="#popupVideo4" id="opendialog" data-rel="popup" data-transition="pop"><span class="story_circle">
+            <img
+              src="https://res.cloudinary.com/dgly8b9lq/image/upload/v1642852991/Lkia/Screenshot_2022-01-22_at_17.28.17-modified_v2xfus.png"
+              style="width: 60px; height:60px" />
+          </span></a>
+        <a href="#popupVideo5" id="opendialog" data-rel="popup" data-transition="pop"><span class="story_circle">
+            <img
+              src="https://res.cloudinary.com/dgly8b9lq/image/upload/v1642853590/Lkia/Screenshot_2022-01-22_at_17.42.48-modified_vw1eet.png"
+              style="width: 60px; height:60px" />
+          </span></a>
+      </div>
+
+      <div data-role="popup" id="popupVideo">
+        <div class="video-container">
+          <div class="h_iframe">
+            <video controls autoplay loop style="height:calc(100vh - 50px);
+              width:calc(100vw - 50px);">
+              <source src="https://lkiea.com/mobile-ui-ux/videos/1.mp4" type="video/mp4">
+            </video>
+          </div>
+        </div>
+      </div>
+
+      <div data-role="popup" id="popupVideo2">
+        <div class="video-container">
+          <div class="h_iframe">
+            <video controls autoplay loop style="height:calc(100vh - 50px);
+              width:calc(100vw - 50px);">
+              <source src="https://lkiea.com/mobile-ui-ux/videos/2.mp4" type="video/mp4">
+            </video>
+          </div>
+        </div>
+      </div>
+
+      <div data-role="popup" id="popupVideo3">
+        <div class="video-container">
+          <div class="h_iframe">
+            <video controls autoplay loop style="height:calc(100vh - 50px);
+              width:calc(100vw - 50px);">
+              <source src="https://lkiea.com/mobile-ui-ux/videos/3.mp4" type="video/mp4">
+            </video>
+          </div>
+        </div>
+      </div>
+
+      <div data-role="popup" id="popupVideo4">
+        <div class="video-container">
+          <div class="h_iframe">
+            <video controls autoplay loop style="height:calc(100vh - 50px);
+              width:calc(100vw - 50px);">
+              <source src="https://lkiea.com/mobile-ui-ux/videos/4.mp4" type="video/mp4">
+            </video>
+          </div>
+        </div>
+      </div>
+
+      <div data-role="popup" id="popupVideo5">
+        <div class="video-container">
+          <div class="h_iframe">
+            <video controls autoplay loop style="height:calc(100vh - 50px);
+              width:calc(100vw - 50px);">
+              <source src="https://lkiea.com/mobile-ui-ux/videos/5.mp4" type="video/mp4">
+            </video>
+          </div>
+        </div>
+      </div>
+
+      <h3><b>Popular Right Now</b></h3>
+
+      <div class="popular_container">
+        <!--Product Grid-->
+        <div id="div1">
+          <section class="section-grid">
+            <div class="grid-prod">
+              <div class="prod-grid">
+                <!-- Card elements -->
+                <div class="card_elements">
+                  <div class="card-image">
+                    <img alt="home"
+                      src="https://res.cloudinary.com/dgly8b9lq/image/upload/c_fill,h_500,w_500/v1642863593/Lkia/unsplash_Gp3Z2Gx-GCM_e89ohf.png"
+                      class="image_card" />
+                  </div>
+                  <h5 class="card-product-title">&nbsp;Tripod Table Lamp</h5>
+                  <h6 class="card-product-desc">
+                    &nbsp;GBP 140.75 (30% 0ff)
+                  </h6>
+                </div>
+              </div>
+
+              <div class="prod-grid">
+                <!-- Card elements -->
+                <div class="card_elements">
+                  <div class="card-image">
+                    <img alt="home"
+                      src="https://res.cloudinary.com/dgly8b9lq/image/upload/c_fill,h_500,w_500/v1642916101/Lkia/unsplash_vuXTB1lR3AY_uor0gh.png"
+                      class="image_card" />
+                  </div>
+                  <h5 class="card-product-title">&nbsp;Embroidery art</h5>
+                  <h6 class="card-product-desc">&nbsp;GBP 80.45 (10% 0ff)</h6>
+                </div>
+              </div>
+
+              <div class="prod-grid">
+                <!-- Card elements -->
+                <div class="card_elements">
+                  <div class="card-image">
+                    <img alt="home"
+                      src="https://res.cloudinary.com/dgly8b9lq/image/upload/c_fill,h_500,w_500/v1642916097/Lkia/unsplash_W5dsm9n6e3g_haegd5.png"
+                      class="image_card" />
+                  </div>
+                  <h5 class="card-product-title">&nbsp;Flower Vase</h5>
+                  <h6 class="card-product-desc">&nbsp;GBP 139.80 (5% 0ff)</h6>
+                </div>
+              </div>
+
+              <div class="prod-grid">
+                <!-- Card elements -->
+                <div class="card_elements">
+                  <div class="card-image">
+                    <img alt="home"
+                      src="https://res.cloudinary.com/dgly8b9lq/image/upload/c_fill,h_500,w_500/v1642916111/Lkia/unsplash_u79wy47kvVs_irpnwq.png"
+                      class="image_card" />
+                  </div>
+                  <h5 class="card-product-title">&nbsp;Customized Sneaker</h5>
+                  <h6 class="card-product-desc">&nbsp;GBP 410.00 (15% 0ff)</h6>
+                </div>
+              </div>
+            </div>
+          </section>
+        </div>
+      </div>
+
+      <!-- Play banner -->
+      <div class="play_win_banner">
+        <img src="https://res.cloudinary.com/dgly8b9lq/image/upload/v1642182578/Lkia/image_14_w9hoaf.png" alt="play"
+          class="playWinBanner" />
+        <a href="gamify/gameMenu/index.html" rel="external"><img src="https://res.cloudinary.com/dgly8b9lq/image/upload/v1642265009/Lkia/image20_wysya8.png"
+            alt="playWin" class="playWinBtn" />
+        </a>
+      </div>
+
+      <!-- About us banner -->
+      <div class="about_us_banner">
+        <img src="https://res.cloudinary.com/dgly8b9lq/image/upload/v1642169159/Lkia/landscape_ocs3cm.png" alt="about"
+          class="about_lkiea" />
+      </div>
+
+      <!-- Newsletter -->
+      <div class="newsletter_local">
+        <img src="https://res.cloudinary.com/dgly8b9lq/image/upload/v1642178948/Lkia/image13_xn8k7c.png" alt="news"
+          class="newsletter_image" />
+        <div>
+          <form>
+            <input type="text" class="email_input_newsletter" name="text-1" id="text-1" value="" />
+            <div class="newsletter_btn">&nbsp;SUBSCRIBE</div>
+          </form>
+          <!-- <input placeholder="Email Address" class="email_input_newsletter" />
+                <input type="button" value="SUBSCRIBE" class="newsletter_btn"  /> -->
+        </div>
+      </div>
+
+      <!-- Footer -->
+      <div class="footer-map" id="map"></div>
+
+      <div class="footerContainer">
+        <div class="feedWrap">
+          <a href="#"><img src="https://res.cloudinary.com/dgly8b9lq/image/upload/v1640853422/Lkia/feedback_bxnmx8.png"
+              alt="" class="feedback" /></a>
+        </div>
+        <div class="footer_head"><br />Lkiea</div>
+        <div class="footer_body">
+          +44-7911-2947<br />lkiea@gmail.com<br />40 Cunnery Rd, Manchester,
+          UK
+        </div>
+
+        <div class="social_container">
+          <a href="https://www.facebook.com/"><img
+              src="https://res.cloudinary.com/dgly8b9lq/image/upload/v1642265017/Lkia/image6_pgd4fu.png" alt=""
+              class="social_circle" /></a>
+          <a href="https://twitter.com/"><img
+              src="https://res.cloudinary.com/dgly8b9lq/image/upload/v1642265015/Lkia/image7_wutgns.png" alt=""
+              class="social_circle" /></a>
+          <a href="https://telegram.org/"><img
+              src="https://res.cloudinary.com/dgly8b9lq/image/upload/v1642265013/Lkia/image8_zxzmkl.png" alt=""
+              class="social_circle" /></a>
+          <a href="https://www.instagram.com/"><img
+              src="https://res.cloudinary.com/dgly8b9lq/image/upload/v1642265022/Lkia/image5_hqmlf1.png" alt=""
+              class="social_circle" /></a>
+        </div>
+
+        <div class="footer_rights">
+          Copyright © 2021, Lkiea Inc. All Rights Reserved.<br />
+        </div>
+      </div>
+      <div style="padding-bottom: 60px !important"></div>
+    </div>
+
+    <div data-role="footer_local" class="footer_local" id="navBar">
+      <nav class="navContainer">
+        <div class="nav__menu" id="nav-menu">
+          <ul class="nav__list">
+            <li class="nav__item" id="home_nav">
+              <a href="#home_page" class="nav__link">
+                <span class="material-icons" id="home_icon">home</span>
+                <span class="nav__name">Home</span>
+              </a>
+            </li>
+
+            <li class="nav__item" id="category_nav">
+              <a href="#category_page" class="nav__link">
+                <span class="material-icons-outlined">grid_view</span>
+                <span class="nav__name">Category</span>
+              </a>
+            </li>
+
+            <li class="nav__item">
+              <a href="#cart_page" class="nav__link">
+                <span class="material-icons-outlined">shopping_cart</span>
+                <span class="nav__name">Cart</span>
+              </a>
+            </li>
+
+            <li class="nav__item">
+              <a href="#notify_page" class="nav__link">
+                <span class="material-icons-outlined">notifications_active</span>
+                <span class="nav__name">Notifications</span>
+              </a>
+            </li>
+
+            <li class="nav__item">
+              <a href="#account_page" class="nav__link">
+                <span class="material-icons-outlined">account_circle</span>
+                <span class="nav__name">Profile</span>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+    </div>
+  </div>
+
+  <!--Page 2 - Category -->
+  <div data-role="page" id="category_page">
+    <div data-role="headerLocal" class="header_local">
+      <a href="#home_page"><img src="https://res.cloudinary.com/dgly8b9lq/image/upload/v1640846393/Lkia/logo_rf4wm5.png"
+          alt="" class="logo_header" /></a>
+      <a href="#search" class="search_icon">
+        <span class="material-icons-outlined" id="searchI">search</span>
+      </a>
+    </div>
+
+    <div role="main" class="content_category">
+      <div class="container-grids">
+        <!--Product Grid-->
+        <div id="div1">
+          <section class="section-grid">
+            <div class="grid-prod-category">
+              <div class="prod-grid">
+                <a href="#product_variant_page">
+                  <div class="card_elements">
+                    <div class="card-image">
+                      <img alt="home"
+                        src="https://res.cloudinary.com/dgly8b9lq/image/upload/c_fill,h_500,w_500/v1642916097/Lkia/unsplash_W5dsm9n6e3g_haegd5.png"
+                        class="image_card" />
+                    </div>
+                    <h5 class="card-category-title">&nbsp;Home & Decor</h5>
+                  </div>
+                </a>
+              </div>
+              <div class="prod-grid">
+                <div class="card_elements">
+                  <div class="card-image">
+                    <img alt="home"
+                      src="https://res.cloudinary.com/dgly8b9lq/image/upload/c_fill,h_500,w_500/v1642916144/Lkia/unsplash_dDVU6D_6T80_evdyps.png"
+                      class="image_card" />
+                  </div>
+                  <h5 class="card-category-title">&nbsp;Gardening</h5>
+                </div>
+              </div>
+              <div class="prod-grid">
+                <div class="card_elements">
+                  <div class="card-image">
+                    <img alt="home"
+                      src="https://res.cloudinary.com/dgly8b9lq/image/upload/c_fill,h_500,w_500/v1642916139/Lkia/unsplash_pWGUMQSWBwI_gimj57.png"
+                      class="image_card" />
+                  </div>
+                  <h5 class="card-category-title">&nbsp;Automobile</h5>
+                </div>
+              </div>
+              <div class="prod-grid">
+                <div class="card_elements">
+                  <div class="card-image">
+                    <img alt="home"
+                      src="https://res.cloudinary.com/dgly8b9lq/image/upload/c_fill,h_500,w_500/v1642916101/Lkia/unsplash_vuXTB1lR3AY_uor0gh.png"
+                      class="image_card" />
+                  </div>
+                  <h5 class="card-category-title">&nbsp;Craft Supplies</h5>
+                </div>
+              </div>
+              <div class="prod-grid">
+                <div class="card_elements">
+                  <div class="card-image">
+                    <img alt="home"
+                      src="https://res.cloudinary.com/dgly8b9lq/image/upload/c_fill,h_500,w_500/v1642916111/Lkia/unsplash_u79wy47kvVs_irpnwq.png"
+                      class="image_card" />
+                  </div>
+                  <h5 class="card-category-title">&nbsp;Clothing & Shoes</h5>
+                </div>
+              </div>
+              <div class="prod-grid">
+                <div class="card_elements">
+                  <div class="card-image">
+                    <img alt="home"
+                      src="https://res.cloudinary.com/dgly8b9lq/image/upload/c_fill,h_500,w_500/v1642916093/Lkia/unsplash_WjIB-6UxA5Q_asbkim.png"
+                      class="image_card" />
+                  </div>
+                  <h5 class="card-category-title">
+                    &nbsp;Art & Collectibles
+                  </h5>
+                </div>
+              </div>
+              <div class="prod-grid">
+                <div class="card_elements">
+                  <div class="card-image">
+                    <img alt="home"
+                      src="https://res.cloudinary.com/dgly8b9lq/image/upload/c_fill,h_500,w_500/v1642916133/Lkia/unsplash_U3zasaqWD-I_sobqw0.png"
+                      class="image_card" />
+                  </div>
+                  <h5 class="card-category-title">&nbsp;Wedding & Parties</h5>
+                </div>
+              </div>
+              <div class="prod-grid">
+                <div class="card_elements">
+                  <div class="card-image">
+                    <img alt="home"
+                      src="https://res.cloudinary.com/dgly8b9lq/image/upload/c_fill,h_500,w_500/v1642916091/Lkia/unsplash_Z9AU36chmQI_dzxwfd.png"
+                      class="image_card" />
+                  </div>
+                  <h5 class="card-category-title">
+                    &nbsp;Toys & Entertainment
+                  </h5>
+                </div>
+              </div>
+            </div>
+          </section>
+        </div>
+      </div>
+      <br />
+
+      <!-- Footer -->
+    </div>
+
+    <div data-role="footer_local" class="footer_local" id="navBar">
+      <nav class="navContainer">
+        <div class="nav__menu" id="nav-menu">
+          <ul class="nav__list">
+            <li class="nav__item" id="home_nav">
+              <a href="#home_page" class="nav__link">
+                <span class="material-icons-outlined" id="home_icon">home</span>
+                <span class="nav__name">Home</span>
+              </a>
+            </li>
+
+            <li class="nav__item" id="category_nav">
+              <a href="#category_page" class="nav__link">
+                <span class="iconify" data-icon="mdi:view-grid" data-width="24" data-height="24"></span>
+                <span class="nav__name">Category</span>
+              </a>
+            </li>
+
+            <li class="nav__item">
+              <a href="#cart_page" class="nav__link">
+                <span class="material-icons-outlined">shopping_cart</span>
+                <span class="nav__name">Cart</span>
+              </a>
+            </li>
+
+            <li class="nav__item">
+              <a href="#notify_page" class="nav__link">
+                <span class="material-icons-outlined">notifications_active</span>
+                <span class="nav__name">Notifications</span>
+              </a>
+            </li>
+
+            <li class="nav__item">
+              <a href="#account_page" class="nav__link">
+                <span class="material-icons-outlined">account_circle</span>
+                <span class="nav__name">Profile</span>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+    </div>
+  </div>
+
+  <!--Page 3 - Cart Page-->
+  <div data-role="page" id="cart_page">
+    <div data-role="headerLocal" class="header_local">
+      <a href="#home_page"><img src="https://res.cloudinary.com/dgly8b9lq/image/upload/v1640846393/Lkia/logo_rf4wm5.png"
+          alt="" class="logo_header" /></a>
+      <a href="#search" class="search_icon">
+        <span class="material-icons-outlined" id="searchI">search</span>
+      </a>
+    </div>
+
+    <div role="main" class="content_category">
+      <div class="container-grids">
+        <div id="div1" style="padding-bottom: 20px;">
+
+          <section class="section-grid">
+
+            <div id="display_cart" class="grid-prod-category">
+
+            </div>
+          </section>
+        </div>
+      </div>
+
+      <!-- Footer -->
+    </div>
+
+    <div data-role="footer_local" class="footer_local" id="navBar">
+      <nav class="navContainer">
+        <div class="nav__menu" id="nav-menu">
+          <ul class="nav__list">
+            <li class="nav__item" id="home_nav">
+              <a href="#home_page" class="nav__link">
+                <span class="material-icons-outlined" id="home_icon">home</span>
+                <span class="nav__name">Home</span>
+              </a>
+            </li>
+
+            <li class="nav__item" id="category_nav">
+              <a href="#category_page" class="nav__link">
+                <span class="material-icons-outlined">grid_view</span>
+                <span class="nav__name">Category</span>
+              </a>
+            </li>
+
+            <li class="nav__item">
+              <a href="#cart_page" class="nav__link">
+                <span class="material-icons">shopping_cart</span>
+                <span class="nav__name">Cart</span>
+              </a>
+            </li>
+
+            <li class="nav__item">
+              <a href="#notify_page" class="nav__link">
+                <span class="material-icons-outlined">notifications_active</span>
+                <span class="nav__name">Notifications</span>
+              </a>
+            </li>
+
+            <li class="nav__item">
+              <a href="#account_page" class="nav__link">
+                <span class="material-icons-outlined">account_circle</span>
+                <span class="nav__name">Profile</span>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+    </div>
+  </div>
+
+  <!--Page 4 - Notifications -->
+  <div data-role="page" id="notify_page">
+    <div data-role="headerLocal" class="header_local">
+      <a href="#home_page"><img src="https://res.cloudinary.com/dgly8b9lq/image/upload/v1640846393/Lkia/logo_rf4wm5.png"
+          alt="" class="logo_header" /></a>
+      <a href="#search" class="search_icon">
+        <span class="material-icons-outlined" id="searchI">search</span>
+      </a>
+    </div>
+
+    <div role="main_content" class="content_home">
+      <a href="#"><img src="https://res.cloudinary.com/dgly8b9lq/image/upload/v1642253991/Lkia/image_23_bih7kx.png"
+          alt="" class="notify1" /></a>
+
+      <a href="#"><img src="https://res.cloudinary.com/dgly8b9lq/image/upload/v1642253991/Lkia/image_23_bih7kx.png"
+          alt="" class="notify1" /></a>
+    </div>
+
+    <div data-role="footer_local" class="footer_local" id="navBar">
+      <nav class="navContainer">
+        <div class="nav__menu" id="nav-menu">
+          <ul class="nav__list">
+            <li class="nav__item" id="home_nav">
+              <a href="#home_page" class="nav__link">
+                <span class="material-icons-outlined" id="home_icon">home</span>
+                <span class="nav__name">Home</span>
+              </a>
+            </li>
+
+            <li class="nav__item" id="category_nav">
+              <a href="#category_page" class="nav__link">
+                <span class="material-icons-outlined">grid_view</span>
+                <span class="nav__name">Category</span>
+              </a>
+            </li>
+
+            <li class="nav__item">
+              <a href="#cart_page" class="nav__link">
+                <span class="material-icons-outlined">shopping_cart</span>
+                <span class="nav__name">Cart</span>
+              </a>
+            </li>
+
+            <li class="nav__item">
+              <a href="#notify_page" class="nav__link">
+                <span class="material-icons">notifications_active</span>
+                <span class="nav__name">Notifications</span>
+              </a>
+            </li>
+
+            <li class="nav__item">
+              <a href="#account_page" class="nav__link">
+                <span class="material-icons-outlined">account_circle</span>
+                <span class="nav__name">Profile</span>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+    </div>
+  </div>
+
+  <!--Page 5 - Account -->
+  <div data-role="page" id="account_page">
+    <div data-role="headerLocal" class="header_local">
+      <img src="https://res.cloudinary.com/dgly8b9lq/image/upload/v1640846393/Lkia/logo_rf4wm5.png" alt=""
+        class="logo_header" />
+      <a href="#search" class="search_icon">
+        <span class="material-icons-outlined" id="searchI">search</span>
+      </a>
+    </div>
+
+    <div role="main_content" class="content_account">
+      <div class="myAcc">
+        <p>My Account</p>
+      </div>
+
+      <div class="menu-items-card">
+        <div id="menu">
+          <ul>
+            <li>
+              <div class="icons-menu">
+                <span class="iconify" data-icon="mdi:gift-outline"
+                  style="color: #092c4c; font-size: 24px"></span>&emsp;My Orders
+              </div>
+            </li>
+            <li>
+              <a href="gamify/gameMenu/index.html" rel="external">
+              <div class="icons-menu">
+                <span class="iconify" data-icon="mdi:gamepad-variant"
+                  style="color: #092c4c; font-size: 24px"></span>&emsp;Play & Win
+              </div>
+            </a>
+            </li>
+            <li>
+              <a href="#favourite_page">
+              <div class="icons-menu">
+                <span class="iconify" data-icon="mdi:cards-heart"
+                  style="color: #092c4c; font-size: 24px"></span>&emsp;Favourites
+              </div></a>
+            </li>
+            <li>
+              <div class="icons-menu" onclick="showQR();">
+                <span class="iconify" data-icon="mdi:ticket-percent-outline"
+                  style="color: #092c4c; font-size: 24px"></span>&emsp;Scan & Redeem
+              </div>
+            </li>
+            <li>
+              <div class="icons-menu">
+                <span class="iconify" data-icon="bx:bxs-key" style="color: #092c4c; font-size: 24px"></span>&emsp;Change
+                password
+              </div>
+            </li>
+            <li>
+              <div class="icons-menu">
+                <span class="iconify" data-icon="mdi:logout"
+                  style="color: #092c4c; font-size: 24px"></span>&emsp;Log-out
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <div>
+        <img src="https://res.cloudinary.com/dgly8b9lq/image/upload/v1640846394/Lkia/main_p0wjoy.png" class="acc-image"
+          alt="" />
+      </div>
+
+      <!--Popup -->
+      <div class="popUp-qr-ar" id="popUp-qr">
+        <div class="overlay-qr" onclick="showQR();"></div>
+        <div class="content-qr">
+          <div class="close-btn-qr" onclick="showQR();">&times;</div>
+          <br>
+
+          <a href="qr_ar/QRview.html" rel="external">
+            <img src="https://res.cloudinary.com/dgly8b9lq/image/upload/v1642788387/Lkia/image_34_n238j6.png" alt=""
+              width="209" height="50" class="qr-ar-button" id="qr-btn" /></a>
+
+          <h4 class="popup-body-qr">OR</h4>
+
+          <a href="qr_ar/ARVRview.html" rel="external">
+            <img src="https://res.cloudinary.com/dgly8b9lq/image/upload/v1642788388/Lkia/image_32_z1jg3t.png" alt=""
+              width="209" height="50" class="qr-ar-button" id="ar-btn" /></a>
+
+
+        </div>
+      </div>
+
+    </div>
+
+    <div data-role="footer_local" class="footer_local" id="navBar">
+      <nav class="navContainer">
+        <div class="nav__menu" id="nav-menu">
+          <ul class="nav__list">
+            <li class="nav__item" id="home_nav">
+              <a href="#home_page" class="nav__link">
+                <span class="material-icons-outlined" id="home_icon">home</span>
+                <span class="nav__name">Home</span>
+              </a>
+            </li>
+
+            <li class="nav__item" id="category_nav">
+              <a href="#category_page" class="nav__link">
+                <span class="material-icons-outlined">grid_view</span>
+                <span class="nav__name">Category</span>
+              </a>
+            </li>
+
+            <li class="nav__item">
+              <a href="#cart_page" class="nav__link">
+                <span class="material-icons-outlined">shopping_cart</span>
+                <span class="nav__name">Cart</span>
+              </a>
+            </li>
+
+            <li class="nav__item">
+              <a href="#notify_page" class="nav__link">
+                <span class="material-icons-outlined">notifications_active</span>
+                <span class="nav__name">Notifications</span>
+              </a>
+            </li>
+
+            <li class="nav__item">
+              <a href="#account_page" class="nav__link">
+                <span class="material-icons">account_circle</span>
+                <span class="nav__name">Profile</span>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+    </div>
+  </div>
+
+  <!--Page - Product types -->
+  <div data-role="page" id="product_variant_page">
+    <div data-role="headerLocal" class="header_local">
+      <a href="#home_page"><img src="https://res.cloudinary.com/dgly8b9lq/image/upload/v1640846393/Lkia/logo_rf4wm5.png"
+          alt="" class="logo_header" /></a>
+      <a href="#search" class="search_icon">
+        <span class="material-icons-outlined" id="searchI">search</span>
+      </a>
+    </div>
+
+    <div role="main" class="content_category">
+      <div class="container-grids">
+        <!--Product Grid-->        
+        <div id="div1">    
+          <div id="list_icon_product" style="margin-top: 70px;"><span onclick="gridToggle()" style="float: right; margin-right: 50px;" class="iconify" data-icon="ic:round-view-list" style="color: #092c4c;" data-width="24" data-height="24"></span></div>      
+          <section class="section-grid" id="grid_view">            
+            <div id="prod_cat_margin" class="grid-prod-category">
+              <div class="prod-grid">
+                <a href="#new_product_page">
+                  <div class="card_elements" id="redirect-product">
+                    <div class="card-image">
+                      <img alt="home"
+                        src="https://res.cloudinary.com/dgly8b9lq/image/upload/c_fill,h_500,w_500/v1642925430/Lkia/unsplash_pdIwPL3HU2s_velpou.png"
+                        class="image_card" />
+                    </div>
+                    <h5 class="card-product-title">
+                      &nbsp;Solid Lampshade 
+                    </h5>
+                    <h6 class="card-product-desc">&nbsp;GBP 20.45</h6>
+                  </div>
+                </a>
+              </div>
+              <div class="prod-grid">
+                <a href="#product_page2">
+                  <div class="card_elements">
+                    <div class="card-image">
+                      <img alt="home"
+                        src="https://res.cloudinary.com/dgly8b9lq/image/upload/c_fill,h_500,w_500/v1642923286/Lkia/unsplash_e0wBK0xJXYQ_dive2s.png"
+                        class="image_card" />
+                    </div>
+                    <h5 class="card-product-title">&nbsp;Embroidery Art</h5>
+                    <h6 class="card-product-desc">
+                      &nbsp;GBP 80.45 (10% 0ff)
+                    </h6>
+                  </div>
+                </a>
+              </div>
+              <div class="prod-grid">
+                <div class="card_elements">
+                  <div class="card-image">
+                    <img alt="home"
+                      src="https://res.cloudinary.com/dgly8b9lq/image/upload/c_fill,h_500,w_500/v1642923286/Lkia/unsplash_3y9ymqvRR_s_vavmih.png"
+                      class="image_card" />
+                  </div>
+                  <h5 class="card-product-title">&nbsp;Candles</h5>
+                  <h6 class="card-product-desc">&nbsp;GBP 10.03 </h6>
+                </div>
+              </div>
+              <div class="prod-grid">
+                <div class="card_elements">
+                  <div class="card-image">
+                    <img alt="home"
+                      src="https://res.cloudinary.com/dgly8b9lq/image/upload/c_fill,h_500,w_500/v1642922686/Lkia/unsplash_IdVNRv-5wJo_tczlsw.png"
+                      class="image_card" />
+                  </div>
+                  <h5 class="card-product-title">&nbsp;Indoor plants</h5>
+                  <h6 class="card-product-desc">&nbsp;GBP 8.50 (3% 0ff)</h6>
+                </div>
+              </div>
+              <div class="prod-grid">
+                <div class="card_elements">
+                  <div class="card-image">
+                    <img alt="home"
+                      src="https://res.cloudinary.com/dgly8b9lq/image/upload/c_fill,h_500,w_500/v1642922678/Lkia/unsplash_TfMfUS036ek_hyi5cs.png"
+                      class="image_card" />
+                  </div>
+                  <h5 class="card-product-title">&nbsp;Porcelain Pots</h5>
+                  <h6 class="card-product-desc">&nbsp;GBP 40.75</h6>
+                </div>
+              </div>
+              <div class="prod-grid">
+                <div class="card_elements">
+                  <div class="card-image">
+                    <img alt="home"
+                      src="https://res.cloudinary.com/dgly8b9lq/image/upload/c_fill,h_500,w_500/v1642925161/Lkia/unsplash_R-FwAN1qz74_mupm9q.png"
+                      class="image_card" />
+                  </div>
+                  <h5 class="card-product-title">&nbsp;Throw Rugs</h5>
+                  <h6 class="card-product-desc">&nbsp;GBP 50.00</h6>
+                </div>
+              </div>
+              <div class="prod-grid">
+                <div class="card_elements">
+                  <div class="card-image">
+                    <img alt="home"
+                      src="https://res.cloudinary.com/dgly8b9lq/image/upload/c_fill,h_500,w_500/v1642922682/Lkia/unsplash_UYHhyLwM1Wk_1_kedgqi.png"
+                      class="image_card" />
+                  </div>
+                  <h5 class="card-product-title">&nbsp;Working Desk</h5>
+                  <h6 class="card-product-desc">&nbsp;GBP 100.05 (17% 0ff)</h6>
+                </div>
+              </div>
+              <div class="prod-grid">
+                <div class="card_elements">
+                  <div class="card-image">
+                    <img alt="home"
+                      src="https://res.cloudinary.com/dgly8b9lq/image/upload/c_fill,h_500,w_500/v1642922681/Lkia/unsplash_mB44ASu-tEE_2_oa95i7.png"
+                      class="image_card" />
+                  </div>
+                  <h5 class="card-product-title">&nbsp;Storage Cabinet</h5>
+                  <h6 class="card-product-desc">&nbsp;GBP 220.55</h6>
+                </div>
+              </div>
+            </div>
+          </section>
+          <!-- list view -->
+          <div id="list_view" class="grid-prod-category1 hidden"  style="margin-top: 5px;">
+            <div>
+              <a href="#new_product_page">
+                <div class="list-view"> 
+                  <div style="width: 1100px;" class="view_item">
+                    <div class="vi_left">
+                      <img style="width: 170px; height: auto;" src="https://res.cloudinary.com/dgly8b9lq/image/upload/c_fill,h_500,w_500/v1642925430/Lkia/unsplash_pdIwPL3HU2s_velpou.png" alt="pineapple">
+                    </div>
+                    <div class="vi_right">
+                      <p class="title">Solid wood Lampshade </p>
+                      <p class="content">GBP 20.45</p>
+                    </div>
+                  </div>
+                </div>
+              </a>
+            </div>
+            <div>
+              <a href="#new_product_page">
+                <div class="list-view"> 
+                  <div style="width: 1100px;" class="view_item">
+                    <div class="vi_left">
+                      <img style="width: 170px; height: auto;" src="https://res.cloudinary.com/dgly8b9lq/image/upload/c_fill,h_500,w_500/v1642923286/Lkia/unsplash_e0wBK0xJXYQ_dive2s.png" alt="pineapple">
+                    </div>
+                    <div class="vi_right">
+                      <p class="title">Embroidery art</p>
+                      <p class="content">GBP 80.45 (10% 0ff)</p>
+                    </div>
+                  </div>
+                </div>
+              </a>
+            </div>
+            <div>
+              <a href="#new_product_page">
+                <div class="list-view"> 
+                  <div style="width: 1100px;" class="view_item">
+                    <div class="vi_left">
+                      <img style="width: 170px; height: auto;" src="https://res.cloudinary.com/dgly8b9lq/image/upload/c_fill,h_500,w_500/v1642923286/Lkia/unsplash_3y9ymqvRR_s_vavmih.png" alt="pineapple">
+                    </div>
+                    <div class="vi_right">
+                      <p class="title">Candles</p>
+                      <p class="content">GBP 10.03</p>
+                    </div>
+                  </div>
+                </div>
+              </a>
+            </div>
+            <div>
+              <a href="#new_product_page">
+                <div class="list-view"> 
+                  <div style="width: 1100px;" class="view_item">
+                    <div class="vi_left">
+                      <img style="width: 170px; height: auto;" src="https://res.cloudinary.com/dgly8b9lq/image/upload/c_fill,h_500,w_500/v1642922686/Lkia/unsplash_IdVNRv-5wJo_tczlsw.png" alt="pineapple">
+                    </div>
+                    <div class="vi_right">
+                      <p class="title">Indoor Plants</p>
+                      <p class="content">GBP 8.50 (3% 0ff)</p>
+                    </div>
+                  </div>
+                </div>
+              </a>
+            </div>
+            <div>
+              <a href="#new_product_page">
+                <div class="list-view"> 
+                  <div style="width: 1100px;" class="view_item">
+                    <div class="vi_left">
+                      <img style="width: 170px; height: auto;" src="https://res.cloudinary.com/dgly8b9lq/image/upload/c_fill,h_500,w_500/v1642922678/Lkia/unsplash_TfMfUS036ek_hyi5cs.png" alt="pineapple">
+                    </div>
+                    <div class="vi_right">
+                      <p class="title">Porcelain Pots</p>
+                      <p class="content">GBP 40.75</p>
+                    </div>
+                  </div>
+                </div>
+              </a>
+            </div>
+            <div>
+              <a href="#new_product_page">
+                <div class="list-view"> 
+                  <div style="width: 1100px;" class="view_item">
+                    <div class="vi_left">
+                      <img style="width: 170px; height: auto;" src="https://res.cloudinary.com/dgly8b9lq/image/upload/c_fill,h_500,w_500/v1642925161/Lkia/unsplash_R-FwAN1qz74_mupm9q.png" alt="pineapple">
+                    </div>
+                    <div class="vi_right">
+                      <p class="title">Throw Rugs</p>
+                      <p class="content">GBP 50.00</p>
+                    </div>
+                  </div>
+                </div>
+              </a>
+            </div>
+            <div>
+              <a href="#new_product_page">
+                <div class="list-view"> 
+                  <div style="width: 1100px;" class="view_item">
+                    <div class="vi_left">
+                      <img style="width: 170px; height: auto;" src="https://res.cloudinary.com/dgly8b9lq/image/upload/c_fill,h_500,w_500/v1642922682/Lkia/unsplash_UYHhyLwM1Wk_1_kedgqi.png" alt="pineapple">
+                    </div>
+                    <div class="vi_right">
+                      <p class="title">Working Desk</p>
+                      <p class="content">GBP 100.05 (17% 0ff)</p>
+                    </div>
+                  </div>
+                </div>
+              </a>
+            </div>
+            <div>
+              <a href="#new_product_page">
+                <div class="list-view"> 
+                  <div style="width: 1100px;" class="view_item">
+                    <div class="vi_left">
+                      <img style="width: 170px; height: auto;" src="https://res.cloudinary.com/dgly8b9lq/image/upload/c_fill,h_500,w_500/v1642922681/Lkia/unsplash_mB44ASu-tEE_2_oa95i7.png" alt="pineapple">
+                    </div>
+                    <div class="vi_right">
+                      <p class="title">Storage Cabinet</p>
+                      <p class="content">GBP 220.55</p>
+                    </div>
+                  </div>
+                </div>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <br />
+
+      <!-- Footer -->
+
+    </div>
+
+    <div data-role="footer_local" class="footer_local" id="navBar">
+      <nav class="navContainer">
+        <div class="nav__menu" id="nav-menu">
+          <ul class="nav__list">
+            <li class="nav__item" id="home_nav">
+              <a href="#home_page" class="nav__link">
+                <span class="material-icons-outlined" id="home_icon">home</span>
+                <span class="nav__name">Home</span>
+              </a>
+            </li>
+
+            <li class="nav__item" id="category_nav">
+              <a href="#category_page" class="nav__link">
+                <span class="iconify" data-icon="mdi:view-grid" data-width="24" data-height="24"></span>
+                <span class="nav__name">Category</span>
+              </a>
+            </li>
+
+            <li class="nav__item">
+              <a href="#cart_page" class="nav__link">
+                <span class="material-icons-outlined">shopping_cart</span>
+                <span class="nav__name">Cart</span>
+              </a>
+            </li>
+
+            <li class="nav__item">
+              <a href="#notify_page" class="nav__link">
+                <span class="material-icons-outlined">notifications_active</span>
+                <span class="nav__name">Notifications</span>
+              </a>
+            </li>
+
+            <li class="nav__item">
+              <a href="#account_page" class="nav__link">
+                <span class="material-icons-outlined">account_circle</span>
+                <span class="nav__name">Profile</span>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+    </div>
+  </div>
+  <!--Page - Review page -->
+  <div data-role="page" id="review_page">
+    <div data-role="headerLocal" class="header_local">
+      <img src="https://res.cloudinary.com/dgly8b9lq/image/upload/v1640846393/Lkia/logo_rf4wm5.png" alt=""
+        class="logo_header" />
+      <a href="#search" class="search_icon">
+        <span class="material-icons-outlined" id="searchI">search</span>
+      </a>
+    </div>
+
+    <div role="main_content" class="content_home">
+      <div class="col-md-6">
+        <div style="margin-top: 20px"></div>
+        <ul id="contacts" class="review-list">
+          <!-- Conatct Object li.list-group-item.contact will be added here by js -->
+        </ul>
+      </div>
+
+      <a href="#popupLogin" data-rel="popup" data-position-to="window"
+        class="ui-btn ui-corner-all ui-shadow ui-btn-inline ui-btn-a" data-transition="pop"
+        style="background: #3867FA; color: white; border-radius: 32px; float:right; text-shadow:none;"
+        id="reviewbtn">Add review and rating</a>
+      <div data-role="popup" id="popupLogin" data-theme="a" class="ui-corner-all">
+        <form method="post" id="reviewForm">
+          <div style="padding: 10px 20px">
+            <h3>Add your review and rating</h3>
+            <input type="text" class="form-control" id="name" required placeholder="Enter name" />
+            <textarea name="textarea-enhanced" id="email" data-enhanced="true"
+              class="ui-input-text ui-shadow-inset ui-body-inherit ui-corner-all" required
+              placeholder="Your Review"></textarea>
+
+            <p class="stars">
+              <span id="star-span">
+                <a id="st-1" class="star-1" href="#">1</a>
+                <a id="st-2" class="star-2" href="#">2</a>
+                <a id="st-3" class="star-3" href="#">3</a>
+                <a id="st-4" class="star-4" href="#">4</a>
+                <a id="st-5" class="star-5" href="#">5</a>
+              </span>
+            </p>
+
+            <a href="#">
+              <button type="submit" class="btn btn-primary addValue" id="addValue" data-rel="back"
+                data-transition="flow">
+                Submit
+              </button>
+            </a>
+          </div>
+        </form>
+      </div>
+    </div>
+
+    <div data-role="footer_local" class="footer_local" id="navBar">
+      <nav class="navContainer">
+        <div class="nav__menu" id="nav-menu">
+          <ul class="nav__list">
+            <li class="nav__item" id="redirect-main-home">
+              <a href="#home_page" class="nav__link">
+                <span class="material-icons-outlined" id="home_icon">home</span>
+                <span class="nav__name">Home</span>
+              </a>
+            </li>
+
+            <li class="nav__item" id="redirect-main-cat">
+              <a href="#category_page" class="nav__link">
+                <span class="material-icons-outlined">grid_view</span>
+                <span class="nav__name">Category</span>
+              </a>
+            </li>
+
+            <li class="nav__item" id="redirect-main-cart">
+              <a href="#cart_page" class="nav__link">
+                <span class="material-icons-outlined">shopping_cart</span>
+                <span class="nav__name">Cart</span>
+              </a>
+            </li>
+
+            <li class="nav__item" id="redirect-main-noti">
+              <a href="#notify_page" class="nav__link">
+                <span class="material-icons-outlined">notifications_active</span>
+                <span class="nav__name">Notifications</span>
+              </a>
+            </li>
+
+            <li class="nav__item" id="redirect-main-prof">
+              <a href="#account_page" class="nav__link">
+                <span class="material-icons-outlined">account_circle</span>
+                <span class="nav__name">Profile</span>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+    </div>
+  </div>
+
+  <!-- New product page -->
+  <div data-role="page" id="new_product_page">
+    <div data-role="headerLocal" class="header_local">
+      <a href="#home_page"><img src="https://res.cloudinary.com/dgly8b9lq/image/upload/v1640846393/Lkia/logo_rf4wm5.png"
+          alt="" class="logo_header" /></a>
+      <a href="#search" class="search_icon">
+        <span class="material-icons-outlined" id="searchI">search</span>
+      </a>
+    </div>
+
+    <div role="main_content" class="content_home">
+      <div class="product_main_content_container">
+        <div id="snackbar-fav">Item Added To Favourites</div>
+        <div id="snackbar-fav-rem">Item Removed from Favourites</div>
+        <div class="product_image_content_container">
+          <div class="product_image_container">
+            <img
+              src="https://res.cloudinary.com/dgly8b9lq/image/upload/v1642139960/Lkia/joel-henry-pdIwPL3HU2s-unsplash_jtp9rn.jpg"
+              class="product_image" />
+          </div>
+          <div class="product_details_container">
+            <div class="product_title_container">
+              Tripod Table Lamp - Modern Bedside Lamp for Room Lighting
+            </div>
+            <div class="product_price_container">
+              £ 39.80
+            </div>
+            <div class="product_star_and_icon_container">
+              <div class="product_star_container">
+                <span class="iconify" data-icon="mdi:hexagram" style="color: #f2994a;" data-width="15"
+                  data-height="15"></span>
+                <span class="iconify" data-icon="mdi:hexagram" style="color: #f2994a;" data-width="15"
+                  data-height="15"></span>
+                <span class="iconify" data-icon="mdi:hexagram" style="color: #f2994a;" data-width="15"
+                  data-height="15"></span>
+                <span class="iconify" data-icon="mdi:hexagram" style="color: #f2994a;" data-width="15"
+                  data-height="15"></span>
+                <span class="iconify" data-icon="mdi:hexagram-outline" style="color: #f2994a;" data-width="15"
+                  data-height="15"></span>
+              </div>
+              <div class="product_icons_container">
+                <div>
+                  <span id="t1" class="iconify " data-icon="mdi:cards-heart-outline" style="color: #9098b1;"
+                    data-width="24" data-height="24" onclick=wifiToggle(true)></span>
+                  <span id="t2" class="iconify " data-icon="mdi:cards-heart" style="color: #9098b1;" data-width="24"
+                    data-height="24" onclick=wifiToggle(false)></span>
+                </div>
+                <div>
+                  <span class="iconify" data-icon="mdi:share-variant" style="color: #9098b1;" data-width="24"
+                    data-height="24" onclick="showQRCode();" id="view-qr-icon"></span>
+                </div>
+              </div>
+            </div>
+            <!-- <div class="product_qt_and_total_text_container">
+                <div>
+                  Quantity
+                </div>
+                <div>
+                  Total
+                </div>
+              </div> -->
+            <!-- <div class="product_qt_drop_and_price_text_container">
+                <div class="product_qty_dropdown_container">
+                  <form>
+                    <fieldset class="ui-nodisc-icon ui-alt-icon" data-role="controlgroup">
+                      <select name="select-native-16" id="select-native-16">
+                        <option value="#">1</option>
+                        <option value="#">2</option>
+                        <option value="#">3</option>
+                      </select>
+                    </fieldset>
+                  </form>
+                </div>
+                <div>
+                  £ 39.80
+                </div>
+              </div> -->
+            <div class="product_buttons_container">
+              <div class="product_button">
+                Add to cart
+              </div>
+                <div class="product_button" id="go-to-ship">
+                  Buy now
+                </div>             
+              <!-- <button class="ui-btn ui-btn-inline" style="width: 235px !important;">Button</button>
+                <button class="ui-btn ui-btn-inline" style="width: 235px !important;">Button</button> -->
+            </div>
+          </div>
+        </div>
+        <div class="product_description_container">
+          <div class="product_description_text">
+            Description
+          </div>
+          <div class="product_description_long_text">
+            Lighting makes the room. Strategically placed, lamps can bring any room into a deeper perspective and
+            showcase your compelling decor. This guide will introduce you to many types of lamp shades available from
+            The Home Depot that will address your lighting needs while enhancing your decor.
+          </div>
+        </div>
+        <div class="product_reviews_container">
+          <div class="product_reviews_text">
+            Reviews
+          </div>
+          <div class="product_review_sample_container">
+            <div class="product_review_user_image">
+              <img src="https://res.cloudinary.com/dgly8b9lq/image/upload/v1642155403/Lkia/gamer_dosam6.png"
+                style="width: 60px; height:60px" />
+            </div>
+            <div class="product_review_content_container">
+              <div class="product_review_star_container">
+                <span class="iconify" data-icon="mdi:hexagram" style="color: #f2994a;" data-width="15"
+                  data-height="15"></span>
+                <span class="iconify" data-icon="mdi:hexagram" style="color: #f2994a;" data-width="15"
+                  data-height="15"></span>
+                <span class="iconify" data-icon="mdi:hexagram" style="color: #f2994a;" data-width="15"
+                  data-height="15"></span>
+                <span class="iconify" data-icon="mdi:hexagram" style="color: #f2994a;" data-width="15"
+                  data-height="15"></span>
+                <span class="iconify" data-icon="mdi:hexagram-outline" style="color: #f2994a;" data-width="15"
+                  data-height="15"></span>
+              </div>
+              <div class="product_review_user_comment">
+                <div class="product_review_commment">
+                  This is a superb product, I loved it. It was a great bargain to get this product for this price :D
+                </div>
+                <div class="product_review_commment_time">
+                  09:05
+                </div>
+              </div>
+              <div class="product_review_images_container">
+                <div class="product_review_images">
+                  <img
+                    src="https://res.cloudinary.com/dgly8b9lq/image/upload/v1642139960/Lkia/joel-henry-pdIwPL3HU2s-unsplash_jtp9rn.jpg"
+                    style="width: 60px; height:60px" />
+                  <img
+                    src="https://res.cloudinary.com/dgly8b9lq/image/upload/v1642139960/Lkia/joel-henry-pdIwPL3HU2s-unsplash_jtp9rn.jpg"
+                    style="width: 60px; height:60px" />
+                  <img
+                    src="https://res.cloudinary.com/dgly8b9lq/image/upload/v1642139960/Lkia/joel-henry-pdIwPL3HU2s-unsplash_jtp9rn.jpg"
+                    style="width: 60px; height:60px" />
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="product_review_view_more">
+          <a href="#review_page" class="ui-btn ui-corner-all ui-shadow ui-btn-inline ui-btn-a"
+            style="background: #3867FA; color: white; border-radius: 32px; float:left; text-shadow:none;">View More</a>
+        </div>
+        <div class="product_questions_container">
+          Questions about this product
+        </div>
+        <div class="product_review_sample_container">
+          <div class="product_review_user_image">
+            <img src="https://res.cloudinary.com/dgly8b9lq/image/upload/v1642155401/Lkia/woman_l0hpd7.png"
+              style="width: 60px; height:60px" />
+          </div>
+          <div class="product_review_content_container">
+            <div class="product_review_user_comment">
+              <div class="product_review_commment">
+                Can I use this for my working desk ?
+              </div>
+            </div>
+            <div class="product_review_commment_time">
+              09:05 1 day ago
+            </div>
+          </div>
+        </div>
+        <div class="product_review_view_more">
+          <a href="#qcanswer_page" class="ui-btn ui-corner-all ui-shadow ui-btn-inline ui-btn-a"
+            style="background: #3867FA; color: white; border-radius: 32px; float:left; text-shadow:none;">View More</a>
+        </div>
+      </div>
+
+      <!--Popup -->
+      <div class="qr-generic-popup" id="popUp-qr-generate">
+        <div class="overlay-qr" onclick="showQRCode();"></div>
+        <div class="content-qr">
+          <div class="close-btn-qr" onclick="showQRCode();">&times;</div>
+          <br />
+          <div class="container-qr-pop">
+            <a class="btn btn-success-qr" tabindex="0" title="QR Code" role="button" data-toggle="popover"
+              data-trigger="focus" data-placement="bottom">Share via QR Code</a>
+            <div id="qrcode-view-pop" style="display: none; width: auto; height: auto; padding: 15px;"></div>
+            <h4 class="qr-share-body">or</h4>
+            <div class="social_container-share">
+              <a href="https://www.facebook.com/"><img
+                  src="https://res.cloudinary.com/dgly8b9lq/image/upload/v1642265017/Lkia/image6_pgd4fu.png" alt=""
+                  class="social_circle-share" /></a>
+              <a href="https://twitter.com/"><img
+                  src="https://res.cloudinary.com/dgly8b9lq/image/upload/v1642265015/Lkia/image7_wutgns.png" alt=""
+                  class="social_circle-share" /></a>
+              <a href="https://telegram.org/"><img
+                  src="https://res.cloudinary.com/dgly8b9lq/image/upload/v1642265013/Lkia/image8_zxzmkl.png" alt=""
+                  class="social_circle-share" /></a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="footerContainer">
+        <div class="feedWrap">
+          <a href="#"><img src="https://res.cloudinary.com/dgly8b9lq/image/upload/v1640853422/Lkia/feedback_bxnmx8.png"
+              alt="" class="feedback" /></a>
+        </div>
+        <div class="footer_head"><br />Lkiea</div>
+        <div class="footer_body">
+          +44-7911-2947<br />lkiea@gmail.com<br />40 Cunnery Rd, Manchester,
+          UK
+        </div>
+
+        <div class="social_container">
+          <a href="https://www.facebook.com/"><img
+              src="https://res.cloudinary.com/dgly8b9lq/image/upload/v1642265017/Lkia/image6_pgd4fu.png" alt=""
+              class="social_circle" /></a>
+          <a href="https://twitter.com/"><img
+              src="https://res.cloudinary.com/dgly8b9lq/image/upload/v1642265015/Lkia/image7_wutgns.png" alt=""
+              class="social_circle" /></a>
+          <a href="https://telegram.org/"><img
+              src="https://res.cloudinary.com/dgly8b9lq/image/upload/v1642265013/Lkia/image8_zxzmkl.png" alt=""
+              class="social_circle" /></a>
+          <a href="https://www.instagram.com/"><img
+              src="https://res.cloudinary.com/dgly8b9lq/image/upload/v1642265022/Lkia/image5_hqmlf1.png" alt=""
+              class="social_circle" /></a>
+        </div>
+
+        <div class="footer_rights">
+          Copyright © 2021, Lkiea Inc. All Rights Reserved.<br />
+        </div>
+      </div>
+      <div style="padding-bottom: 60px !important"></div>
+
+    </div>
+
+    <div data-role="footer_local" class="footer_local" id="navBar">
+      <nav class="navContainer">
+        <div class="nav__menu" id="nav-menu">
+          <ul class="nav__list">
+            <li class="nav__item" id="home_nav">
+              <a href="#home_page" class="nav__link">
+                <span class="material-icons-outlined" id="home_icon">home</span>
+                <span class="nav__name">Home</span>
+              </a>
+            </li>
+
+            <li class="nav__item" id="category_nav">
+              <a href="#category_page" class="nav__link">
+                <span class="material-icons-outlined">grid_view</span>
+                <span class="nav__name">Category</span>
+              </a>
+            </li>
+
+            <li class="nav__item">
+              <a href="#cart_page" class="nav__link">
+                <span class="material-icons-outlined">shopping_cart</span>
+                <span class="nav__name">Cart</span>
+              </a>
+            </li>
+
+            <li class="nav__item">
+              <a href="#notify_page" class="nav__link">
+                <span class="material-icons-outlined">notifications_active</span>
+                <span class="nav__name">Notifications</span>
+              </a>
+            </li>
+
+            <li class="nav__item">
+              <a href="#account_page" class="nav__link">
+                <span class="material-icons-outlined">account_circle</span>
+                <span class="nav__name">Profile</span>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+    </div>
+  </div>
+
+    <!-- New product page2 -->
+    <div data-role="page" id="new_product_page2">
+      <div data-role="headerLocal" class="header_local">
+        <a href="#home_page"><img src="https://res.cloudinary.com/dgly8b9lq/image/upload/v1640846393/Lkia/logo_rf4wm5.png"
+            alt="" class="logo_header" /></a>
+        <a href="#search" class="search_icon">
+          <span class="material-icons-outlined" id="searchI">search</span>
+        </a>
+      </div>
+  
+      <div role="main_content" class="content_home">
+        <div class="product_main_content_container">
+          <div id="snackbar-fav">Item Added To Favourites</div>
+          <div id="snackbar-fav-rem">Item Removed from Favourites</div>
+          <div class="product_image_content_container">
+            <div class="product_image_container">
+              <img
+                src="https://res.cloudinary.com/dgly8b9lq/image/upload/v1642863590/Lkia/unsplash_UYHhyLwM1Wk_imxslj.png"
+                class="product_image" />
+            </div>
+            <div class="product_details_container">
+              <div class="product_title_container">
+                NEW MDF Wooden Computer Desk Office Desk 
+              </div>
+              <div class="product_price_container">
+                £ 539.80
+              </div>
+              <div class="product_star_and_icon_container">
+                <div class="product_star_container">
+                  <span class="iconify" data-icon="mdi:hexagram" style="color: #f2994a;" data-width="15"
+                    data-height="15"></span>
+                  <span class="iconify" data-icon="mdi:hexagram" style="color: #f2994a;" data-width="15"
+                    data-height="15"></span>
+                  <span class="iconify" data-icon="mdi:hexagram" style="color: #f2994a;" data-width="15"
+                    data-height="15"></span>
+                    <span class="iconify" data-icon="mdi:hexagram-outline" style="color: #f2994a;" data-width="15"
+                    data-height="15"></span>
+                  <span class="iconify" data-icon="mdi:hexagram-outline" style="color: #f2994a;" data-width="15"
+                    data-height="15"></span>
+                </div>
+                <div class="product_icons_container">
+                  <div>
+                    <span id="tt1" class="iconify" data-icon="mdi:cards-heart-outline" style="color: #9098b1;"
+                      data-width="24" data-height="24"></span>
+                  </div>
+                  <div>
+                    <span class="iconify" data-icon="mdi:share-variant" style="color: #9098b1;" data-width="24"
+                      data-height="24" onclick="showQRCode();" id="view-qr-icon"></span>
+                  </div>
+                </div>
+              </div>
+              <div class="product_buttons_container">
+                <div class="product_button">
+                  Add to cart
+                </div>
+                  <div class="product_button" id="go-to-ship">
+                    Buy now
+                  </div>             
+              </div>
+            </div>
+          </div>
+          <div class="product_description_container">
+            <div class="product_description_text">
+              Description
+            </div>
+            <div class="product_description_long_text">
+              Minimalism and Industrial Aesthetic With industrial-inspired details and open, airy design, this computer desk brings a feel of minimalism to any room，makes your space look neat, rustic and comfortable. Heavy Duty wooden legs make this mordern writing desk super sturdy.
+            </div>
+          </div>
+          <div class="product_reviews_container">
+            <div class="product_reviews_text">
+              Reviews
+            </div>
+            <div class="product_review_sample_container">
+              <div class="product_review_user_image">
+                <img src="https://res.cloudinary.com/dgly8b9lq/image/upload/v1642155462/Lkia/woman_1_jxokcq.png"
+                  style="width: 60px; height:60px" />
+              </div>
+              <div class="product_review_content_container">
+                <div class="product_review_star_container">
+                  <span class="iconify" data-icon="mdi:hexagram" style="color: #f2994a;" data-width="15"
+                    data-height="15"></span>
+                  <span class="iconify" data-icon="mdi:hexagram" style="color: #f2994a;" data-width="15"
+                    data-height="15"></span>
+                  <span class="iconify" data-icon="mdi:hexagram" style="color: #f2994a;" data-width="15"
+                    data-height="15"></span>
+                  <span class="iconify" data-icon="mdi:hexagram" style="color: #f2994a;" data-width="15"
+                    data-height="15"></span>
+                  <span class="iconify" data-icon="mdi:hexagram-outline" style="color: #f2994a;" data-width="15"
+                    data-height="15"></span>
+                </div>
+                <div class="product_review_user_comment">
+                  <div class="product_review_commment">
+                    Good product. For this price point I can recommend this desk for anyone. Recommended seller.
+                  </div>
+                  <div class="product_review_commment_time">
+                    10:45
+                  </div>
+                </div>
+                <div class="product_review_images_container">
+                  <div class="product_review_images">
+                    <img
+                      src="https://res.cloudinary.com/dgly8b9lq/image/upload/v1642863590/Lkia/unsplash_UYHhyLwM1Wk_imxslj.png"
+                      style="width: 60px; height:60px" />
+                    <img
+                      src="https://res.cloudinary.com/dgly8b9lq/image/upload/v1642863590/Lkia/unsplash_UYHhyLwM1Wk_imxslj.png"
+                      style="width: 60px; height:60px" />
+                    <img
+                      src="https://res.cloudinary.com/dgly8b9lq/image/upload/v1642863590/Lkia/unsplash_UYHhyLwM1Wk_imxslj.png"
+                      style="width: 60px; height:60px" />
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="product_review_view_more">
+            <a href="#review_page" class="ui-btn ui-corner-all ui-shadow ui-btn-inline ui-btn-a"
+              style="background: #3867FA; color: white; border-radius: 32px; float:left; text-shadow:none;">View More</a>
+          </div>
+          <div class="product_questions_container">
+            Questions about this product
+          </div>
+          <div class="product_review_sample_container">
+            <div class="product_review_user_image">
+              <img src="https://res.cloudinary.com/dgly8b9lq/image/upload/v1642155401/Lkia/woman_l0hpd7.png"
+                style="width: 60px; height:60px" />
+            </div>
+            <div class="product_review_content_container">
+              <div class="product_review_user_comment">
+                <div class="product_review_commment">
+                  Can I use this as a computer table ?
+                </div>
+              </div>
+              <div class="product_review_commment_time">
+                09:05 1 day ago
+              </div>
+            </div>
+          </div>
+          <div class="product_review_view_more">
+            <a href="#qcanswer_page" class="ui-btn ui-corner-all ui-shadow ui-btn-inline ui-btn-a"
+              style="background: #3867FA; color: white; border-radius: 32px; float:left; text-shadow:none;">View More</a>
+          </div>
+        </div>
+  
+        <!--Popup -->
+        <div class="qr-generic-popup" id="popUp-qr-generate">
+          <div class="overlay-qr" onclick="showQRCode();"></div>
+          <div class="content-qr">
+            <div class="close-btn-qr" onclick="showQRCode();">&times;</div>
+            <br />
+            <div class="container-qr-pop">
+              <a class="btn btn-success-qr" tabindex="0" title="QR Code" role="button" data-toggle="popover"
+                data-trigger="focus" data-placement="bottom">Share via QR Code</a>
+              <div id="qrcode-view-pop" style="display: none; width: auto; height: auto; padding: 15px;"></div>
+              <h4 class="qr-share-body">or</h4>
+              <div class="social_container-share">
+                <a href="https://www.facebook.com/"><img
+                    src="https://res.cloudinary.com/dgly8b9lq/image/upload/v1642265017/Lkia/image6_pgd4fu.png" alt=""
+                    class="social_circle-share" /></a>
+                <a href="https://twitter.com/"><img
+                    src="https://res.cloudinary.com/dgly8b9lq/image/upload/v1642265015/Lkia/image7_wutgns.png" alt=""
+                    class="social_circle-share" /></a>
+                <a href="https://telegram.org/"><img
+                    src="https://res.cloudinary.com/dgly8b9lq/image/upload/v1642265013/Lkia/image8_zxzmkl.png" alt=""
+                    class="social_circle-share" /></a>
+              </div>
+            </div>
+          </div>
+        </div>
+  
+        <div class="footerContainer">
+          <div class="feedWrap">
+            <a href="#"><img src="https://res.cloudinary.com/dgly8b9lq/image/upload/v1640853422/Lkia/feedback_bxnmx8.png"
+                alt="" class="feedback" /></a>
+          </div>
+          <div class="footer_head"><br />Lkiea</div>
+          <div class="footer_body">
+            +44-7911-2947<br />lkiea@gmail.com<br />40 Cunnery Rd, Manchester,
+            UK
+          </div>
+  
+          <div class="social_container">
+            <a href="https://www.facebook.com/"><img
+                src="https://res.cloudinary.com/dgly8b9lq/image/upload/v1642265017/Lkia/image6_pgd4fu.png" alt=""
+                class="social_circle" /></a>
+            <a href="https://twitter.com/"><img
+                src="https://res.cloudinary.com/dgly8b9lq/image/upload/v1642265015/Lkia/image7_wutgns.png" alt=""
+                class="social_circle" /></a>
+            <a href="https://telegram.org/"><img
+                src="https://res.cloudinary.com/dgly8b9lq/image/upload/v1642265013/Lkia/image8_zxzmkl.png" alt=""
+                class="social_circle" /></a>
+            <a href="https://www.instagram.com/"><img
+                src="https://res.cloudinary.com/dgly8b9lq/image/upload/v1642265022/Lkia/image5_hqmlf1.png" alt=""
+                class="social_circle" /></a>
+          </div>
+  
+          <div class="footer_rights">
+            Copyright © 2021, Lkiea Inc. All Rights Reserved.<br />
+          </div>
+        </div>
+        <div style="padding-bottom: 60px !important"></div>
+      </div>
+  
+      <div data-role="footer_local" class="footer_local" id="navBar">
+        <nav class="navContainer">
+          <div class="nav__menu" id="nav-menu">
+            <ul class="nav__list">
+              <li class="nav__item" id="home_nav">
+                <a href="#home_page" class="nav__link">
+                  <span class="material-icons-outlined" id="home_icon">home</span>
+                  <span class="nav__name">Home</span>
+                </a>
+              </li>
+  
+              <li class="nav__item" id="category_nav">
+                <a href="#category_page" class="nav__link">
+                  <span class="material-icons-outlined">grid_view</span>
+                  <span class="nav__name">Category</span>
+                </a>
+              </li>
+  
+              <li class="nav__item">
+                <a href="#cart_page" class="nav__link">
+                  <span class="material-icons-outlined">shopping_cart</span>
+                  <span class="nav__name">Cart</span>
+                </a>
+              </li>
+  
+              <li class="nav__item">
+                <a href="#notify_page" class="nav__link">
+                  <span class="material-icons-outlined">notifications_active</span>
+                  <span class="nav__name">Notifications</span>
+                </a>
+              </li>
+  
+              <li class="nav__item">
+                <a href="#account_page" class="nav__link">
+                  <span class="material-icons-outlined">account_circle</span>
+                  <span class="nav__name">Profile</span>
+                </a>
+              </li>
+            </ul>
+          </div>
+        </nav>
+      </div>
+    </div>
+
+  <!-- Favourite Page -->
+  <div data-role="page" id="favourite_page">
+    <div data-role="headerLocal" class="header_local">
+      <a href="#home_page"><img src="https://res.cloudinary.com/dgly8b9lq/image/upload/v1640846393/Lkia/logo_rf4wm5.png"
+          alt="" class="logo_header" /></a>
+      <a href="#search" class="search_icon">
+        <span class="material-icons-outlined" id="searchI">search</span>
+      </a>
+    </div>
+
+    <div role="main" class="content_category">
+      <div class="container-grids">
+        <div id="snackbar-fav-inv">Invalid Email !!!!</div>
+        <div  id="snackbar-fav-send">Email sent successfully !</div>
+        <div id="div1" style="padding-bottom: 20px;">
+
+          <section class="section-grid">
+
+            <div id="display_fav" class="grid-prod-category">
+
+            </div>
+          </section>
+        </div>
+        <div style="padding:10px;">
+          <form style="display:flex; flex-direction: row; ">
+            <input type="text" id="subscription-email-text-field" name="email"
+              placeholder="Enter Email To Send Favourits">
+            <!--
+           -->
+            <input class="favouritetext" id="subscribe-button" value="Send">
+          </form>
+        </div>
+      </div>
+
+      <!-- Footer -->
+    </div>
+
+    <div data-role="footer_local" class="footer_local" id="navBar">
+      <nav class="navContainer">
+        <div class="nav__menu" id="nav-menu">
+          <ul class="nav__list">
+            <li class="nav__item" id="home_nav">
+              <a href="#home_page" class="nav__link">
+                <span class="material-icons-outlined" id="home_icon">home</span>
+                <span class="nav__name">Home</span>
+              </a>
+            </li>
+
+            <li class="nav__item" id="category_nav">
+              <a href="#category_page" class="nav__link">
+                <span class="material-icons-outlined">grid_view</span>
+                <span class="nav__name">Category</span>
+              </a>
+            </li>
+
+            <li class="nav__item">
+              <a href="#cart_page" class="nav__link">
+                <span class="material-icons-outlined">shopping_cart</span>
+                <span class="nav__name">Cart</span>
+              </a>
+            </li>
+
+            <li class="nav__item">
+              <a href="#notify_page" class="nav__link">
+                <span class="material-icons-outlined">notifications_active</span>
+                <span class="nav__name">Notifications</span>
+              </a>
+            </li>
+
+            <li class="nav__item">
+              <a href="#account_page" class="nav__link">
+                <span class="material-icons-outlined">account_circle</span>
+                <span class="nav__name">Profile</span>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+    </div>
+  </div>
+
+  <!-- QnA page Questions-->
+  <div data-role="page" id="qcanswer_page">
+    <div data-role="headerLocal" class="header_local">
+      <img src="https://res.cloudinary.com/dgly8b9lq/image/upload/v1640846393/Lkia/logo_rf4wm5.png" alt=""
+        class="logo_header" />
+      <a href="#search" class="search_icon">
+        <span class="material-icons-outlined" id="searchI">search</span>
+      </a>
+    </div>
+
+    <div role="main_content" class="content_home">
+        
+      <div class="col-md-6">
+        <a href="#qcanswer_page2" style="color: inherit;
+        text-decoration: inherit;
+        font-weight: inherit;">
+        <div style="padding-top: 30px"></div>
+        <section class="section-50">
+          <div class="container">
+            <div class="notification-ui_dd-content">
+              <div class="notification-list">
+                <div class="notification-list_content">
+                  <div class="notification-list_img">
+                    <img src="https://res.cloudinary.com/dgly8b9lq/image/upload/v1642155401/Lkia/woman_l0hpd7.png" alt="user">
+                  </div>
+                  <div class="notification-list_detail">
+                    <p><b>Stefani Cumin</b> asked a question</p>
+                    <p class="text-muted">Can I use this for my working desk ?</p>
+                    <p class="text-muted"><small>Sunday, January 23, 2022</small></p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        </a>
+        <ul id="questions" class="review-list">
+          <!-- Conatct Object li.list-group-item.contact will be added here by js -->
+        </ul>
+      </div>
+
+      <a
+        href="#popupLoginQc"
+        data-rel="popup"
+        data-position-to="window"
+        class="ui-btn ui-corner-all ui-shadow ui-btn-inline ui-btn-a"
+        data-transition="pop"
+        style="background: #3867FA; color: white; border-radius: 32px; float:right; text-shadow:none;"
+        id="reviewbtn"
+        >Post Question</a
+      >
+      <div
+        data-role="popup"
+        id="popupLoginQc"
+        data-theme="a"
+        class="ui-corner-all"
+      >
+        <form method="post" id="questionsForm">
+          <div style="padding: 10px 20px">
+            <h3>Post your Question</h3>
+            <input
+              type="text"
+              class="form-control"
+              id="name_qc_user"
+              required
+              placeholder="Enter name"
+            />
+            <textarea
+              name="textarea-enhanced"
+              id="user_question"
+              data-enhanced="true"
+              class="ui-input-text ui-shadow-inset ui-body-inherit ui-corner-all"
+              required
+              placeholder="Your Question"
+            ></textarea>
+            <a href="#">
+              <button
+                type="submit"
+                class="btn btn-primary addQuestion"
+                id="addQuestion"
+                data-rel="back"
+                data-transition="flow"
+              >
+                Submit
+              </button>
+            </a>
+          </div>
+        </form>
+      </div>
+    </div>
+
+    <div data-role="footer_local" class="footer_local" id="navBar">
+      <nav class="navContainer">
+        <div class="nav__menu" id="nav-menu">
+          <ul class="nav__list">
+            <li class="nav__item" id="redirect-main-home">
+              <a href="#home_page" class="nav__link">
+                <span class="material-icons-outlined" id="home_icon">home</span>
+                <span class="nav__name">Home</span>
+              </a>
+            </li>
+
+            <li class="nav__item" id="redirect-main-cat">
+              <a href="#category_page" class="nav__link">
+                <span class="material-icons-outlined">grid_view</span>
+                <span class="nav__name">Category</span>
+              </a>
+            </li>
+
+            <li class="nav__item" id="redirect-main-cart">
+              <a href="#cart_page" class="nav__link">
+                <span class="material-icons-outlined">shopping_cart</span>
+                <span class="nav__name">Cart</span>
+              </a>
+            </li>
+
+            <li class="nav__item" id="redirect-main-noti">
+              <a href="#notify_page" class="nav__link">
+                <span class="material-icons-outlined">notifications_active</span>
+                <span class="nav__name">Notifications</span>
+              </a>
+            </li>
+
+            <li class="nav__item" id="redirect-main-prof">
+              <a href="#account_page" class="nav__link">
+                <span class="material-icons-outlined">account_circle</span>
+                <span class="nav__name">Profile</span>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+    </div>
+  </div>
+
+  <!-- QnA page Answers-->
+  <div data-role="page" id="qcanswer_page2">
+    <div data-role="headerLocal" class="header_local">
+      <img src="https://res.cloudinary.com/dgly8b9lq/image/upload/v1640846393/Lkia/logo_rf4wm5.png" alt=""
+        class="logo_header" />
+      <a href="#search" class="search_icon">
+        <span class="material-icons-outlined" id="searchI">search</span>
+      </a>
+    </div>
+
+    <div role="main_content" class="content_home">
+      <div class="col-md-6">
+        <div style="padding-top: 30px"></div>
+        <section class="section-50">
+          <div class="container">
+            <div class="notification-ui_dd-content">
+              <div class="notification-list">
+                <div class="notification-list_content">
+                  <div class="notification-list_img">
+                    <img src="https://res.cloudinary.com/dgly8b9lq/image/upload/v1642155401/Lkia/woman_l0hpd7.png" alt="user">
+                  </div>
+                  <div class="notification-list_detail">
+                    <p><b>Stefani Cumin</b> asked a question</p>
+                    <p class="text-muted">Can I use this for my working desk ?</p>
+                    <p class="text-muted"><small>45 mins ago</small></p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <ul id="answers" class="review-list">
+          <!-- Conatct Object li.list-group-item.contact will be added here by js -->
+        </ul>
+      </div>
+
+      <a
+        href="#popupLoginAnswers"
+        data-rel="popup"
+        data-position-to="window"
+        class="ui-btn ui-corner-all ui-shadow ui-btn-inline ui-btn-a"
+        data-transition="pop"
+        style="background: #3867FA; color: white; border-radius: 32px; float:right; text-shadow:none;"
+        >Add Reply</a
+      >
+      <div
+        data-role="popup"
+        id="popupLoginAnswers"
+        data-theme="a"
+        class="ui-corner-all"
+      >
+        <form method="post" id="answersForm">
+          <div style="padding: 10px 20px">
+            <h3>Add your answer</h3>
+            <input
+              type="text"
+              class="form-control"
+              id="name_ans_user"
+              required
+              placeholder="Enter name"
+            />
+            <textarea
+              name="textarea-enhanced"
+              id="user_answer"
+              data-enhanced="true"
+              class="ui-input-text ui-shadow-inset ui-body-inherit ui-corner-all"
+              required
+              placeholder="Your Answer"
+            ></textarea>
+            <a href="#">
+              <button
+                type="submit"
+                class="btn btn-primary addReply"
+                id="addReply"
+                data-rel="back"
+                data-transition="flow"
+              >
+                Submit
+              </button>
+            </a>
+          </div>
+        </form>
+      </div>
+    </div>
+
+    <div data-role="footer_local" class="footer_local" id="navBar">
+      <nav class="navContainer">
+        <div class="nav__menu" id="nav-menu">
+          <ul class="nav__list">
+            <li class="nav__item" id="redirect-main-home">
+              <a href="#home_page" class="nav__link">
+                <span class="material-icons-outlined" id="home_icon">home</span>
+                <span class="nav__name">Home</span>
+              </a>
+            </li>
+
+            <li class="nav__item" id="redirect-main-cat">
+              <a href="#category_page" class="nav__link">
+                <span class="material-icons-outlined">grid_view</span>
+                <span class="nav__name">Category</span>
+              </a>
+            </li>
+
+            <li class="nav__item" id="redirect-main-cart">
+              <a href="#cart_page" class="nav__link">
+                <span class="material-icons-outlined">shopping_cart</span>
+                <span class="nav__name">Cart</span>
+              </a>
+            </li>
+
+            <li class="nav__item" id="redirect-main-noti">
+              <a href="#notify_page" class="nav__link">
+                <span class="material-icons-outlined">notifications_active</span>
+                <span class="nav__name">Notifications</span>
+              </a>
+            </li>
+
+            <li class="nav__item" id="redirect-main-prof">
+              <a href="#account_page" class="nav__link">
+                <span class="material-icons-outlined">account_circle</span>
+                <span class="nav__name">Profile</span>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+    </div>
+  </div>
+
+  <!-- Buy Now Page  -->
+  <div data-role="page" id="buynowform_page">
+    <div data-role="headerLocal" class="header_local">
+      <img src="https://res.cloudinary.com/dgly8b9lq/image/upload/v1640846393/Lkia/logo_rf4wm5.png" alt=""
+        class="logo_header" />
+      <a href="#search" class="search_icon">
+        <span class="material-icons-outlined" id="searchI">search</span>
+      </a>
+    </div>
+
+    <div role="main_content" class="content_home">
+      <div class="shipContainer">
+        <div style="margin-top: 10px; margin-left: 40px;" class="title">Shipping Details</div>
+        <div class="row">
+            <div class="col-md-12">
+                <form id="Shipping-Form">
+                <fieldset>
+                
+                  <label for="name">Full Name</label>
+                  <input type="text" id="name" name="user_name">
+                
+                  <label for="email-message">Email</label>
+                  <input type="email" id="mail" name="user_email">
+               
+                  <label for="address">Shipping Address</label>
+                  <input type="text" id="address" name="user_address">
+
+                  <label for="code">Zip/Postal Code</label>
+                  <input type="number" id="code" name="user_code">
+               
+                  <label for="num">Contact Number</label>
+                  <input type="text" id="num" name="user_num">
+
+                  <div  id="proceed-btn">Proceed</div>
+                
+                 
+                </fieldset>
+                </form>
+            </div>
+        </div>             
+    </div>
+    </div>
+
+    <div data-role="footer_local" class="footer_local" id="navBar">
+      <nav class="navContainer">
+        <div class="nav__menu" id="nav-menu">
+          <ul class="nav__list">
+            <li class="nav__item" id="redirect-main-home">
+              <a href="#home_page" class="nav__link">
+                <span class="material-icons-outlined" id="home_icon">home</span>
+                <span class="nav__name">Home</span>
+              </a>
+            </li>
+
+            <li class="nav__item" id="redirect-main-cat">
+              <a href="#category_page" class="nav__link">
+                <span class="material-icons-outlined">grid_view</span>
+                <span class="nav__name">Category</span>
+              </a>
+            </li>
+
+            <li class="nav__item" id="redirect-main-cart">
+              <a href="#cart_page" class="nav__link">
+                <span class="material-icons-outlined">shopping_cart</span>
+                <span class="nav__name">Cart</span>
+              </a>
+            </li>
+
+            <li class="nav__item" id="redirect-main-noti">
+              <a href="#notify_page" class="nav__link">
+                <span class="material-icons-outlined">notifications_active</span>
+                <span class="nav__name">Notifications</span>
+              </a>
+            </li>
+
+            <li class="nav__item" id="redirect-main-prof">
+              <a href="#account_page" class="nav__link">
+                <span class="material-icons-outlined">account_circle</span>
+                <span class="nav__name">Profile</span>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+    </div>
+  </div>
+
+ <!--Page - Sign In -->
+ <div data-role="page" id="account_signin_page">
+
+  <div data-role="headerLocal" class="header_local"  >
+      <img src="https://res.cloudinary.com/dgly8b9lq/image/upload/v1640846393/Lkia/logo_rf4wm5.png"  alt="" class="logo_header">
+      <a href="#search" class="search_icon">
+          <span class="material-icons-outlined" id="searchI">search</span>
+      </a>
+  </div>
+
+  <div role="main_content" class="content_home">
+     <div>
+      <img src="https://res.cloudinary.com/dgly8b9lq/image/upload/v1640846394/Lkia/main_p0wjoy.png" alt="" class="signup-logo">
+     </div>
+        <!-- Login Form -->
+        <div class="input-set">
+          <div>
+
+              <div>
+         
+                <div>
+                  <form action="#">
+                    <div>
+                      <input type="text"  placeholder="Email">
+                    </div>
+                    <div >
+                       <input class="password-width" type="password"  placeholder=" Password">
+                    </div>
+                    <div class="forgot-password">
+                       <p>forgot password ?</p>
+                    </div>
+                    <div>
+                      <button type="submit" class="login-button">Login</button>
+                    </div>
+                    <div class="dont-have-an-account">
+                      <p>Don’t have an account, Sign Up now.</p>
+                    </div>
+                  </form>
+                 </div>
+              </div>
+          </div>
+        </div>
+            
+  </div>
+        
+
+  <div data-role="footer_local" class="footer_local" id="navBar">
+      <nav class="navContainer">
+
+          <div class="nav__menu" id="nav-menu">
+              <ul class="nav__list">
+                  <li class="nav__item" id="home_nav">
+                      <a href="#home_page" class="nav__link">
+                          <span class="material-icons-outlined" id="home_icon">home</span>
+                          <span class="nav__name">Home</span>
+                      </a>
+                  </li>
+                  
+                  <li class="nav__item" id="category_nav">
+                      <a href="#category_page" class="nav__link">
+                          <span class="material-icons-outlined">grid_view</span>
+                          <span class="nav__name">Category</span>
+                      </a>
+                  </li>
+
+                  <li class="nav__item">
+                      <a href="#cart_page" class="nav__link">
+                          <span class="material-icons-outlined">shopping_cart</span>
+                          <span class="nav__name">Cart</span>
+                      </a>
+                  </li>
+
+                  <li class="nav__item">
+                      <a href="#notify_page" class="nav__link">
+                          <span class="material-icons-outlined">notifications_active</span>
+                          <span class="nav__name">Notifications</span>
+                      </a>
+                  </li>
+
+                  <li class="nav__item">
+                      <a href="#account_page" class="nav__link">
+                          <span class="material-icons">account_circle</span>
+                          <span class="nav__name">Profile</span>
+                      </a>
+                  </li>
+              </ul>
+          </div>
+
+      </nav>
+  </div>
+
+
+</div>
+
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+    integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+    crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.bundle.min.js"
+    integrity="sha384-xrRywqdh3PHs8keKZN+8zzc5TX0GRTLCcmivcbNJWm2rs5C8PRhcEn3czEjhAO9o"
+    crossorigin="anonymous"></script>
+  <script type="text/javascript" src="qrcode.min.js"></script>
+  <script>
+    var qrcode = new QRCode(document.getElementById("qrcode-view-pop"), {
+      width: 120,
+      height: 120
+    });
+    function makeQrcode(e) {
+      qrcode.makeCode(window.location.href);
+    }
+    jQuery(document).ready(function () {
+      jQuery("[data-toggle='popover']").popover(
+        options = {
+          content: jQuery("#qrcode-view-pop"),
+          html: true // important! popover html content (tag: "#qrcode") which contains an image
+        }
+      );
+
+      jQuery("[data-toggle='popover']").on("show.bs.popover", function (e) {
+        makeQrcode(jQuery(this));
+        jQuery("#qrcode-view-pop").show();
+      });
+    });
+  </script>
+
+  <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+  <!-- La
+    
+    compiled and minified Bootstrap -->
+
+  <!-- Include Firebase Library -->
+  <script src="https://www.gstatic.com/firebasejs/4.5.0/firebase.js"></script>
+  <!-- Contacts Store JavaScript -->
+  <script src="script.js"></script>
+  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+</body>
+
+</html>

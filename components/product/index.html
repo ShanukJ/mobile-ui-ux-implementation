@@ -1,0 +1,451 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://fonts.googleapis.com/css?family=Material+Icons|Material+Icons+Outlined|Material+Icons+Two+Tone|Material+Icons+Round|Material+Icons+Sharp"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css"
+    />
+    <script src="https://code.jquery.com/jquery-1.11.1.min.js"></script>
+    <script src="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+    <script src="https://code.iconify.design/2/2.1.1/iconify.min.js"></script>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://code.jquery.com/mobile/1.4.0/jquery.mobile-1.4.0.min.css"
+    />
+
+    <link rel="stylesheet" href="style-map.css" />
+
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=API_KEY&callback=initMap"
+      defer></script>
+  
+
+    <script>
+        // Initialize and add the map
+        function initMap() {
+    
+          const uluru = { lat: 51.520919, lng: -0.140126 };
+          // Styles a map in night mode.
+          const map = new google.maps.Map(document.getElementById("map"), {
+            center: uluru,
+            zoom: 12,
+            mapTypeControl: false,
+            streetViewControl: false,
+            //disableDefaultUI: true,
+            styles: [
+              { elementType: "geometry", stylers: [{ color: "#242f3e" }] },
+              { elementType: "labels.text.stroke", stylers: [{ color: "#242f3e" }] },
+              { elementType: "labels.text.fill", stylers: [{ color: "#746855" }] },
+              {
+                featureType: "administrative.locality",
+                elementType: "labels.text.fill",
+                stylers: [{ color: "#d59563" }],
+              },
+              {
+                featureType: "poi",
+                elementType: "labels.text.fill",
+                stylers: [{ color: "#d59563" }],
+              },
+              {
+                featureType: "poi.park",
+                elementType: "geometry",
+                stylers: [{ color: "#263c3f" }],
+              },
+              {
+                featureType: "poi.park",
+                elementType: "labels.text.fill",
+                stylers: [{ color: "#6b9a76" }],
+              },
+              {
+                featureType: "road",
+                elementType: "geometry",
+                stylers: [{ color: "#38414e" }],
+              },
+              {
+                featureType: "road",
+                elementType: "geometry.stroke",
+                stylers: [{ color: "#212a37" }],
+              },
+              {
+                featureType: "road",
+                elementType: "labels.text.fill",
+                stylers: [{ color: "#9ca5b3" }],
+              },
+              {
+                featureType: "road.highway",
+                elementType: "geometry",
+                stylers: [{ color: "#746855" }],
+              },
+              {
+                featureType: "road.highway",
+                elementType: "geometry.stroke",
+                stylers: [{ color: "#1f2835" }],
+              },
+              {
+                featureType: "road.highway",
+                elementType: "labels.text.fill",
+                stylers: [{ color: "#f3d19c" }],
+              },
+              {
+                featureType: "transit",
+                elementType: "geometry",
+                stylers: [{ color: "#2f3948" }],
+              },
+              {
+                featureType: "transit.station",
+                elementType: "labels.text.fill",
+                stylers: [{ color: "#d59563" }],
+              },
+              {
+                featureType: "water",
+                elementType: "geometry",
+                stylers: [{ color: "#17263c" }],
+              },
+              {
+                featureType: "water",
+                elementType: "labels.text.fill",
+                stylers: [{ color: "#515c6d" }],
+              },
+              {
+                featureType: "water",
+                elementType: "labels.text.stroke",
+                stylers: [{ color: "#17263c" }],
+              },
+            ],
+          });
+    
+          const marker = new google.maps.Marker({
+              position: uluru,
+              map: map,
+                  title: "University of Westminster"
+            });
+        }
+      </script>
+
+<script>
+  jQuery(document).ready(function() { 
+    let x=1;
+    if(x===0){
+      $("#t1").addClass("hidden");
+    }else{
+      $("#t2").addClass("hidden");
+    }
+
+
+    $('#redirect-main-home').click(function() {
+        window.location.replace("http://127.0.0.1:5500/components/home/index.html");
+      });
+      $('#redirect-main-cat').click(function() {
+        window.location.replace("http://127.0.0.1:5500/components/home/index.html#category_page");
+      });
+      $('#redirect-main-cart').click(function() {
+        window.location.replace("http://127.0.0.1:5500/components/home/index.html#cart_page");
+      });
+      $('#redirect-main-noti').click(function() {
+        window.location.replace("http://127.0.0.1:5500/components/home/index.html#notify_page");
+      });
+      $('#redirect-main-prof').click(function() {
+        window.location.replace("http://127.0.0.1:5500/components/home/index.html#account_page");
+      });
+     
+});
+</script>
+<script>
+  function wifiToggle(from){
+    if(from){
+      console.log("Fav")
+    }else{
+      console.log("not Fav")
+    }
+    var t1 = document.getElementById("t1");
+    var t2 = document.getElementById("t2");
+        t1.classList.toggle("hidden");
+        t2.classList.toggle("hidden");
+  }
+  </script>
+  <style>.hidden{display:none;}</style>
+    <title>Home</title>
+  </head>
+  <body>
+    <!--Page 6 - Account -->
+    <div data-role="page" id="product_page">
+      <div data-role="headerLocal" class="header_local">
+        <img
+          src="https://res.cloudinary.com/dgly8b9lq/image/upload/v1640846393/Lkia/logo_rf4wm5.png"
+          alt=""
+          class="logo_header"
+        />
+        <a href="#search" class="search_icon">
+          <span class="material-icons-outlined" id="searchI">search</span>
+        </a>
+      </div>
+
+      <div role="main_content" class="content_home">
+        <div class="main-product-container">
+          <div class="sub-product-container">
+            <div class="product-image-container">
+              <img
+                src="https://res.cloudinary.com/dgly8b9lq/image/upload/v1642139960/Lkia/joel-henry-pdIwPL3HU2s-unsplash_jtp9rn.jpg"
+                class="product-image"
+              />
+              <div class="product-details-container">
+                  <div class="product-title-container">
+                      <div class="product-title">
+                        Tripod Table Lamp - Modern Bedside Lamp for Room 
+                      </div>
+                      <div class="product-favorite-icon">
+                        <span id="t1" class="iconify " data-icon="mdi:cards-heart-outline" style="color: #9098b1;" data-width="24" data-height="24" onclick=wifiToggle(true)></span>
+                        <span id="t2" class="iconify " data-icon="mdi:cards-heart" style="color: #9098b1;" data-width="24" data-height="24" onclick=wifiToggle(false)></span>
+                      </div>
+                      <div class="product-share-icon">
+                        <span class="iconify" data-icon="mdi:share-variant" style="color: #9098b1;" data-width="24" data-height="24"></span>
+                      </div>
+                  </div>
+                  <div class="product-star-rating-container">
+                    <span class="iconify" data-icon="mdi:hexagram" style="color: #f2994a;" data-width="12" data-height="12"></span>
+                    <span class="iconify" data-icon="mdi:hexagram" style="color: #f2994a;" data-width="12" data-height="12"></span>
+                    <span class="iconify" data-icon="mdi:hexagram" style="color: #f2994a;" data-width="12" data-height="12"></span>
+                    <span class="iconify" data-icon="mdi:hexagram" style="color: #f2994a;" data-width="12" data-height="12"></span>
+                    <span class="iconify" data-icon="mdi:hexagram-outline" style="color: #f2994a;" data-width="12" data-height="12"></span>
+                  </div>
+                  <div class="product-price-container">
+                    £ 39.80
+                  </div>
+                  <div class="product-description-container">
+                      <div class="product-description-title">
+                        Description
+                      </div>
+                      <div class="product-description">
+                        Lighting makes the room. Strategically placed, lamps can bring any room into a deeper perspective and showcase your compelling decor. This guide will introduce you to many types of lamp shades available from The Home Depot that will address your lighting needs while enhancing your decor.
+                      </div>
+                      <div class="price-qty-container">
+                          <div class="total-container">
+                              <div class="total-text">Total:</div>
+                              &nbsp;
+                              <div class="price-text"> £ 39.80</div>
+                          </div>
+                          <div class="qty-container">
+                              <div class="qty-text">Quantity</div>
+                              <div class="qty-dropdown">
+                                <form>
+                                    <div class="ui-field-contain">
+                                        <select name="select-native-2" id="select-native-2" data-mini="true">
+                                            <option value="1">1</option>
+                                            <option value="2">2</option>
+                                            <option value="3">3</option>
+                                        </select>
+                                    </div>
+                                </form>
+                              </div>
+                          </div>
+                      </div>
+                      <div class="product-button-container">
+                          <div class="product-add-to-cart-button">
+                            Add to cart
+                          </div>
+                          <div class="product-add-to-cart-button">
+                            Buy now
+                        </div>
+                      </div>
+                      <div class="product-review-container">
+                          <div class="product-review-title">Reviews</div>
+                          <div class="product-reviews">
+                              <div class="product-user-image-container">
+                                <img
+                                src="https://res.cloudinary.com/dgly8b9lq/image/upload/v1642155403/Lkia/gamer_dosam6.png"
+                                class="product-user-image"
+                              />
+                              </div>
+                              <div class="product-review-content-container">
+                                  <div class="product-review-text">
+                                    It was superb, I loved it...
+                                  </div>
+                                  <div class="product-review-star">
+                                    <span class="iconify" data-icon="mdi:hexagram" style="color: #f2994a;" data-width="12" data-height="12"></span>
+                                    <span class="iconify" data-icon="mdi:hexagram" style="color: #f2994a;" data-width="12" data-height="12"></span>
+                                    <span class="iconify" data-icon="mdi:hexagram" style="color: #f2994a;" data-width="12" data-height="12"></span>
+                                    <span class="iconify" data-icon="mdi:hexagram" style="color: #f2994a;" data-width="12" data-height="12"></span>
+                                    <span class="iconify" data-icon="mdi:hexagram-outline" style="color: #f2994a;" data-width="12" data-height="12"></span>
+                                  </div>
+                              </div>
+                              <div class="product-review-view-more" id="review-view-more">
+                                <!-- <a href="http://127.0.0.1:5500/components/reviews/index.html"> -->
+                                <div class="product-review-view-more">
+                                  View More
+                                </div>
+                              </div>
+                          </div>
+                      </div>
+                      <div class="product-asked-questions-container">
+                          <div class="product-question-title">
+                            Questions about this product 
+                          </div>
+                          <div class="product-question-content-container">
+                              <div class="product-question-contents">
+                            <div class="product-qa-user-image-container">
+                                <img
+                                src="https://res.cloudinary.com/dgly8b9lq/image/upload/v1642155401/Lkia/woman_l0hpd7.png"
+                                class="product-user-image"
+                              />
+                              </div>
+                              <div class="product-qa-content-container">
+                                <div class="product-qa-text">
+                                    Is this one original?
+                                  </div>
+                                  <div class="product-qa-asked-date">
+                                    09:05  1 day ago
+                                  </div>
+                              </div>
+                            </div>
+                              <input type="text" name="text-6" id="text-6" value="" placeholder="Enter your reply here">
+                              <div class="product-qa-reply">
+                                Reply
+                              </div>
+                          </div>
+                          <div class="product-question-content-container">
+                            <div class="product-question-contents">
+                          <div class="product-qa-user-image-container">
+                              <img
+                              src="https://res.cloudinary.com/dgly8b9lq/image/upload/v1642155403/Lkia/man_1_ilhh9d.png"
+                              class="product-user-image"
+                            />
+                            </div>
+                            <div class="product-qa-content-container">
+                              <div class="product-qa-text">
+                                Is this one water proof? any buyers here???
+                                </div>
+                                <div class="product-qa-asked-date">
+                                  09:05  1 day ago
+                                </div>
+                                <div class="product-qa-reply-spacer"></div>
+                            </div>
+                          </div>
+                          <div class="product-question-contents">
+                              <div class="product-question-spacer"></div>
+                            <div class="product-qa-user-image-container">
+                                <img
+                                src="https://res.cloudinary.com/dgly8b9lq/image/upload/v1642155462/Lkia/woman_1_jxokcq.png"
+                                class="product-user-image"
+                              />
+                              </div>
+                              <div class="product-qa-content-container">
+                                <div class="product-qa-text">
+                                    Yes. It is water proof
+                                  </div>
+                                  <div class="product-qa-asked-date">
+                                    09:05  Sandra
+                                  </div>
+                              </div>
+                            </div>
+                            <input type="text" name="text-6" id="text-6" value="" placeholder="Enter your reply here">
+                            <div class="product-qa-reply">
+                              Reply
+                            </div>
+                        </div>
+                      </div>
+                  </div>
+              </div>
+              <div role="main">
+                <div id="map"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        
+        <div class="footerContainer">
+          <div class="feedWrap">
+            <a href="#"
+              ><img
+                src="https://res.cloudinary.com/dgly8b9lq/image/upload/v1640853422/Lkia/feedback_bxnmx8.png"
+                alt=""
+                class="feedback"
+            /></a>
+          </div>
+          <div class="footer_head"><br />Lkiea</div>
+          <div class="footer_body">
+            +44-7911-2947<br />lkiea@gmail.com<br />40 Cunnery Rd, Manchester,
+            UK
+          </div>
+
+          <div class="social_container">
+            <a href="https://www.facebook.com/"
+              ><img src="image6.png" alt="" class="social_circle"
+            /></a>
+            <a href="https://twitter.com/"
+              ><img src="image7.png" alt="" class="social_circle"
+            /></a>
+            <a href="https://telegram.org/"
+              ><img src="image8.png" alt="" class="social_circle"
+            /></a>
+            <a href="https://www.instagram.com/"
+              ><img src="image5.png" alt="" class="social_circle"
+            /></a>
+          </div>
+
+          <div class="footer_rights">
+            Copyright © 2021, Lkiea Inc. All Rights Reserved.<br />
+          </div>
+        </div>
+
+
+      </div>
+
+      <div data-role="footer_local" class="footer_local" id="navBar">
+        <nav class="navContainer">
+          <div class="nav__menu" id="nav-menu">
+            <ul class="nav__list">
+              <li class="nav__item" id="redirect-main-home">
+                <a href="#home_page" class="nav__link">
+                  <span class="material-icons-outlined" id="home_icon"
+                    >home</span
+                  >
+                  <span class="nav__name">Home</span>
+                </a>
+              </li>
+
+              <li class="nav__item" id="redirect-main-cat">
+                <a href="#category_page" class="nav__link">
+                  <span class="material-icons-outlined">grid_view</span>
+                  <span class="nav__name">Category</span>
+                </a>
+              </li>
+
+              <li class="nav__item" id=redirect-main-cart>
+                <a href="#cart_page" class="nav__link">
+                  <span class="material-icons-outlined">shopping_cart</span>
+                  <span class="nav__name">Cart</span>
+                </a>
+              </li>
+
+              <li class="nav__item" id="redirect-main-noti">
+                <a href="#notify_page" class="nav__link">
+                  <span class="material-icons-outlined"
+                    >notifications_active</span
+                  >
+                  <span class="nav__name">Notifications</span>
+                </a>
+              </li>
+
+              <li class="nav__item" id="redirect-main-prof">
+                <a href="#account_page" class="nav__link">
+                  <span class="material-icons-outlined">account_circle</span>
+                  <span class="nav__name">Profile</span>
+                </a>
+              </li>
+            </ul>
+          </div>
+        </nav>
+      </div>
+    </div>
+  </body>
+</html>
